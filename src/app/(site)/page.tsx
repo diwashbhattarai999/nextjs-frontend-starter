@@ -1,9 +1,9 @@
 import { ComponentExample } from "@/components/component-example";
 
 export default function HomePage() {
-  return (
-    <div>
-      <ComponentExample />
-    </div>
-  );
+    return (
+        <div>
+            <ComponentExample />
+        </div>
+    );
 }

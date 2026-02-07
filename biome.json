@@ -10,12 +10,16 @@
   },
   "formatter": {
     "enabled": true,
-    "indentStyle": "tab"
+    "indentStyle": "space",
+    "indentWidth": 4
   },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "style": {
+        "useBlockStatements": "off"
+      }
     }
   },
   "javascript": {
@@ -31,8 +35,5 @@
       }
     }
   },
-  "extends": [
-    "ultracite/biome/core",
-    "ultracite/biome/next"
-  ]
+  "extends": ["ultracite/biome/core", "ultracite/biome/next"]
 }
