@@ -1,5 +1,5 @@
-import { AnimatedThemeToggler } from "@/components/shared/animated-theme-toggler";
-import { GitHubLink } from "@/components/shared/github-link";
+import { ThemeModeToggle } from "@/components/themes/theme-mode-toggle";
+import { ThemeSelector } from "@/components/themes/theme-selector";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -8,10 +8,10 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             data-slot="layout"
         >
             <div className="flex items-center justify-end gap-2 p-4">
-                <GitHubLink />
-                <AnimatedThemeToggler />
+                <ThemeModeToggle />
             </div>
-            <main className="flex flex-1 flex-col items-center justify-center">
+            <main className="flex flex-1 flex-col items-center justify-center gap-5">
+                <ThemeSelector />
                 {children}
             </main>
         </div>
