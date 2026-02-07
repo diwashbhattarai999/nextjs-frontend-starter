@@ -7,7 +7,7 @@ import { DEFAULT_THEME } from "@/components/themes/theme.config";
 import { META_THEME_COLORS, siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 
-import "../../styles/globals.css";
+import "@/styles/globals.css";
 
 import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
