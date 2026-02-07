@@ -45,7 +45,7 @@ export function ThemeSelector() {
                 <SelectContent align="end">
                     {THEMES.length > 0 && (
                         <SelectGroup>
-                            <SelectLabel>themes</SelectLabel>
+                            <SelectLabel>THEMES</SelectLabel>
                             {THEMES.map((theme) => (
                                 <SelectItem
                                     key={theme.name}
