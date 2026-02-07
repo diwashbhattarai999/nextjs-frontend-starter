@@ -2,6 +2,7 @@ import axios, { type AxiosInstance } from "axios";
 
 import { STORAGE_KEYS } from "@/configs/storage";
 import { env } from "@/env/client";
+
 import { getCookie, removeCookie, setCookie } from "./cookies";
 
 /**
