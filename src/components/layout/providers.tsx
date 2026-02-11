@@ -28,6 +28,9 @@ export function Providers({
 }: ProvidersProps) {
     const queryClient = new QueryClient();
 
+    const timezone =
+        Intl.DateTimeFormat().resolvedOptions().timeZone || "Asia/Kathmandu";
+
     return (
         <>
             <NextTopLoader color="var(--primary)" showSpinner={false} />
@@ -40,7 +43,11 @@ export function Providers({
                     enableColorScheme
                     enableSystem
                 >
-                    <NextIntlClientProvider locale={locale} messages={messages}>
+                    <NextIntlClientProvider
+                        locale={locale}
+                        messages={messages}
+                        timeZone={timezone}
+                    >
                         <QueryClientProvider client={queryClient}>
                             <Toaster />
 
