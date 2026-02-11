@@ -28,11 +28,11 @@ export default async function LocaleLayout({
     params,
 }: {
     children: React.ReactNode;
-    params: Promise<{ locale: TLocales }>;
+    params: Promise<{ locale: string }>;
 }) {
     const { locale } = await params;
 
-    if (!routing.locales.includes(locale)) {
+    if (!routing.locales.includes(locale as TLocales)) {
         // Ensure that the incoming `locale` is valid
         notFound();
     }
@@ -69,7 +69,7 @@ export default async function LocaleLayout({
             >
                 <Providers
                     activeThemeValue={themeToApply}
-                    locale={locale}
+                    locale={locale as TLocales}
                     messages={messages}
                 >
                     {children}
