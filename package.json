@@ -30,7 +30,7 @@
     "start": "next start",
     "lint:check": "ultracite check",
     "lint:fix": "ultracite fix",
-    "prepare": "lefthook install",
+    "prepare": "lefthook install || true",
     "type-check": "tsc -b"
   },
   "dependencies": {
