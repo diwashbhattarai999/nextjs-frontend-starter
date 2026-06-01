@@ -40,7 +40,10 @@ export function ActiveThemeProvider({
         // Only update if theme has changed
         const currentTheme =
             document.documentElement.getAttribute("data-theme");
-        if (currentTheme !== activeTheme) {
+        if (currentTheme === activeTheme) {
+            // Still update cookie in case it's missing
+            setThemeCookie(activeTheme);
+        } else {
             setThemeCookie(activeTheme);
 
             // Remove existing data-theme attribute
@@ -60,9 +63,6 @@ export function ActiveThemeProvider({
                     activeTheme
                 );
             }
-        } else {
-            // Still update cookie in case it's missing
-            setThemeCookie(activeTheme);
         }
     }, [activeTheme]);
 
