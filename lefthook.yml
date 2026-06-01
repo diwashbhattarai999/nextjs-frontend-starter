@@ -25,6 +25,9 @@ pre-push:
         - "coverage/**"
         - "dist/**"
       run: pnpm lint:check
+    
+    build:
+      run: pnpm build
 
 commit-msg:
   commands:
