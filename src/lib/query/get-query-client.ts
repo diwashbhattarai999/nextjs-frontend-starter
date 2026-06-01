@@ -1,8 +1,4 @@
-import {
-    defaultShouldDehydrateQuery,
-    isServer,
-    QueryClient,
-} from "@tanstack/react-query";
+import { defaultShouldDehydrateQuery, isServer, QueryClient } from "@tanstack/react-query";
 import { AxiosError } from "axios";
 import { cache } from "react";
 
@@ -19,10 +15,7 @@ function shouldRetryQuery(failureCount: number, error: unknown) {
         return false;
     }
 
-    if (
-        error instanceof AxiosError &&
-        [401, 403].includes(error.response?.status ?? 0)
-    ) {
+    if (error instanceof AxiosError && [401, 403].includes(error.response?.status ?? 0)) {
         return false;
     }
 
@@ -40,8 +33,7 @@ function makeQueryClient() {
             },
             dehydrate: {
                 shouldDehydrateQuery: (query) =>
-                    defaultShouldDehydrateQuery(query) ||
-                    query.state.status === "pending",
+                    defaultShouldDehydrateQuery(query) || query.state.status === "pending",
             },
         },
     });

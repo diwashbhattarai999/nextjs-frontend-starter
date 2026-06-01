@@ -20,16 +20,10 @@ interface ProvidersProps {
     children: React.ReactNode;
 }
 
-export function Providers({
-    activeThemeValue,
-    locale,
-    messages,
-    children,
-}: ProvidersProps) {
+export function Providers({ activeThemeValue, locale, messages, children }: ProvidersProps) {
     const queryClient = new QueryClient();
 
-    const timezone =
-        Intl.DateTimeFormat().resolvedOptions().timeZone || "Asia/Kathmandu";
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Asia/Kathmandu";
 
     return (
         <>
@@ -43,17 +37,11 @@ export function Providers({
                     enableColorScheme
                     enableSystem
                 >
-                    <NextIntlClientProvider
-                        locale={locale}
-                        messages={messages}
-                        timeZone={timezone}
-                    >
+                    <NextIntlClientProvider locale={locale} messages={messages} timeZone={timezone}>
                         <QueryClientProvider client={queryClient}>
                             <Toaster />
 
-                            <ActiveThemeProvider
-                                initialTheme={activeThemeValue}
-                            >
+                            <ActiveThemeProvider initialTheme={activeThemeValue}>
                                 {children}
                             </ActiveThemeProvider>
 

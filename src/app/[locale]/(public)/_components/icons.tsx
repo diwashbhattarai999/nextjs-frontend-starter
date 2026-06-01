@@ -355,14 +355,7 @@ export const PrettierIcon = ({ className }: ISVGProps) => (
                 x="146.285714"
                 y="97.5238095"
             />
-            <rect
-                fill="#56B3B4"
-                height="12.1904762"
-                rx="5"
-                width="158.47619"
-                x="0"
-                y="0"
-            />
+            <rect fill="#56B3B4" height="12.1904762" rx="5" width="158.47619" x="0" y="0" />
             <rect
                 fill="#D0D4D8"
                 height="12.1904762"
@@ -575,13 +568,7 @@ export const TestingLibraryIcon = ({ className }: ISVGProps) => (
                 <stop offset="86%" stopColor="#89181A" />
                 <stop offset="100%" stopColor="#640E0E" />
             </radialGradient>
-            <linearGradient
-                id="linearGradient-2"
-                x1="0.003%"
-                x2="100%"
-                y1="49.969%"
-                y2="49.969%"
-            >
+            <linearGradient id="linearGradient-2" x1="0.003%" x2="100%" y1="49.969%" y2="49.969%">
                 <stop offset="0%" stopColor="#F7B3C5" />
                 <stop offset="19%" stopColor="#F7B0C2" />
                 <stop offset="38%" stopColor="#F6A4B6" />
@@ -639,13 +626,7 @@ export const TestingLibraryIcon = ({ className }: ISVGProps) => (
                 <stop offset="99%" stopColor="#DC4D6C" />
                 <stop offset="100%" stopColor="#DA4B6A" />
             </radialGradient>
-            <linearGradient
-                id="linearGradient-6"
-                x1="0%"
-                x2="99.996%"
-                y1="49.997%"
-                y2="49.997%"
-            >
+            <linearGradient id="linearGradient-6" x1="0%" x2="99.996%" y1="49.997%" y2="49.997%">
                 <stop offset="0%" stopColor="#DA4B6A" />
                 <stop offset="1%" stopColor="#DC4D6C" />
                 <stop offset="21%" stopColor="#E7728B" />
@@ -1621,12 +1602,7 @@ export const ZodIcon = ({ className }: ISVGProps) => (
                 x="-2.2%"
                 y="-2.8%"
             >
-                <feOffset
-                    dx="1"
-                    dy="1"
-                    in="SourceAlpha"
-                    result="shadowOffsetOuter1"
-                />
+                <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1" />
                 <feGaussianBlur
                     in="shadowOffsetOuter1"
                     result="shadowBlurOuter1"
@@ -1657,12 +1633,7 @@ export const ZodIcon = ({ className }: ISVGProps) => (
                 points="144.596212 12.5642823 33.9304463 76.4571406 16.7194669 54.9715457 90.8141008 12.1929865"
             />
             <g>
-                <use
-                    fill="black"
-                    fillOpacity="1"
-                    filter="url(#filter-2)"
-                    xlinkHref="#path-1"
-                />
+                <use fill="black" fillOpacity="1" filter="url(#filter-2)" xlinkHref="#path-1" />
                 <use fill="#3068B7" xlinkHref="#path-1" />
             </g>
         </g>

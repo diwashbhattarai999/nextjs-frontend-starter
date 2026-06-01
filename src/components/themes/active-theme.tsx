@@ -1,12 +1,6 @@
 "use client";
 
-import {
-    createContext,
-    type ReactNode,
-    useContext,
-    useEffect,
-    useState,
-} from "react";
+import { createContext, type ReactNode, useContext, useEffect, useState } from "react";
 
 import { DEFAULT_THEME } from "./theme.config";
 
@@ -38,8 +32,7 @@ export function ActiveThemeProvider({
 
     useEffect(() => {
         // Only update if theme has changed
-        const currentTheme =
-            document.documentElement.getAttribute("data-theme");
+        const currentTheme = document.documentElement.getAttribute("data-theme");
         if (currentTheme === activeTheme) {
             // Still update cookie in case it's missing
             setThemeCookie(activeTheme);
@@ -58,10 +51,7 @@ export function ActiveThemeProvider({
 
             // Set data-theme on html element
             if (activeTheme) {
-                document.documentElement.setAttribute(
-                    "data-theme",
-                    activeTheme
-                );
+                document.documentElement.setAttribute("data-theme", activeTheme);
             }
         }
     }, [activeTheme]);
@@ -76,9 +66,7 @@ export function ActiveThemeProvider({
 export function useThemeConfig() {
     const context = useContext(ThemeContext);
     if (context === undefined) {
-        throw new Error(
-            "useThemeConfig must be used within an ActiveThemeProvider"
-        );
+        throw new Error("useThemeConfig must be used within an ActiveThemeProvider");
     }
     return context;
 }

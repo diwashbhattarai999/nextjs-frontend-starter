@@ -1,12 +1,7 @@
 "use client";
 
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import {
-    IconCheck,
-    IconChevronDown,
-    IconChevronUp,
-    IconSelector,
-} from "@tabler/icons-react";
+import { IconCheck, IconChevronDown, IconChevronUp, IconSelector } from "@tabler/icons-react";
 import type * as React from "react";
 
 import { cn } from "@/lib/utils";
@@ -103,27 +98,17 @@ function SelectContent({
     );
 }
 
-function SelectLabel({
-    className,
-    ...props
-}: SelectPrimitive.GroupLabel.Props) {
+function SelectLabel({ className, ...props }: SelectPrimitive.GroupLabel.Props) {
     return (
         <SelectPrimitive.GroupLabel
-            className={cn(
-                "px-2 py-1.5 text-muted-foreground text-xs",
-                className
-            )}
+            className={cn("px-2 py-1.5 text-muted-foreground text-xs", className)}
             data-slot="select-label"
             {...props}
         />
     );
 }
 
-function SelectItem({
-    className,
-    children,
-    ...props
-}: SelectPrimitive.Item.Props) {
+function SelectItem({ className, children, ...props }: SelectPrimitive.Item.Props) {
     return (
         <SelectPrimitive.Item
             className={cn(
@@ -147,16 +132,10 @@ function SelectItem({
     );
 }
 
-function SelectSeparator({
-    className,
-    ...props
-}: SelectPrimitive.Separator.Props) {
+function SelectSeparator({ className, ...props }: SelectPrimitive.Separator.Props) {
     return (
         <SelectPrimitive.Separator
-            className={cn(
-                "pointer-events-none -mx-1 my-1 h-px bg-border",
-                className
-            )}
+            className={cn("pointer-events-none -mx-1 my-1 h-px bg-border", className)}
             data-slot="select-separator"
             {...props}
         />

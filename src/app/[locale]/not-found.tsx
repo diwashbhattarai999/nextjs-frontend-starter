@@ -11,26 +11,13 @@ export default function NotFound() {
             <span className="bg-linear-to-b from-foreground to-transparent bg-clip-text font-extrabold text-[10rem] text-transparent leading-none">
                 404
             </span>
-            <h2 className="my-2 font-bold font-heading text-2xl">
-                Something&apos;s missing
-            </h2>
-            <p>
-                Sorry, the page you are looking for doesn&apos;t exist or has
-                been moved.
-            </p>
+            <h2 className="my-2 font-bold font-heading text-2xl">Something&apos;s missing</h2>
+            <p>Sorry, the page you are looking for doesn&apos;t exist or has been moved.</p>
             <div className="mt-8 flex justify-center gap-2">
-                <Button
-                    onClick={() => router.back()}
-                    size="lg"
-                    variant="default"
-                >
+                <Button onClick={() => router.back()} size="lg" variant="default">
                     Go back
                 </Button>
-                <Button
-                    onClick={() => router.push("/")}
-                    size="lg"
-                    variant="ghost"
-                >
+                <Button onClick={() => router.push("/")} size="lg" variant="ghost">
                     Back to Home
                 </Button>
             </div>

@@ -4,8 +4,7 @@ export const siteConfig = {
         "A modern frontend template built with Next.js 16 and Shadcn UI, designed for developers looking to kickstart their projects with a solid foundation.",
     links: {
         github: "https://github.com/diwashbhattarai999/nextjs16_shadcn_template",
-        github_api:
-            "https://api.github.com/repos/diwashbhattarai999/nextjs16_shadcn_template",
+        github_api: "https://api.github.com/repos/diwashbhattarai999/nextjs16_shadcn_template",
     },
 };
 

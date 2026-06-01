@@ -15,9 +15,7 @@ function DropdownMenuPortal({ ...props }: MenuPrimitive.Portal.Props) {
 }
 
 function DropdownMenuTrigger({ ...props }: MenuPrimitive.Trigger.Props) {
-    return (
-        <MenuPrimitive.Trigger data-slot="dropdown-menu-trigger" {...props} />
-    );
+    return <MenuPrimitive.Trigger data-slot="dropdown-menu-trigger" {...props} />;
 }
 
 function DropdownMenuContent({
@@ -28,10 +26,7 @@ function DropdownMenuContent({
     className,
     ...props
 }: MenuPrimitive.Popup.Props &
-    Pick<
-        MenuPrimitive.Positioner.Props,
-        "align" | "alignOffset" | "side" | "sideOffset"
-    >) {
+    Pick<MenuPrimitive.Positioner.Props, "align" | "alignOffset" | "side" | "sideOffset">) {
     return (
         <MenuPrimitive.Portal>
             <MenuPrimitive.Positioner
@@ -102,9 +97,7 @@ function DropdownMenuItem({
 }
 
 function DropdownMenuSub({ ...props }: MenuPrimitive.SubmenuRoot.Props) {
-    return (
-        <MenuPrimitive.SubmenuRoot data-slot="dropdown-menu-sub" {...props} />
-    );
+    return <MenuPrimitive.SubmenuRoot data-slot="dropdown-menu-sub" {...props} />;
 }
 
 function DropdownMenuSubTrigger({
@@ -189,12 +182,7 @@ function DropdownMenuCheckboxItem({
 }
 
 function DropdownMenuRadioGroup({ ...props }: MenuPrimitive.RadioGroup.Props) {
-    return (
-        <MenuPrimitive.RadioGroup
-            data-slot="dropdown-menu-radio-group"
-            {...props}
-        />
-    );
+    return <MenuPrimitive.RadioGroup data-slot="dropdown-menu-radio-group" {...props} />;
 }
 
 function DropdownMenuRadioItem({
@@ -228,10 +216,7 @@ function DropdownMenuRadioItem({
     );
 }
 
-function DropdownMenuSeparator({
-    className,
-    ...props
-}: MenuPrimitive.Separator.Props) {
+function DropdownMenuSeparator({ className, ...props }: MenuPrimitive.Separator.Props) {
     return (
         <MenuPrimitive.Separator
             className={cn("-mx-1 my-1 h-px bg-border", className)}
@@ -241,10 +226,7 @@ function DropdownMenuSeparator({
     );
 }
 
-function DropdownMenuShortcut({
-    className,
-    ...props
-}: React.ComponentProps<"span">) {
+function DropdownMenuShortcut({ className, ...props }: React.ComponentProps<"span">) {
     return (
         <span
             className={cn(

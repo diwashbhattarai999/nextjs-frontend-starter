@@ -37,9 +37,7 @@ export function ThemeSelector() {
                     <span className="hidden text-muted-foreground sm:block">
                         <Icons.palette />
                     </span>
-                    <span className="block text-muted-foreground sm:hidden">
-                        Theme
-                    </span>
+                    <span className="block text-muted-foreground sm:hidden">Theme</span>
                     <SelectValue placeholder="Select a theme" />
                 </SelectTrigger>
                 <SelectContent align="end">
@@ -47,10 +45,7 @@ export function ThemeSelector() {
                         <SelectGroup>
                             <SelectLabel>THEMES</SelectLabel>
                             {THEMES.map((theme) => (
-                                <SelectItem
-                                    key={theme.name}
-                                    value={theme.value}
-                                >
+                                <SelectItem key={theme.name} value={theme.value}>
                                     {theme.name}
                                 </SelectItem>
                             ))}
