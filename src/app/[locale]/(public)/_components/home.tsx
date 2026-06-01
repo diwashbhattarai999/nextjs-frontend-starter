@@ -65,9 +65,7 @@ export default function Home() {
                                     key={pkg.name}
                                 >
                                     {pkg.icon}
-                                    <span className="font-medium text-sm">
-                                        {pkg.name}
-                                    </span>
+                                    <span className="font-medium text-sm">{pkg.name}</span>
                                 </div>
                             ))}
                         </div>
