@@ -2,15 +2,15 @@
 
 import { createContext, type ReactNode, useContext, useEffect, useState } from "react";
 
-import { DEFAULT_THEME } from "./theme.config";
+import { STORAGE_KEYS } from "@/configs/storage";
 
-const COOKIE_NAME = "active_theme";
+import { DEFAULT_THEME } from "./theme.config";
 
 function setThemeCookie(theme: string) {
     if (typeof window === "undefined") return;
 
     // biome-ignore lint/suspicious/noDocumentCookie: Setting theme cookie
-    document.cookie = `${COOKIE_NAME}=${theme}; path=/; max-age=31536000; SameSite=Lax; ${window.location.protocol === "https:" ? "Secure;" : ""}`;
+    document.cookie = `${STORAGE_KEYS.THEME}=${theme}; path=/; max-age=31536000; SameSite=Lax; ${window.location.protocol === "https:" ? "Secure;" : ""}`;
 }
 
 interface ThemeContextType {

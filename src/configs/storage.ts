@@ -5,12 +5,7 @@ export const STORAGE_KEYS = {
     /**
      * Key for storing the selected theme in localStorage.
      */
-    // THEME: "tanstack-starter-theme",
-
-    /**
-     * Key for storing the sidebar state in localStorage.
-     */
-    // SIDEBAR_STATE: "sidebar_state",
+    THEME: "nextjs-frontend-starter-theme",
 
     /**
      * Key for storing the access token in cookies.
