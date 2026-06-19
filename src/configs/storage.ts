@@ -16,4 +16,9 @@ export const STORAGE_KEYS = {
      * Key for storing the refresh token in cookies.
      */
     REFRESH_TOKEN: "refresh_token",
+
+    /**
+     * Key for storing the session in cookies.
+     */
+    SESSION: "session",
 };
