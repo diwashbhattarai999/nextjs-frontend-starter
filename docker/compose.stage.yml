@@ -1,0 +1,20 @@
+name: next-starter-stage
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      args:
+        NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL}
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
+        NEXT_PUBLIC_API_TIMEOUT: ${NEXT_PUBLIC_API_TIMEOUT:-15000}
+    ports:
+      - "3004:3000"
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: 1
+      HOSTNAME: 0.0.0.0
+    restart: unless-stopped
