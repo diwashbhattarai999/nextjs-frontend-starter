@@ -12,6 +12,7 @@ import "@/styles/globals.css";
 import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
 
+import { STORAGE_KEYS } from "@/configs/storage";
 import { routing, type TLocales } from "@/i18n/routing";
 
 export const metadata: Metadata = {
@@ -41,7 +42,7 @@ export default async function LocaleLayout({
     const messages = await getMessages();
 
     const cookieStore = await cookies();
-    const activeThemeValue = cookieStore.get("active_theme")?.value;
+    const activeThemeValue = cookieStore.get(STORAGE_KEYS.ACTIVE_THEME)?.value;
     const themeToApply = activeThemeValue || DEFAULT_THEME;
 
     return (

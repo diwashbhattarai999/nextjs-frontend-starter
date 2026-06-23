@@ -1,3 +1,5 @@
+const STORAGE_KEY_BASE = "next-starter-";
+
 /**
  * Storage keys used in the application.
  */
@@ -5,20 +7,20 @@ export const STORAGE_KEYS = {
     /**
      * Key for storing the selected theme in localStorage.
      */
-    THEME: "nextjs-frontend-starter-theme",
+    THEME: `${STORAGE_KEY_BASE}theme`,
 
     /**
-     * Key for storing the access token in cookies.
+     * Key for storing the active theme in localStorage.
      */
-    ACCESS_TOKEN: "access_token",
+    ACTIVE_THEME: `${STORAGE_KEY_BASE}active-theme`,
 
     /**
-     * Key for storing the refresh token in cookies.
+     * Key for storing the sidebar state in localStorage.
      */
-    REFRESH_TOKEN: "refresh_token",
+    SIDEBAR: `${STORAGE_KEY_BASE}sidebar`,
 
     /**
      * Key for storing the session in cookies.
      */
-    SESSION: "session",
+    SESSION: `${STORAGE_KEY_BASE}session`,
 };
