@@ -2,7 +2,7 @@
  * Default theme that loads when no user preference is set
  * Change this value to set a different default theme
  */
-export const DEFAULT_THEME = "vercel";
+export const DEFAULT_THEME = "paila";
 
 export const THEMES = [
     {
@@ -24,5 +24,9 @@ export const THEMES = [
     {
         name: "Notebook",
         value: "notebook",
+    },
+    {
+        name: "Paila",
+        value: "paila",
     },
 ];
