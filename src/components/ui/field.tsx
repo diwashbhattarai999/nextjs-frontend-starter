@@ -72,7 +72,6 @@ function Field({
     ...props
 }: React.ComponentProps<"div"> & VariantProps<typeof fieldVariants>) {
     return (
-        // biome-ignore lint/a11y/useSemanticElements: Wrapper groups label/content; actual form controls provide semantic roles.
         <div
             className={cn(fieldVariants({ orientation }), className)}
             data-orientation={orientation}
@@ -111,7 +110,7 @@ function FieldTitle({ className, ...props }: React.ComponentProps<"div">) {
     return (
         <div
             className={cn(
-                "flex w-fit items-center gap-2 font-medium text-sm leading-snug group-data-[disabled=true]/field:opacity-50",
+                "flex w-fit items-center gap-2 font-medium text-sm group-data-[disabled=true]/field:opacity-50",
                 className
             )}
             data-slot="field-label"
@@ -191,9 +190,7 @@ function FieldError({
         return (
             <ul className="ml-4 flex list-disc flex-col gap-1">
                 {uniqueErrors.map(
-                    (error, index) =>
-                        // biome-ignore lint/suspicious/noArrayIndexKey: Errors are deduplicated and static; no stable ID available.
-                        error?.message && <li key={index}>{error.message}</li>
+                    (error, index) => error?.message && <li key={index}>{error.message}</li>
                 )}
             </ul>
         );

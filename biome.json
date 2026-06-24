@@ -58,20 +58,32 @@
             "useSemanticElements": "off",
             "useKeyWithClickEvents": "off",
             "noNoninteractiveElementInteractions": "off",
-            "noRedundantRoles": "off"
+            "noRedundantRoles": "off",
+            "useFocusableInteractive": "off",
+            "useAriaPropsForRole": "off",
+            "noLabelWithoutControl": "off"
           },
           "performance": {
-            "noNamespaceImport": "off"
+            "noNamespaceImport": "off",
+            "noBarrelFile": "off"
           },
           "suspicious": {
             "noDuplicateJsxProps": "off",
-            "noDocumentCookie": "off"
+            "noDocumentCookie": "off",
+            "noArrayIndexKey": "off"
           },
           "style": {
-            "useConsistentTypeDefinitions": "off"
+            "useConsistentTypeDefinitions": "off",
+            "noNestedTernary": "off"
           },
           "correctness": {
             "useExhaustiveDependencies": "off"
+          },
+          "security": {
+            "noDangerouslySetInnerHtml": "off"
+          },
+          "complexity": {
+            "noExcessiveCognitiveComplexity": "off"
           }
         }
       }

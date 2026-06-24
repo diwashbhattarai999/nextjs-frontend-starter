@@ -11,6 +11,7 @@ import { Toaster } from "@/components/ui/sonner";
 import type { TLocales } from "@/i18n/routing";
 
 import { ActiveThemeProvider } from "../themes/active-theme";
+import { TooltipProvider } from "../ui/tooltip";
 
 interface ProvidersProps {
     activeThemeValue: string;
@@ -42,7 +43,7 @@ export function Providers({ activeThemeValue, locale, messages, children }: Prov
                             <Toaster />
 
                             <ActiveThemeProvider initialTheme={activeThemeValue}>
-                                {children}
+                                <TooltipProvider>{children}</TooltipProvider>
                             </ActiveThemeProvider>
 
                             <ReactQueryDevtools initialIsOpen={false} />
