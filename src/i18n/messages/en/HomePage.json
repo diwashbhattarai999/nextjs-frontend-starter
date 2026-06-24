@@ -40,9 +40,9 @@
       "title": "API integration",
       "description": "Service layer examples with typed Axios clients and TanStack Query hooks."
     },
-    "cicd": {
-      "title": "CI/CD pipelines",
-      "description": "GitHub Actions workflows for linting, type-checking, and deployment."
+    "deployment": {
+      "title": "Deployment workflows",
+      "description": "Automated deploy to staging and production environments."
     }
   }
 }

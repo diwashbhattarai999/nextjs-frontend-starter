@@ -52,6 +52,7 @@ A production-oriented Next.js starter with TypeScript, Tailwind CSS 4, shadcn/ui
 - **Biome + Ultracite** — Linting and formatting (`pnpm lint:check`, `pnpm lint:fix`)
 - **Lefthook** — Git hooks for lint, build, branch naming, and commitlint
 - **Commitlint** — Conventional Commits enforcement
+- **GitHub Actions** — CI on push/PR: production build, Biome lint, and commitlint (see `.github/workflows/ci.yml`)
 - **pnpm** — Fast, disk-efficient package management
 - **Docker** — Multi-environment Compose setup via `Makefile`
 
@@ -194,7 +195,7 @@ Planned for upcoming releases:
 | Dashboard layouts    | Sidebar navigation and example app pages                       |
 | Form patterns        | React Hook Form + Zod examples                                 |
 | API integration      | Service layer examples with TanStack Query hooks               |
-| CI/CD pipelines      | Extended GitHub Actions for deploy workflows                   |
+| Deployment workflows | Automated deploy to staging/production environments            |
 
 ## Contributing
 

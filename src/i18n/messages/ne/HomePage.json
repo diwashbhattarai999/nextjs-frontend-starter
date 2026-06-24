@@ -40,9 +40,9 @@
       "title": "API एकीकरण",
       "description": "टाइप गरिएको Axios क्लाइन्ट र TanStack Query हुकसहित सेवा तह उदाहरणहरू।"
     },
-    "cicd": {
-      "title": "CI/CD पाइपलाइन",
-      "description": "लिन्टिङ, टाइप-चेक र डिप्लोयमेन्टका लागि GitHub Actions वर्कफ्लो।"
+    "deployment": {
+      "title": "डिप्लोयमेन्ट वर्कफ्लो",
+      "description": "स्टेजिङ र उत्पादन वातावरणमा स्वचालित डिप्लोयमेन्ट।"
     }
   }
 }
