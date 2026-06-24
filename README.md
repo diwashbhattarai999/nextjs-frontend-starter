@@ -1,48 +1,80 @@
-# Next.js Front-end Template
+# Next.js 16 Frontend Starter
 
-![Next.js](https://img.shields.io/badge/Next.js-15-green)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.0-blueviolet)
-![ESLint](https://img.shields.io/badge/ESLint-Configured-yellow)
-![Prettier](https://img.shields.io/badge/Prettier-Configured-lightgrey)
+![Next.js](https://img.shields.io/badge/Next.js-16-black)
+![React](https://img.shields.io/badge/React-19-61dafb)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-38bdf8)
+![Biome](https://img.shields.io/badge/Biome-Configured-60a5fa)
+![Ultracite](https://img.shields.io/badge/Ultracite-Configured-8b5cf6)
+![Lefthook](https://img.shields.io/badge/Lefthook-Configured-f97316)
 ![Commitlint](https://img.shields.io/badge/Commitlint-Configured-orange)
-![Husky](https://img.shields.io/badge/Husky-Configured-red)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Configured-success)
-![Vitest](https://img.shields.io/badge/Vitest-Configured-blue)
-![Playwright](https://img.shields.io/badge/Playwright-Configured-green)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI-success)
 
-Kickstart your modern Next.js projects with this template featuring TypeScript,
-Tailwind CSS for styling, and testing utilities such as Vitest and Playwright.
-It comes pre-configured with ESLint, Prettier, Commitlint, Husky, and GitHub
-Actions for a solid development setup.
+A production-oriented Next.js starter with TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, multi-theme support, and an opinionated feature-based architecture — so you can ship features, not boilerplate.
 
-> **Warning**  
-> This app is a work in progress.
+> **Note**  
+> This project is under active development. See [Roadmap](#roadmap) for planned additions.
 
 ## Features
 
-- **TypeScript** 📜: Full TypeScript support for type safety.
-- **Tailwind CSS** 🌀: Utility-first CSS framework for styling.
-- **Testing** 🧪: Vitest for unit testing and Playwright for end-to-end testing.
-- **ESLint** 🧹: Integrated for code linting and ensuring best practices.
-- **Prettier** 🎨: Code formatting for consistent style.
-- **Commitlint** 📝: Enforce conventional commit messages.
-- **Husky** 🐶: Git hooks for pre-commit and commit-msg linting.
-- **Zod** 🛠️: Schema validation for data integrity.
-- **clsx** 🎯: Conditional class name utility for React components.
-- **Tailwind Merge** 🧳: Tailwind class merging for cleaner code.
-- **next-intl** 🌍: Internationalization support for multiple languages.
-- **React Query** 🔄: Efficient data-fetching and caching with React Query.
-- **Axios** 📡: Promise-based HTTP client for making requests.
-- **Lucide React** ✨: Beautifully designed icons for React.
-- **React Hook Form** 📑: Form handling with validation and easy integration.
-- **Sonner** 🌞: Toast notifications with animations.
+### Core
 
-## Setup
+- **Next.js 16** — App Router, Server Components, and React Compiler
+- **React 19** — Latest React with compiler optimizations
+- **TypeScript 5** — Strict typing across the codebase
+
+### UI & styling
+
+- **Tailwind CSS 4** — Utility-first styling with PostCSS
+- **shadcn/ui + Base UI** — Accessible, composable UI primitives
+- **Tabler Icons** — Consistent icon set
+- **Multi-theme system** — Claude, Supabase, Vercel, Mono, Notebook, Paila (see [`docs/themes.md`](docs/themes.md))
+- **Light / dark mode** — Theme mode toggle with persisted preference
+
+### Data & forms
+
+- **TanStack Query 5** — Server-state caching, mutations, and devtools
+- **Zustand** — Lightweight client state
+- **Zod 4** — Schema validation
+- **React Hook Form** — Form state and validation integration
+- **Axios** — Typed HTTP clients (`src/lib/http/`)
+
+### Platform
+
+- **next-intl** — Internationalization (`en`, `ne`) with locale-aware routing
+- **nuqs** — Type-safe URL search parameter state
+- **Sonner** — Toast notifications
+- **nextjs-toploader** — Route transition progress indicator
+- **t3-env** — Typed environment variables (`src/env/`)
+
+### Developer experience
+
+- **Biome + Ultracite** — Linting and formatting (`pnpm lint:check`, `pnpm lint:fix`)
+- **Lefthook** — Git hooks for lint, build, branch naming, and commitlint
+- **Commitlint** — Conventional Commits enforcement
+- **pnpm** — Fast, disk-efficient package management
+- **Docker** — Multi-environment Compose setup via `Makefile`
+
+### Architecture
+
+- **Feature folders** — Business logic lives in `src/features/<feature>/`
+- **Centralized configs** — Routes, endpoints, query keys, storage keys
+- **Service layer** — API functions in `src/services/<feature>/`
+- **Query options** — Reusable TanStack Query options in `src/lib/query-options/`
+
+## Getting started
+
+### Prerequisites
+
+- Node.js 22+
+- [pnpm](https://pnpm.io/) 11+
+
+### Local development
 
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/diwashbhattarai999/nextjs-frontend-template
+   git clone https://github.com/diwashbhattarai999/nextjs-frontend-template.git
    cd nextjs-frontend-template
    ```
 
@@ -52,7 +84,7 @@ Actions for a solid development setup.
    pnpm install
    ```
 
-3. Copy `.env.example` to `.env.local` and update your environment variables:
+3. Copy environment variables:
 
    ```sh
    cp .env.example .env.local
@@ -64,69 +96,110 @@ Actions for a solid development setup.
    pnpm dev
    ```
 
-   Visit [http://localhost:3000](http://localhost:3000) in your browser.
+   Open [http://localhost:3000](http://localhost:3000).
 
-## Folder Structure
+### Scripts
 
+| Command            | Description                          |
+| ------------------ | ------------------------------------ |
+| `pnpm dev`         | Start the Next.js development server |
+| `pnpm build`       | Create a production build            |
+| `pnpm start`       | Serve the production build           |
+| `pnpm lint:check`  | Run Ultracite / Biome checks         |
+| `pnpm lint:fix`    | Auto-fix lint and format issues      |
+| `pnpm type-check`  | Run TypeScript compiler checks       |
+| `pnpm clean`       | Remove `.next` and test artifacts    |
+
+### Docker
+
+Docker Compose configs live in `docker/`. Use the `Makefile` from the repo root:
+
+```sh
+make help                # List available commands
+make build-development   # Build development image
+make run-development     # Start → http://localhost:3002
+make stop-development    # Stop containers
+make logs-development    # Follow logs
 ```
+
+Environment-specific env files are expected (for example `.env.development`, `.env.production`). See `.env.example` for required variables.
+
+## Folder structure
+
+```txt
 .
-├── .github                         # GitHub Actions workflows
-├── .husky                          # Husky Git hooks
-├── .vscode                         # VS Code settings and extensions
-├── public                          # Static files (images, fonts, etc.)
-├── src
-│   ├── app                         # All Next.js pages and API routes
-│       ├── [locale]                # Internationalized pages and routes
-│           ├── (auth)              # Authentication pages and routes
-│           ├── (not-found)         # For catching all remaining routes for 404
-│           ├── (unauth)            # Unauthenticated pages and routes
-│           ├── layout.tsx          # Layout component for the locale
-│           ├── not-found.tsx       # 404 page for internationalized routes
-│           ├── page.tsx            # Home page
-│       ├── favicon.ico             # Favicon for the app
-│       ├── global-error.tsx        # Global error boundary component
-│       ├── layout.tsx              # Root layout component
-│       ├── manifest.ts             # Web app manifest
-│       ├── not-found.tsx           # 404 page for non-internationalized routes
-│       ├── robots.ts               # Robots.txt file
-│       ├── sitemap.ts              # Sitemap.xml file
-│   ├── components                  # Reusable UI components
-│   ├── configs                     # Configuration files
-│   ├── constants                   # Constants and enums
-│   ├── hooks                       # Custom React hooks
-│   ├── i18n                        # Internationalization utilities
-│   ├── lib                         # Utility functions and classes
-│   ├── styles                      # Tailwind CSS and global styles
-│   ├── tests                       # Unit and integration tests
-│   ├── types                       # TypeScript types and interfaces
-│   ├── utils                       # Utility functions
-│   ├── middleware.ts               # Middleware for Next.js API routes
-│   └── ...
-├── .env.example                    # Environment variables example
-├── .gitignore                      # Git ignore rules
-├── .prettierrc                     # Prettier configuration
-├── .commitlintrc.config.ts         # Commitlint configuration
-├── .eslintrc.config.mjs            # ESLint configuration
-├── LICENSE                         # License information
-├── next.config.ts                  # Next.js configuration
-├── package.json                    # NPM package configuration
-├── playwright.config.ts            # Playwright configuration
-├── pnpm-lock.yaml                  # pnpm lockfile
-├── postcss.config.mjs              # PostCSS configuration
-├── README.md                       # Project README
-├── tailwind.config.ts              # Tailwind CSS configuration
-├── tsconfig.json                   # TypeScript configuration
-├── vitest.config.ts                # Vitest configuration
-└── ...
+├── .github/                    # GitHub Actions workflows
+├── docker/                     # Dockerfile and Compose configs
+├── docs/                       # Project documentation
+├── public/                     # Static assets
+├── src/
+│   ├── app/                    # Next.js App Router
+│   │   ├── [locale]/           # Locale-scoped routes
+│   │   │   ├── (public)/       # Public pages (landing)
+│   │   │   └── (not-found)/    # Catch-all 404 handling
+│   │   ├── layout.tsx          # Root layout
+│   │   ├── manifest.ts         # Web app manifest
+│   │   ├── robots.ts           # robots.txt
+│   │   └── sitemap.ts          # sitemap.xml
+│   ├── assets/                 # Icons and images
+│   ├── components/
+│   │   ├── layout/             # App-wide layout providers
+│   │   ├── shared/             # Shared reusable components
+│   │   ├── themes/             # Theme provider and switcher
+│   │   └── ui/                 # shadcn/ui primitives
+│   ├── configs/                # Routes, endpoints, query keys, storage
+│   ├── env/                    # Typed client and server env
+│   ├── features/               # Feature modules (landing, auth, …)
+│   ├── hooks/                  # Shared React hooks
+│   ├── i18n/                   # next-intl routing and messages
+│   ├── lib/                    # Utilities, HTTP clients, query helpers
+│   ├── services/               # API service functions
+│   ├── styles/                 # Global CSS and theme definitions
+│   ├── types/                  # Shared TypeScript types
+│   └── proxy.ts                # Next.js proxy / middleware
+├── .env.example
+├── biome.json
+├── commitlint.config.ts
+├── components.json             # shadcn/ui configuration
+├── lefthook.yml
+├── Makefile
+├── next.config.ts
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.mjs
+└── tsconfig.json
 ```
+
+### Feature module layout
+
+Each feature under `src/features/<name>/` is self-contained:
+
+```txt
+features/landing/
+├── components/     # Feature UI
+├── constants/      # Feature constants
+├── data/           # Static data
+├── hooks/          # Feature hooks
+└── types/          # Feature types
+```
+
+## Roadmap
+
+Planned for upcoming releases:
+
+| Feature              | Description                                                    |
+| -------------------- | -------------------------------------------------------------- |
+| Authentication       | OAuth and credential flows with protected routes               |
+| Testing suite        | Playwright E2E and Vitest unit tests                           |
+| Dashboard layouts    | Sidebar navigation and example app pages                       |
+| Form patterns        | React Hook Form + Zod examples                                 |
+| API integration      | Service layer examples with TanStack Query hooks               |
+| CI/CD pipelines      | Extended GitHub Actions for deploy workflows                   |
 
 ## Contributing
 
-Contributions are welcome! Please fork this repository and submit a pull request
-with a description of your changes. Ensure that you follow the commit message
-guidelines and write tests for any new features.
+Contributions are welcome. Please fork the repository, create a feature branch (`feature/<name>`), and open a pull request with a clear description of your changes. Follow [Conventional Commits](https://www.conventionalcommits.org/) — commitlint runs on push and in CI.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
-for details.
+This project is licensed under the MIT License — see [LICENSE.md](LICENSE.md).
