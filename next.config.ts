@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
+    output: "standalone",
+
     // Experimental features for Next.js 16.1
     experimental: {
         // Better tree-shaking for large icon/utility libraries
