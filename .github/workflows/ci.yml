@@ -33,13 +33,9 @@ jobs:
 
       - name: Inject environment variables
         run: |
-          echo "VITE_APP_NAME=${{ secrets.VITE_APP_NAME }}" >> .env.production
-          echo "VITE_PUBLIC_URL=${{ secrets.VITE_PUBLIC_URL }}" >> .env.production
-          echo "VITE_HOST=${{ secrets.VITE_HOST }}" >> .env.production
-          echo "VITE_DEV_PORT=${{ secrets.VITE_DEV_PORT }}" >> .env.production
-          echo "VITE_PREVIEW_PORT=${{ secrets.VITE_PREVIEW_PORT }}" >> .env.production
-          echo "VITE_API_BASE_URL=${{ secrets.VITE_API_BASE_URL }}" >> .env.production
-          echo "VITE_API_TIMEOUT=${{ secrets.VITE_API_TIMEOUT }}" >> .env.production
+          echo "NEXT_PUBLIC_APP_URL=${{ secrets.NEXT_PUBLIC_APP_URL }}" >> .env.production
+          echo "NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}" >> .env.production
+          echo "NEXT_PUBLIC_API_TIMEOUT=${{ secrets.NEXT_PUBLIC_API_TIMEOUT }}" >> .env.production
 
       - name: Build project
         run: pnpm build
