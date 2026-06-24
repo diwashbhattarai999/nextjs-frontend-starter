@@ -7,7 +7,7 @@ import NextTopLoader from "nextjs-toploader";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 import { Toaster } from "@/components/ui/sonner";
-import type { TLocales } from "@/i18n/routing";
+import type { TLocales } from "@/i18n/locale.config";
 
 import { ActiveThemeProvider } from "../themes/active-theme";
 import { TooltipProvider } from "../ui/tooltip";

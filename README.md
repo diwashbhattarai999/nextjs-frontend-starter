@@ -41,7 +41,7 @@ A production-oriented Next.js starter with TypeScript, Tailwind CSS 4, shadcn/ui
 
 ### Platform
 
-- **next-intl** — Internationalization (`en`, `ne`) with locale-aware routing
+- **next-intl** — Internationalization (`en`, `ne`, `hi`, `fr`, `es`) with locale-aware routing
 - **nuqs** — Type-safe URL search parameter state
 - **Sonner** — Toast notifications
 - **nextjs-toploader** — Route transition progress indicator

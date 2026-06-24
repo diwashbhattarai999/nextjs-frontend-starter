@@ -2,16 +2,13 @@ import type { Metadata } from "next";
 
 import { ROUTES } from "@/configs/routes";
 import { siteConfig } from "@/configs/site";
-import { routing, type TLocales } from "@/i18n/routing";
+import type { TLocales } from "@/i18n/locale.config";
+import { getOpenGraphLocale } from "@/i18n/locale.config";
+import { routing } from "@/i18n/routing";
 import { getBaseUrl } from "@/lib/utils";
 
 /** Request header set by proxy middleware with the locale-neutral pathname. */
 export const METADATA_PATHNAME_HEADER = "x-pathname";
-
-const OPEN_GRAPH_LOCALE: Record<TLocales, string> = {
-    en: "en_US",
-    ne: "ne_NP",
-};
 
 /**
  * Returns the pathname for a locale using the `as-needed` prefix strategy.
@@ -121,8 +118,8 @@ export const getSiteMetadata = (locale: TLocales, options?: GetSiteMetadataOptio
         alternates: getPageAlternates(locale, pathname),
         openGraph: {
             type: openGraphSeo.type,
-            locale: OPEN_GRAPH_LOCALE[locale],
-            alternateLocale: alternateLocales.map((item) => OPEN_GRAPH_LOCALE[item]),
+            locale: getOpenGraphLocale(locale),
+            alternateLocale: alternateLocales.map((item) => getOpenGraphLocale(item)),
             url: localizedPath,
             siteName: siteConfig.title,
             title: siteConfig.title,

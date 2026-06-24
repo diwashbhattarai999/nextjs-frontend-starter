@@ -1,0 +1,91 @@
+{
+  "badge": "v0.1.0 · En cours de développement",
+  "title": "Starter Frontend Next.js 16",
+  "description": "Une base prête pour la production avec TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, thèmes et une architecture structurée — pour livrer des fonctionnalités, pas du boilerplate.",
+  "viewGithub": "Voir sur GitHub",
+  "getStarted": "Commencer",
+  "viewDashboard": "Voir le tableau de bord",
+  "navigation": {
+    "login": "Connexion",
+    "register": "Inscription"
+  },
+  "integrated": {
+    "title": "Stack intégrée",
+    "subtitle": "Tout est connecté et prêt à être utilisé.",
+    "categories": {
+      "core": "Cœur",
+      "ui": "UI et style",
+      "data": "Données et formulaires",
+      "platform": "Plateforme",
+      "architecture": "Structure de l'app",
+      "dx": "Expérience développeur"
+    }
+  },
+  "pageGroups": {
+    "title": "Explorer le starter",
+    "subtitle": "Groupes de routes avec pages placeholder — cliquez pour prévisualiser chaque section.",
+    "placeholder": "Placeholder",
+    "groups": {
+      "auth": {
+        "title": "Authentification",
+        "description": "Connexion, inscription, récupération de mot de passe et vérification d'e-mail."
+      },
+      "dashboard": {
+        "title": "Tableau de bord",
+        "description": "Shell d'application protégé avec aperçu, profil, paramètres et facturation."
+      },
+      "legal": {
+        "title": "Légal",
+        "description": "Pages de confidentialité, conditions et politique de cookies."
+      }
+    },
+    "pages": {
+      "login": "Connexion",
+      "register": "Inscription",
+      "forgotPassword": "Mot de passe oublié",
+      "resetPassword": "Réinitialiser le mot de passe",
+      "verifyEmail": "Vérifier l'e-mail",
+      "emailVerificationSuccess": "E-mail vérifié",
+      "dashboardHome": "Aperçu",
+      "dashboardSettings": "Paramètres",
+      "dashboardProfile": "Profil",
+      "dashboardBilling": "Facturation",
+      "privacyPolicy": "Politique de confidentialité",
+      "termsOfService": "Conditions d'utilisation",
+      "cookiePolicy": "Politique de cookies"
+    }
+  },
+  "roadmap": {
+    "title": "Prochaines versions",
+    "subtitle": "Ajouts prévus pour les prochaines versions de ce starter.",
+    "soon": "Bientôt disponible"
+  },
+  "roadmapItems": {
+    "testing": {
+      "title": "Suite de tests",
+      "description": "Tests E2E Playwright et tests unitaires Vitest avec exemples."
+    },
+    "forms": {
+      "title": "Modèles de formulaires",
+      "description": "Exemples React Hook Form + Zod pour les flux de saisie courants."
+    },
+    "api": {
+      "title": "Intégration API",
+      "description": "Exemples de couche service avec clients Axios typés et hooks TanStack Query."
+    },
+    "deployment": {
+      "title": "Workflows de déploiement",
+      "description": "Déploiement automatisé vers les environnements de staging et production."
+    }
+  },
+  "footer": {
+    "product": "Produit",
+    "legal": "Légal",
+    "resources": "Ressources",
+    "overview": "Aperçu",
+    "settings": "Paramètres",
+    "profile": "Profil",
+    "github": "GitHub",
+    "copyright": "© {year} Next.js Frontend Starter. Tous droits réservés."
+  }
+}

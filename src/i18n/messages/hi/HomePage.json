@@ -1,0 +1,91 @@
+{
+  "badge": "v0.1.0 · कार्य प्रगति पर",
+  "title": "Next.js 16 फ्रंटएंड स्टार्टर",
+  "description": "TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, थीमिंग और स्पष्ट आर्किटेक्चर के साथ प्रोडक्शन-रेडी आधार — ताकि आप बॉयलरप्लेट नहीं, फीचर्स बना सकें।",
+  "viewGithub": "GitHub पर देखें",
+  "getStarted": "शुरू करें",
+  "viewDashboard": "डैशबोर्ड देखें",
+  "navigation": {
+    "login": "लॉग इन",
+    "register": "रजिस्टर"
+  },
+  "integrated": {
+    "title": "एकीकृत स्टैक",
+    "subtitle": "सब कुछ कनेक्टेड है और बिल्ड के लिए तैयार है।",
+    "categories": {
+      "core": "कोर",
+      "ui": "UI और स्टाइलिंग",
+      "data": "डेटा और फॉर्म",
+      "platform": "प्लेटफ़ॉर्म",
+      "architecture": "ऐप संरचना",
+      "dx": "डेवलपर अनुभव"
+    }
+  },
+  "pageGroups": {
+    "title": "स्टार्टर एक्सप्लोर करें",
+    "subtitle": "प्लेसहोल्डर पेजों के साथ तैयार रूट ग्रुप — हर सेक्शन का पूर्वावलोकन करने के लिए क्लिक करें।",
+    "placeholder": "प्लेसहोल्डर",
+    "groups": {
+      "auth": {
+        "title": "प्रमाणीकरण",
+        "description": "लॉगिन, रजिस्ट्रेशन, पासवर्ड रिकवरी और ईमेल सत्यापन फ्लो।"
+      },
+      "dashboard": {
+        "title": "डैशबोर्ड",
+        "description": "ओवरव्यू, प्रोफ़ाइल, सेटिंग्स और बिलिंग पेजों के साथ सुरक्षित ऐप शेल।"
+      },
+      "legal": {
+        "title": "कानूनी",
+        "description": "अनुपालन के लिए गोपनीयता, नियम और कुकी नीति पेज।"
+      }
+    },
+    "pages": {
+      "login": "लॉग इन",
+      "register": "रजिस्टर",
+      "forgotPassword": "पासवर्ड भूल गए",
+      "resetPassword": "पासवर्ड रीसेट",
+      "verifyEmail": "ईमेल सत्यापित करें",
+      "emailVerificationSuccess": "ईमेल सत्यापित",
+      "dashboardHome": "ओवरव्यू",
+      "dashboardSettings": "सेटिंग्स",
+      "dashboardProfile": "प्रोफ़ाइल",
+      "dashboardBilling": "बिलिंग",
+      "privacyPolicy": "गोपनीयता नीति",
+      "termsOfService": "सेवा की शर्तें",
+      "cookiePolicy": "कुकी नीति"
+    }
+  },
+  "roadmap": {
+    "title": "आगामी रिलीज़",
+    "subtitle": "इस स्टार्टर के आगामी संस्करणों के लिए नियोजित जोड़।",
+    "soon": "जल्द आ रहा है"
+  },
+  "roadmapItems": {
+    "testing": {
+      "title": "टेस्टिंग सुइट",
+      "description": "Playwright E2E और Vitest यूनिट टेस्ट उदाहरण कवरेज के साथ।"
+    },
+    "forms": {
+      "title": "फॉर्म पैटर्न",
+      "description": "सामान्य इनपुट और वैलिडेशन फ्लो के लिए React Hook Form + Zod उदाहरण।"
+    },
+    "api": {
+      "title": "API एकीकरण",
+      "description": "टाइप्ड Axios क्लाइंट और TanStack Query हुक के साथ सर्विस लेयर उदाहरण।"
+    },
+    "deployment": {
+      "title": "डिप्लॉयमेंट वर्कफ़्लो",
+      "description": "स्टेजिंग और प्रोडक्शन वातावरण में स्वचालित डिप्लॉयमेंट।"
+    }
+  },
+  "footer": {
+    "product": "उत्पाद",
+    "legal": "कानूनी",
+    "resources": "संसाधन",
+    "overview": "ओवरव्यू",
+    "settings": "सेटिंग्स",
+    "profile": "प्रोफ़ाइल",
+    "github": "GitHub",
+    "copyright": "© {year} Next.js Frontend Starter. सर्वाधिकार सुरक्षित।"
+  }
+}

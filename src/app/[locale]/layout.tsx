@@ -16,7 +16,8 @@ import { getMessages } from "next-intl/server";
 import { ROUTES } from "@/configs/routes";
 import { META_THEME_COLORS } from "@/configs/site";
 import { STORAGE_KEYS } from "@/configs/storage";
-import { routing, type TLocales } from "@/i18n/routing";
+import type { TLocales } from "@/i18n/locale.config";
+import { routing } from "@/i18n/routing";
 import {
     getSiteMetadata,
     METADATA_PATHNAME_HEADER,

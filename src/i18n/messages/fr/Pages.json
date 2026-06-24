@@ -1,0 +1,65 @@
+{
+  "comingSoon": {
+    "badge": "Bientôt disponible",
+    "defaultDescription": "Cette page est en cours de développement et sera disponible dans une prochaine version.",
+    "backHome": "Retour à l'accueil"
+  },
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "description": "Connectez-vous à votre compte pour accéder au tableau de bord."
+    },
+    "register": {
+      "title": "Créer un compte",
+      "description": "Inscrivez-vous pour commencer à utiliser l'application."
+    },
+    "forgotPassword": {
+      "title": "Mot de passe oublié",
+      "description": "Demandez un lien pour réinitialiser votre mot de passe."
+    },
+    "resetPassword": {
+      "title": "Réinitialiser le mot de passe",
+      "description": "Choisissez un nouveau mot de passe pour votre compte."
+    },
+    "verifyEmail": {
+      "title": "Vérifier votre e-mail",
+      "description": "Confirmez votre adresse e-mail pour activer votre compte."
+    },
+    "emailVerificationSuccess": {
+      "title": "E-mail vérifié",
+      "description": "Votre e-mail a été confirmé. Vous pouvez maintenant vous connecter."
+    }
+  },
+  "dashboard": {
+    "home": {
+      "title": "Tableau de bord",
+      "description": "Aperçu de votre compte et de votre activité."
+    },
+    "settings": {
+      "title": "Paramètres",
+      "description": "Gérez les préférences et la sécurité de votre compte."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Consultez et mettez à jour vos informations personnelles."
+    },
+    "billing": {
+      "title": "Facturation",
+      "description": "Gérez les abonnements, factures et moyens de paiement."
+    }
+  },
+  "legal": {
+    "privacyPolicy": {
+      "title": "Politique de confidentialité",
+      "description": "Comment nous collectons, utilisons et protégeons vos données personnelles."
+    },
+    "termsOfService": {
+      "title": "Conditions d'utilisation",
+      "description": "Règles et directives pour l'utilisation de cette application."
+    },
+    "cookiePolicy": {
+      "title": "Politique de cookies",
+      "description": "Comment nous utilisons les cookies et technologies similaires."
+    }
+  }
+}

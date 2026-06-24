@@ -1,7 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import {
     Select,
@@ -12,41 +11,33 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
-import { usePathname } from "@/i18n/navigation";
+import { LOCALE_CONFIG, type TLocales } from "@/i18n/locale.config";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
 /**
- * A component that allows the user to switch between locales.
- * @returns The locale switcher component.
+ * Allows the user to switch between supported application locales.
  */
 export const LocaleSwitcher = () => {
     const router = useRouter();
     const pathname = usePathname();
     const locale = useLocale();
+    const t = useTranslations("Common");
 
-    const localeMeta: Record<string, { label: string; flag: string }> = {
-        en: { label: "English", flag: "🇺🇸" },
-        ne: { label: "नेपाली", flag: "🇳🇵" },
-    };
-
-    // Handle the change event of the select element.
     const handleChange = (value: string | null): void => {
-        if (!value) return;
+        if (!value) {
+            return;
+        }
 
-        router.push(`/${value}${pathname}`);
-        router.refresh();
+        router.replace(pathname, { locale: value as TLocales });
     };
 
-    const items = routing.locales.map((locale) => {
-        const meta = localeMeta[locale] ?? {
-            label: locale.toUpperCase(),
-            flag: "",
-        };
+    const items = routing.locales.map((localeCode) => {
+        const meta = LOCALE_CONFIG[localeCode];
 
         return {
             label: `${meta.flag} ${meta.label}`,
-            flag: meta.flag,
-            value: locale,
+            value: localeCode,
         };
     });
 
@@ -57,7 +48,7 @@ export const LocaleSwitcher = () => {
             </SelectTrigger>
             <SelectContent>
                 <SelectGroup>
-                    <SelectLabel>LANGUAGES</SelectLabel>
+                    <SelectLabel>{t("languages")}</SelectLabel>
                     {items.map((item) => (
                         <SelectItem key={item.value} value={item.value}>
                             {item.label}

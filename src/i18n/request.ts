@@ -1,11 +1,13 @@
 import { getRequestConfig } from "next-intl/server";
 
-import { routing, type TLocales } from "@/i18n/routing";
+import type { TLocales } from "@/i18n/locale.config";
+import { routing } from "@/i18n/routing";
 
 /**
  * Message file namespaces
  */
 const NAMESPACE_FILES = {
+    Common: "Common",
     HomePage: "HomePage",
     Pages: "Pages",
 } as const satisfies Record<string, string>;

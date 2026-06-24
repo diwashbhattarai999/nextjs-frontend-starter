@@ -1,0 +1,65 @@
+{
+  "comingSoon": {
+    "badge": "Próximamente",
+    "defaultDescription": "Esta página está en desarrollo y estará disponible en una próxima versión.",
+    "backHome": "Volver al inicio"
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar sesión",
+      "description": "Inicia sesión en tu cuenta para acceder al panel."
+    },
+    "register": {
+      "title": "Crear una cuenta",
+      "description": "Regístrate para empezar a usar la aplicación."
+    },
+    "forgotPassword": {
+      "title": "Olvidé mi contraseña",
+      "description": "Solicita un enlace para restablecer tu contraseña."
+    },
+    "resetPassword": {
+      "title": "Restablecer contraseña",
+      "description": "Elige una nueva contraseña para tu cuenta."
+    },
+    "verifyEmail": {
+      "title": "Verificar tu correo",
+      "description": "Confirma tu dirección de correo para activar tu cuenta."
+    },
+    "emailVerificationSuccess": {
+      "title": "Correo verificado",
+      "description": "Tu correo ha sido confirmado. Ya puedes iniciar sesión."
+    }
+  },
+  "dashboard": {
+    "home": {
+      "title": "Panel",
+      "description": "Resumen de tu cuenta y actividad."
+    },
+    "settings": {
+      "title": "Ajustes",
+      "description": "Gestiona las preferencias y seguridad de tu cuenta."
+    },
+    "profile": {
+      "title": "Perfil",
+      "description": "Consulta y actualiza tu información personal."
+    },
+    "billing": {
+      "title": "Facturación",
+      "description": "Gestiona suscripciones, facturas y métodos de pago."
+    }
+  },
+  "legal": {
+    "privacyPolicy": {
+      "title": "Política de privacidad",
+      "description": "Cómo recopilamos, usamos y protegemos tus datos personales."
+    },
+    "termsOfService": {
+      "title": "Términos de servicio",
+      "description": "Reglas y directrices para usar esta aplicación."
+    },
+    "cookiePolicy": {
+      "title": "Política de cookies",
+      "description": "Cómo usamos cookies y tecnologías similares."
+    }
+  }
+}
