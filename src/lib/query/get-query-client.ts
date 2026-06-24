@@ -1,4 +1,8 @@
-import { defaultShouldDehydrateQuery, isServer, QueryClient } from "@tanstack/react-query";
+import {
+    defaultShouldDehydrateQuery,
+    environmentManager,
+    QueryClient,
+} from "@tanstack/react-query";
 import { AxiosError } from "axios";
 import { cache } from "react";
 
@@ -49,7 +53,7 @@ const getServerQueryClient = cache(() => makeQueryClient());
  * - Browser: singleton reused across navigations
  */
 export function getQueryClient() {
-    if (isServer) {
+    if (environmentManager.isServer()) {
         return getServerQueryClient();
     }
 
