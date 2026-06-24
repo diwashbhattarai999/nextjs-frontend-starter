@@ -6,7 +6,17 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": false
+    "ignoreUnknown": false,
+    "includes": [
+      "src/**/*.{ts,tsx,js,jsx,json,jsonc,css,html,md,mdx}",
+
+      "!src/assets",
+      "!coverage",
+      "!dist",
+      "!node_modules",
+      "!public",
+      "!styles"
+    ]
   },
   "formatter": {
     "enabled": true,

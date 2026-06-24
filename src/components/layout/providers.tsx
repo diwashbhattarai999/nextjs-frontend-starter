@@ -6,7 +6,6 @@ import { NextIntlClientProvider } from "next-intl";
 import NextTopLoader from "nextjs-toploader";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
-import { ThemeProvider } from "@/components/themes/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import type { TLocales } from "@/i18n/routing";
 
@@ -31,25 +30,17 @@ export function Providers({ activeThemeValue, locale, messages, children }: Prov
             <NextTopLoader color="var(--primary)" showSpinner={false} />
 
             <NuqsAdapter>
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="system"
-                    disableTransitionOnChange
-                    enableColorScheme
-                    enableSystem
-                >
-                    <NextIntlClientProvider locale={locale} messages={messages} timeZone={timezone}>
-                        <QueryClientProvider client={queryClient}>
-                            <Toaster />
+                <NextIntlClientProvider locale={locale} messages={messages} timeZone={timezone}>
+                    <QueryClientProvider client={queryClient}>
+                        <Toaster />
 
-                            <ActiveThemeProvider initialTheme={activeThemeValue}>
-                                <TooltipProvider>{children}</TooltipProvider>
-                            </ActiveThemeProvider>
+                        <ActiveThemeProvider initialTheme={activeThemeValue}>
+                            <TooltipProvider>{children}</TooltipProvider>
+                        </ActiveThemeProvider>
 
-                            <ReactQueryDevtools initialIsOpen={false} />
-                        </QueryClientProvider>
-                    </NextIntlClientProvider>
-                </ThemeProvider>
+                        <ReactQueryDevtools initialIsOpen={false} />
+                    </QueryClientProvider>
+                </NextIntlClientProvider>
             </NuqsAdapter>
         </>
     );

@@ -1,7 +1,7 @@
 "use client";
 
 import { IconBrightness } from "@tabler/icons-react";
-import { useTheme } from "next-themes";
+import { useTheme } from "@wrksz/themes/client";
 import { useCallback } from "react";
 
 import { Button } from "@/components/ui/button";
