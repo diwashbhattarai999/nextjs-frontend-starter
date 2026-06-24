@@ -1,18 +1,29 @@
-import { IconBrandGithub } from "@tabler/icons-react";
+import { IconArrowRight, IconBrandGithub } from "@tabler/icons-react";
 
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import { siteConfig } from "@/lib/config";
+import { ROUTES } from "@/configs/routes";
+import { siteConfig } from "@/configs/site";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 interface LandingHeroProps {
     badge: string;
     title: string;
     description: string;
+    getStartedLabel: string;
+    viewDashboardLabel: string;
     viewGithubLabel: string;
 }
 
-export function LandingHero({ badge, title, description, viewGithubLabel }: LandingHeroProps) {
+export function LandingHero({
+    badge,
+    title,
+    description,
+    getStartedLabel,
+    viewDashboardLabel,
+    viewGithubLabel,
+}: LandingHeroProps) {
     return (
         <section className="flex flex-col items-center gap-6 text-center">
             <Badge variant="secondary">{badge}</Badge>
@@ -22,15 +33,27 @@ export function LandingHero({ badge, title, description, viewGithubLabel }: Land
                     {description}
                 </p>
             </div>
-            <a
-                className={cn(buttonVariants({ size: "lg" }))}
-                href={siteConfig.links.github}
-                rel="noopener noreferrer"
-                target="_blank"
-            >
-                <IconBrandGithub aria-hidden />
-                {viewGithubLabel}
-            </a>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+                <Link className={cn(buttonVariants({ size: "lg" }))} href={ROUTES.AUTH.LOGIN}>
+                    {getStartedLabel}
+                    <IconArrowRight aria-hidden />
+                </Link>
+                <Link
+                    className={cn(buttonVariants({ size: "lg", variant: "outline" }))}
+                    href={ROUTES.DASHBOARD.HOME}
+                >
+                    {viewDashboardLabel}
+                </Link>
+                <a
+                    className={cn(buttonVariants({ size: "lg", variant: "outline" }))}
+                    href={siteConfig.social.github}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    <IconBrandGithub aria-hidden />
+                    {viewGithubLabel}
+                </a>
+            </div>
         </section>
     );
 }

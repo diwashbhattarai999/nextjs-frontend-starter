@@ -3,6 +3,12 @@
   "title": "नेक्स्ट.जेएस १६ फ्रन्टएन्ड स्टार्टर",
   "description": "टाइपसक्रिप्ट, टेलविन्ड CSS ४, shadcn/ui, TanStack Query, i18n, थिमिङ र स्पष्ट आर्किटेक्चरसहित उत्पादनका लागि तयार आधार — ताकि तपाईं बोइलरप्लेट होइन, फिचर बनाउन सक्नुहोस्।",
   "viewGithub": "GitHub मा हेर्नुहोस्",
+  "getStarted": "सुरु गर्नुहोस्",
+  "viewDashboard": "ड्यासबोर्ड हेर्नुहोस्",
+  "navigation": {
+    "login": "लगइन",
+    "register": "दर्ता"
+  },
   "integrated": {
     "title": "एकीकृत स्ट्याक",
     "subtitle": "सबै कुरा जोडिएको छ र निर्माणका लागि तयार छ।",
@@ -11,7 +17,42 @@
       "ui": "UI र स्टाइलिङ",
       "data": "डाटा र फर्म",
       "platform": "प्लेटफर्म",
+      "architecture": "एप संरचना",
       "dx": "विकासकर्ता अनुभव"
+    }
+  },
+  "pageGroups": {
+    "title": "स्टार्टर अन्वेषण गर्नुहोस्",
+    "subtitle": "प्लेसहोल्डर पृष्ठहरूसहित तयार मार्ग समूहहरू — प्रत्येक खण्ड पूर्वावलोकन गर्न क्लिक गर्नुहोस्।",
+    "placeholder": "प्लेसहोल्डर",
+    "groups": {
+      "auth": {
+        "title": "प्रमाणीकरण",
+        "description": "लगइन, दर्ता, पासवर्ड पुनर्प्राप्ति र इमेल प्रमाणीकरण प्रवाह।"
+      },
+      "dashboard": {
+        "title": "ड्यासबोर्ड",
+        "description": "अवलोकन, प्रोफाइल, सेटिङ र बिलिङ पृष्ठहरूसहित सुरक्षित एप शेल।"
+      },
+      "legal": {
+        "title": "कानूनी",
+        "description": "अनुपालनका लागि गोपनीयता, सर्त र कुकी नीति पृष्ठहरू।"
+      }
+    },
+    "pages": {
+      "login": "लगइन",
+      "register": "दर्ता",
+      "forgotPassword": "पासवर्ड बिर्सनुभयो",
+      "resetPassword": "पासवर्ड रिसेट",
+      "verifyEmail": "इमेल प्रमाणित",
+      "emailVerificationSuccess": "इमेल प्रमाणित भयो",
+      "dashboardHome": "अवलोकन",
+      "dashboardSettings": "सेटिङहरू",
+      "dashboardProfile": "प्रोफाइल",
+      "dashboardBilling": "बिलिङ",
+      "privacyPolicy": "गोपनीयता नीति",
+      "termsOfService": "सेवाका सर्तहरू",
+      "cookiePolicy": "कुकी नीति"
     }
   },
   "roadmap": {
@@ -20,17 +61,9 @@
     "soon": "छिट्टै आउँदै"
   },
   "roadmapItems": {
-    "auth": {
-      "title": "प्रमाणीकरण",
-      "description": "सुरक्षित मार्ग र सत्र व्यवस्थापनसहित OAuth र क्रेडेन्सियल प्रवाह।"
-    },
     "testing": {
       "title": "परीक्षण सुइट",
       "description": "Playwright E2E र Vitest युनिट परीक्षण उदाहरण कभरेजसहित।"
-    },
-    "dashboard": {
-      "title": "ड्यासबोर्ड लेआउट",
-      "description": "साइडबार नेभिगेसन, रेस्पोन्सिभ शेल र उदाहरण एप पृष्ठहरू।"
     },
     "forms": {
       "title": "फर्म ढाँचाहरू",
@@ -44,5 +77,15 @@
       "title": "डिप्लोयमेन्ट वर्कफ्लो",
       "description": "स्टेजिङ र उत्पादन वातावरणमा स्वचालित डिप्लोयमेन्ट।"
     }
+  },
+  "footer": {
+    "product": "उत्पादन",
+    "legal": "कानूनी",
+    "resources": "स्रोतहरू",
+    "overview": "अवलोकन",
+    "settings": "सेटिङहरू",
+    "profile": "प्रोफाइल",
+    "github": "GitHub",
+    "copyright": "© {year} Next.js Frontend Starter. सर्वाधिकार सुरक्षित।"
   }
 }

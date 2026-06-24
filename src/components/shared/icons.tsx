@@ -1,6 +1,8 @@
 import {
     IconAlertOctagon,
     IconAlertTriangle,
+    IconArrowLeft,
+    IconArrowRight,
     IconCircleCheck,
     IconCommand,
     IconInfoCircle,
@@ -19,4 +21,6 @@ export const Icons = {
     alertTriangle: IconAlertTriangle,
     alertOctagon: IconAlertOctagon,
     loader: IconLoader,
+    arrowLeft: IconArrowLeft,
+    arrowRight: IconArrowRight,
 };

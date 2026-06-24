@@ -1,0 +1,65 @@
+{
+  "comingSoon": {
+    "badge": "Coming soon",
+    "defaultDescription": "This page is under development and will be available in a future release.",
+    "backHome": "Back to home"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "description": "Sign in to your account to access the dashboard."
+    },
+    "register": {
+      "title": "Create an account",
+      "description": "Register to get started with the application."
+    },
+    "forgotPassword": {
+      "title": "Forgot password",
+      "description": "Request a link to reset your password."
+    },
+    "resetPassword": {
+      "title": "Reset password",
+      "description": "Choose a new password for your account."
+    },
+    "verifyEmail": {
+      "title": "Verify your email",
+      "description": "Confirm your email address to activate your account."
+    },
+    "emailVerificationSuccess": {
+      "title": "Email verified",
+      "description": "Your email has been confirmed. You can now sign in."
+    }
+  },
+  "dashboard": {
+    "home": {
+      "title": "Dashboard",
+      "description": "Overview of your account and activity."
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Manage your account preferences and security."
+    },
+    "profile": {
+      "title": "Profile",
+      "description": "View and update your personal information."
+    },
+    "billing": {
+      "title": "Billing",
+      "description": "Manage subscriptions, invoices, and payment methods."
+    }
+  },
+  "legal": {
+    "privacyPolicy": {
+      "title": "Privacy policy",
+      "description": "How we collect, use, and protect your personal data."
+    },
+    "termsOfService": {
+      "title": "Terms of service",
+      "description": "Rules and guidelines for using this application."
+    },
+    "cookiePolicy": {
+      "title": "Cookie policy",
+      "description": "How we use cookies and similar technologies."
+    }
+  }
+}

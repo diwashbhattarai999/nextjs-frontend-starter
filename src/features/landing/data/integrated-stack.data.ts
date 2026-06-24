@@ -3,6 +3,13 @@ export const INTEGRATED_STACK = {
     ui: ["Tailwind CSS 4", "shadcn/ui", "Base UI", "Tabler Icons"],
     data: ["TanStack Query 5", "Zustand", "Zod 4", "React Hook Form", "Axios"],
     platform: ["next-intl", "next-themes", "nuqs", "Sonner", "nextjs-toploader", "t3-env"],
+    architecture: [
+        "Auth routes",
+        "Dashboard routes",
+        "Legal routes",
+        "Route constants",
+        "i18n pages",
+    ],
     dx: ["Biome", "Ultracite", "Lefthook", "Commitlint", "GitHub Actions", "pnpm"],
 } as const;
 

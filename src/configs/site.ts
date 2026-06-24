@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 
+import { env } from "@/env/client";
 import type { SiteConfig, ThemeColors } from "@/types/site";
 
 /**
@@ -35,7 +36,7 @@ export const siteConfig: SiteConfig = {
     shortTitle: "Next.js 16 Frontend Template with Shadcn UI",
     description:
         "A modern frontend template built with Next.js 16 and Shadcn UI, designed for developers looking to kickstart their projects with a solid foundation.",
-    url: "https://nextjs16_shadcn_template.vercel.app",
+    url: env.NEXT_PUBLIC_APP_URL,
     seo: {
         keywords: [
             "nextjs",
@@ -68,6 +69,7 @@ export const siteConfig: SiteConfig = {
         instagram: "https://www.instagram.com/diwashbhattarai999/",
         facebook: "https://facebook.com/diwashbhattarai999",
         youtube: "https://youtube.com/diwashbhattarai999",
+        github: "https://github.com/diwashbhattarai999/nextjs-frontend-starter",
     },
 };
 

@@ -2,14 +2,26 @@
 
 import { Separator } from "@/components/ui/separator";
 import { IntegratedStackSection } from "@/features/landing/components/integrated-stack-section";
+import { LandingFooter } from "@/features/landing/components/landing-footer";
 import { LandingHeader } from "@/features/landing/components/landing-header";
 import { LandingHero } from "@/features/landing/components/landing-hero";
+import { PageGroupsSection } from "@/features/landing/components/page-groups-section";
 import { RoadmapSection } from "@/features/landing/components/roadmap-section";
 import { useLandingTranslations } from "@/features/landing/hooks/use-landing-translations";
 
 export function LandingPage() {
-    const { badge, title, description, viewGithubLabel, integrated, roadmap } =
-        useLandingTranslations();
+    const {
+        badge,
+        title,
+        description,
+        viewGithubLabel,
+        getStartedLabel,
+        viewDashboardLabel,
+        integrated,
+        pageGroups,
+        roadmap,
+        footer,
+    } = useLandingTranslations();
 
     return (
         <main className="min-h-screen overflow-y-auto">
@@ -24,11 +36,22 @@ export function LandingPage() {
                 <LandingHero
                     badge={badge}
                     description={description}
+                    getStartedLabel={getStartedLabel}
                     title={title}
+                    viewDashboardLabel={viewDashboardLabel}
                     viewGithubLabel={viewGithubLabel}
                 />
 
                 <Separator />
+
+                <PageGroupsSection
+                    getGroupDescription={pageGroups.getGroupDescription}
+                    getGroupTitle={pageGroups.getGroupTitle}
+                    getPageLabel={pageGroups.getPageLabel}
+                    placeholderLabel={pageGroups.placeholderLabel}
+                    subtitle={pageGroups.subtitle}
+                    title={pageGroups.title}
+                />
 
                 <IntegratedStackSection
                     getCategoryLabel={integrated.getCategoryLabel}
@@ -42,6 +65,22 @@ export function LandingPage() {
                     soonLabel={roadmap.soonLabel}
                     subtitle={roadmap.subtitle}
                     title={roadmap.title}
+                />
+
+                <LandingFooter
+                    cookiePolicy={footer.cookiePolicy}
+                    copyright={footer.copyright}
+                    github={footer.github}
+                    legal={footer.legal}
+                    login={footer.login}
+                    overview={footer.overview}
+                    privacyPolicy={footer.privacyPolicy}
+                    product={footer.product}
+                    profile={footer.profile}
+                    register={footer.register}
+                    resources={footer.resources}
+                    settings={footer.settings}
+                    termsOfService={footer.termsOfService}
                 />
             </div>
         </main>

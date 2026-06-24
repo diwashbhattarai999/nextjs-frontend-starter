@@ -3,6 +3,12 @@
   "title": "Next.js 16 Frontend Starter",
   "description": "A production-ready foundation with TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, theming, and opinionated architecture — so you can ship features, not boilerplate.",
   "viewGithub": "View on GitHub",
+  "getStarted": "Get started",
+  "viewDashboard": "View dashboard",
+  "navigation": {
+    "login": "Login",
+    "register": "Register"
+  },
   "integrated": {
     "title": "Integrated stack",
     "subtitle": "Everything wired up and ready to build on.",
@@ -11,7 +17,42 @@
       "ui": "UI & styling",
       "data": "Data & forms",
       "platform": "Platform",
+      "architecture": "App structure",
       "dx": "Developer experience"
+    }
+  },
+  "pageGroups": {
+    "title": "Explore the starter",
+    "subtitle": "Scaffolded route groups with placeholder pages — click through to preview each section.",
+    "placeholder": "Placeholder",
+    "groups": {
+      "auth": {
+        "title": "Authentication",
+        "description": "Login, registration, password recovery, and email verification flows."
+      },
+      "dashboard": {
+        "title": "Dashboard",
+        "description": "Protected app shell with overview, profile, settings, and billing pages."
+      },
+      "legal": {
+        "title": "Legal",
+        "description": "Privacy, terms, and cookie policy pages for compliance."
+      }
+    },
+    "pages": {
+      "login": "Login",
+      "register": "Register",
+      "forgotPassword": "Forgot password",
+      "resetPassword": "Reset password",
+      "verifyEmail": "Verify email",
+      "emailVerificationSuccess": "Email verified",
+      "dashboardHome": "Overview",
+      "dashboardSettings": "Settings",
+      "dashboardProfile": "Profile",
+      "dashboardBilling": "Billing",
+      "privacyPolicy": "Privacy policy",
+      "termsOfService": "Terms of service",
+      "cookiePolicy": "Cookie policy"
     }
   },
   "roadmap": {
@@ -20,17 +61,9 @@
     "soon": "Coming soon"
   },
   "roadmapItems": {
-    "auth": {
-      "title": "Authentication",
-      "description": "OAuth and credential flows with protected routes and session handling."
-    },
     "testing": {
       "title": "Testing suite",
       "description": "Playwright end-to-end tests and Vitest unit tests with example coverage."
-    },
-    "dashboard": {
-      "title": "Dashboard layouts",
-      "description": "Sidebar navigation, responsive shells, and example app pages."
     },
     "forms": {
       "title": "Form patterns",
@@ -44,5 +77,15 @@
       "title": "Deployment workflows",
       "description": "Automated deploy to staging and production environments."
     }
+  },
+  "footer": {
+    "product": "Product",
+    "legal": "Legal",
+    "resources": "Resources",
+    "overview": "Overview",
+    "settings": "Settings",
+    "profile": "Profile",
+    "github": "GitHub",
+    "copyright": "© {year} Next.js Frontend Starter. All rights reserved."
   }
 }

@@ -18,7 +18,7 @@ export function RoadmapSection({
     getItemDescription,
 }: RoadmapSectionProps) {
     return (
-        <section className="flex flex-col gap-8 pb-8">
+        <section className="flex flex-col gap-8">
             <div className="flex flex-col gap-2 text-center md:text-left">
                 <h2 className="font-semibold text-2xl tracking-tight">{title}</h2>
                 <p className="text-muted-foreground">{subtitle}</p>

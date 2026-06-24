@@ -1,8 +1,10 @@
 import type homePageMessages from "@/i18n/messages/en/HomePage.json";
+import type pagesMessages from "@/i18n/messages/en/Pages.json";
 import type { routing } from "@/i18n/routing";
 
 export interface AppMessages {
     HomePage: typeof homePageMessages;
+    Pages: typeof pagesMessages;
 }
 
 declare module "next-intl" {
