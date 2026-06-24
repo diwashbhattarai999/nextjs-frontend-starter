@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ROADMAP_KEYS } from "@/features/landing/constants/landing.constants";
-import type { RoadmapKey } from "@/features/landing/types/landing.types";
+import { ROADMAP_KEYS, type RoadmapKey } from "@/features/landing/constants/landing.constants";
 
 interface RoadmapSectionProps {
     title: string;
@@ -30,7 +29,7 @@ export function RoadmapSection({
                         <CardHeader>
                             <div className="flex items-start justify-between gap-3">
                                 <CardTitle>{getItemTitle(key)}</CardTitle>
-                                <Badge variant="secondary">{soonLabel}</Badge>
+                                <Badge variant="warning">{soonLabel}</Badge>
                             </div>
                             <CardDescription>{getItemDescription(key)}</CardDescription>
                         </CardHeader>
