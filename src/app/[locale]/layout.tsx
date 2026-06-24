@@ -62,12 +62,7 @@ export default async function LocaleLayout({
                     }}
                 />
             </head>
-            <body
-                className={cn(
-                    "overflow-hidden overscroll-none bg-background font-sans antialiased",
-                    fontVariables
-                )}
-            >
+            <body className={cn("bg-background font-sans antialiased", fontVariables)}>
                 <Providers
                     activeThemeValue={themeToApply}
                     locale={locale as TLocales}

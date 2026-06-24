@@ -1,5 +1,48 @@
 {
-  "welcome": "Welcome to the Nextjs Frontend Starter",
-  "description": "This is a starter template for a Next.js project with TypeScript, ESLint, Prettier, Vitest, Playwright, i18n support and many more.",
-  "getStarted": "Get Started"
+  "badge": "v0.1.0 · Work in progress",
+  "title": "Next.js 16 Frontend Starter",
+  "description": "A production-ready foundation with TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, theming, and opinionated architecture — so you can ship features, not boilerplate.",
+  "viewGithub": "View on GitHub",
+  "integrated": {
+    "title": "Integrated stack",
+    "subtitle": "Everything wired up and ready to build on.",
+    "categories": {
+      "core": "Core",
+      "ui": "UI & styling",
+      "data": "Data & forms",
+      "platform": "Platform",
+      "dx": "Developer experience"
+    }
+  },
+  "roadmap": {
+    "title": "Future releases",
+    "subtitle": "Planned additions for upcoming versions of this starter.",
+    "soon": "Coming soon"
+  },
+  "roadmapItems": {
+    "auth": {
+      "title": "Authentication",
+      "description": "OAuth and credential flows with protected routes and session handling."
+    },
+    "testing": {
+      "title": "Testing suite",
+      "description": "Playwright end-to-end tests and Vitest unit tests with example coverage."
+    },
+    "dashboard": {
+      "title": "Dashboard layouts",
+      "description": "Sidebar navigation, responsive shells, and example app pages."
+    },
+    "forms": {
+      "title": "Form patterns",
+      "description": "React Hook Form + Zod examples for common input and validation flows."
+    },
+    "api": {
+      "title": "API integration",
+      "description": "Service layer examples with typed Axios clients and TanStack Query hooks."
+    },
+    "cicd": {
+      "title": "CI/CD pipelines",
+      "description": "GitHub Actions workflows for linting, type-checking, and deployment."
+    }
+  }
 }
