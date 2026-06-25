@@ -1,10 +1,11 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { IconBrandApple, IconBrandGoogle } from "@tabler/icons-react";
 import { useMemo } from "react";
 import { Controller, useForm } from "react-hook-form";
 
+import { AppleIcon } from "@/components/icons/apple";
+import { GoogleIcon } from "@/components/icons/google";
 import { PageDescription, PageFooter, PageHeader, PageTitle } from "@/components/shared/page";
 import { PasswordInput } from "@/components/shared/password-input";
 import { SubmitButton } from "@/components/shared/submit-button";
@@ -78,7 +79,7 @@ export function LoginForm() {
                         type="button"
                         variant="outline"
                     >
-                        <IconBrandGoogle aria-hidden />
+                        <GoogleIcon aria-hidden />
                         {auth.login.google}
                     </Button>
                     <Button
@@ -87,7 +88,7 @@ export function LoginForm() {
                         type="button"
                         variant="outline"
                     >
-                        <IconBrandApple aria-hidden />
+                        <AppleIcon aria-hidden />
                         {auth.login.apple}
                     </Button>
                 </div>
