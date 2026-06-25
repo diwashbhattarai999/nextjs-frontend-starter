@@ -84,3 +84,44 @@ export const fontVariables = cn(
     fontOutfit.variable,
     fontSpaceMono.variable
 );
+
+/**
+ * Font stacks for each theme. Keep in sync with `src/styles/themes/*.css`.
+ */
+export const THEME_FONT_STACKS = {
+    bridgebench: {
+        sans: "var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif",
+        mono: "var(--font-mono), Geist Mono, ui-monospace, monospace",
+        serif: "Georgia, ui-serif, serif",
+    },
+    claude: {
+        sans: "var(--font-dm-sans), DM Sans, ui-sans-serif, system-ui, sans-serif",
+        mono: "var(--font-mono), Geist Mono, ui-monospace, monospace",
+        serif: "Georgia, ui-serif, serif",
+    },
+    mono: {
+        sans: "var(--font-mono), Geist Mono, ui-monospace, monospace",
+        mono: "var(--font-mono), Geist Mono, ui-monospace, monospace",
+        serif: "var(--font-mono), Geist Mono, ui-monospace, monospace",
+    },
+    notebook: {
+        sans: "var(--font-architects-daughter), Architects Daughter, cursive",
+        mono: "var(--font-space-mono), Space Mono, ui-monospace, monospace",
+        serif: "Georgia, ui-serif, serif",
+    },
+    paila: {
+        sans: "ui-sans-serif, system-ui, sans-serif",
+        mono: "ui-monospace, monospace",
+        serif: "ui-serif, Georgia, serif",
+    },
+    supabase: {
+        sans: "var(--font-outfit), Outfit, ui-sans-serif, system-ui, sans-serif",
+        mono: "var(--font-mono), Geist Mono, ui-monospace, monospace",
+        serif: "Georgia, ui-serif, serif",
+    },
+    vercel: {
+        sans: "var(--font-sans), Geist, ui-sans-serif, system-ui, sans-serif",
+        mono: "var(--font-mono), Geist Mono, ui-monospace, monospace",
+        serif: "Georgia, ui-serif, serif",
+    },
+} as const;

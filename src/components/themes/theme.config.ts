@@ -29,4 +29,8 @@ export const THEMES = [
         name: "Paila",
         value: "paila",
     },
+    {
+        name: "BridgeBench",
+        value: "bridgebench",
+    },
 ];

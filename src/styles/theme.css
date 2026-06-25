@@ -5,6 +5,7 @@
 @import "./themes/mono.css";
 @import "./themes/notebook.css";
 @import "./themes/paila.css";
+@import "./themes/bridgebench.css";
 
 body {
     @apply overscroll-none;
