@@ -37,7 +37,7 @@ export const PAGE_GROUPS: Record<PageGroupKey, PageGroup> = {
             { key: "login", href: ROUTES.AUTH.LOGIN, status: "ready" },
             { key: "register", href: ROUTES.AUTH.REGISTER, status: "ready" },
             { key: "forgotPassword", href: ROUTES.AUTH.FORGOT_PASSWORD, status: "ready" },
-            { key: "resetPassword", href: ROUTES.AUTH.RESET_PASSWORD, status: "placeholder" },
+            { key: "resetPassword", href: ROUTES.AUTH.RESET_PASSWORD, status: "ready" },
             { key: "verifyEmail", href: ROUTES.AUTH.VERIFY_EMAIL, status: "placeholder" },
             {
                 key: "emailVerificationSuccess",

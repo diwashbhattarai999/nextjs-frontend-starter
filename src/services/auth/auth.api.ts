@@ -3,10 +3,12 @@ import { AxiosError, type InternalAxiosRequestConfig } from "axios";
 import type { ForgotPasswordFormValues } from "@/features/auth/schemas/forgot-password.schema";
 import type { LoginFormValues } from "@/features/auth/schemas/login.schema";
 import type { RegisterPayload } from "@/features/auth/schemas/register.schema";
+import type { ResetPasswordPayload } from "@/features/auth/schemas/reset-password.schema";
 import type {
     ForgotPasswordResponse,
     LoginResponse,
     RegisterResponse,
+    ResetPasswordResponse,
 } from "@/types/api/auth.types";
 
 const MOCK_DELAY_MS = 1200;
@@ -129,6 +131,35 @@ export async function forgotPassword(
 
     // const { data } = await api.post<ForgotPasswordResponse>(
     //     ENDPOINTS.auth.forgotPassword,
+    //     payload
+    // );
+    // return data;
+}
+
+/**
+ * Resets the user's password using a reset token.
+ *
+ * Mock implementation — replace with `api.post` when the backend is available.
+ *
+ * @param payload - The new password and the verification token.
+ * @returns Confirmation message on success.
+ */
+export async function resetPassword(
+    _payload: ResetPasswordPayload
+): Promise<ResetPasswordResponse> {
+    await new Promise((resolve) => setTimeout(resolve, MOCK_DELAY_MS));
+
+    return {
+        status: "success",
+        message: "Password reset successful.",
+        statusCode: 200,
+        data: {
+            message: "Your password has been reset successfully.",
+        },
+    };
+
+    // const { data } = await api.post<ResetPasswordResponse>(
+    //     ENDPOINTS.auth.resetPassword,
     //     payload
     // );
     // return data;
