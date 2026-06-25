@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
  * Message file namespaces
  */
 const NAMESPACE_FILES = {
+    Auth: "Auth",
     Common: "Common",
     HomePage: "HomePage",
     Pages: "Pages",

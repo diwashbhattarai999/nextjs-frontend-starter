@@ -2,7 +2,8 @@
   "comingSoon": {
     "badge": "Próximamente",
     "defaultDescription": "Esta página está en desarrollo y estará disponible en una próxima versión.",
-    "backHome": "Volver al inicio"
+    "backHome": "Volver al inicio",
+    "actionLabel": "Ok"
   },
   "auth": {
     "login": {

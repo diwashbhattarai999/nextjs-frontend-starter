@@ -1,3 +1,19 @@
 {
-  "languages": "Languages"
+  "languages": "Languages",
+  "accessibility": {
+    "showPassword": "Show password",
+    "hidePassword": "Hide password"
+  },
+  "validation": {
+    "emailInvalid": "Enter a valid email address.",
+    "passwordRequired": "Password is required.",
+    "passwordMin": "Password must be at least 8 characters.",
+    "passwordMax": "Password must be at most 128 characters.",
+    "phoneRequired": "Phone number is required.",
+    "phoneMin": "Phone number must be at least 7 characters.",
+    "phoneMax": "Phone number must be at most 20 characters.",
+    "nameRequired": "Full name is required.",
+    "nameMin": "Name must be at least 2 characters.",
+    "nameMax": "Name must be at most 120 characters."
+  }
 }

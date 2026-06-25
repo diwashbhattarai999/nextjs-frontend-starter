@@ -1,3 +1,19 @@
 {
-  "languages": "Langues"
+  "languages": "Langues",
+  "accessibility": {
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe"
+  },
+  "validation": {
+    "emailInvalid": "Saisissez une adresse e-mail valide.",
+    "passwordRequired": "Le mot de passe est requis.",
+    "passwordMin": "Le mot de passe doit contenir au moins 8 caractères.",
+    "passwordMax": "Le mot de passe doit contenir au plus 128 caractères.",
+    "phoneRequired": "Le numéro de téléphone est requis.",
+    "phoneMin": "Le numéro de téléphone doit contenir au moins 7 caractères.",
+    "phoneMax": "Le numéro de téléphone doit contenir au plus 20 caractères.",
+    "nameRequired": "Le nom complet est requis.",
+    "nameMin": "Le nom doit contenir au moins 2 caractères.",
+    "nameMax": "Le nom doit contenir au plus 120 caractères."
+  }
 }

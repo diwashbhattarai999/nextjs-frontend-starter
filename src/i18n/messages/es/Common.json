@@ -1,3 +1,19 @@
 {
-  "languages": "Idiomas"
+  "languages": "Idiomas",
+  "accessibility": {
+    "showPassword": "Mostrar contraseña",
+    "hidePassword": "Ocultar contraseña"
+  },
+  "validation": {
+    "emailInvalid": "Introduce una dirección de correo válida.",
+    "passwordRequired": "La contraseña es obligatoria.",
+    "passwordMin": "La contraseña debe tener al menos 8 caracteres.",
+    "passwordMax": "La contraseña debe tener como máximo 128 caracteres.",
+    "phoneRequired": "El número de teléfono es obligatorio.",
+    "phoneMin": "El número de teléfono debe tener al menos 7 caracteres.",
+    "phoneMax": "El número de teléfono debe tener como máximo 20 caracteres.",
+    "nameRequired": "El nombre completo es obligatorio.",
+    "nameMin": "El nombre debe tener al menos 2 caracteres.",
+    "nameMax": "El nombre debe tener como máximo 120 caracteres."
+  }
 }

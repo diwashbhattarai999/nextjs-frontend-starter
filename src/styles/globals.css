@@ -13,6 +13,95 @@
     body {
         @apply bg-background text-foreground;
     }
+
+    [data-slot="input"],
+    [data-slot="textarea"] {
+        background-color: transparent;
+    }
+
+    :is(.dark *) [data-slot="input"],
+    :is(.dark *) [data-slot="textarea"] {
+        background-color: color-mix(in oklch, var(--input) 30%, transparent);
+    }
+
+    [data-slot="input-group-control"] {
+        background-color: transparent;
+    }
+}
+
+/* Unlayered so autofill overrides win over browser UA styles (especially Firefox). */
+[data-slot="input"]:-moz-autofill,
+[data-slot="input"]:-moz-autofill-preview,
+[data-slot="input-group-control"]:-moz-autofill,
+[data-slot="input-group-control"]:-moz-autofill-preview,
+[data-slot="textarea"]:-moz-autofill,
+[data-slot="textarea"]:-moz-autofill-preview {
+    filter: none;
+}
+
+[data-slot="input"]:is(:autofill, :-moz-autofill, :-webkit-autofill),
+[data-slot="input"]:is(:autofill, :-moz-autofill, :-webkit-autofill):hover,
+[data-slot="input"]:is(:autofill, :-moz-autofill, :-webkit-autofill):focus,
+[data-slot="input-group-control"]:is(
+    :autofill,
+    :-moz-autofill,
+    :-webkit-autofill
+),
+[data-slot="input-group-control"]:is(
+    :autofill,
+    :-moz-autofill,
+    :-webkit-autofill
+):hover,
+[data-slot="input-group-control"]:is(
+    :autofill,
+    :-moz-autofill,
+    :-webkit-autofill
+):focus,
+[data-slot="textarea"]:is(:autofill, :-moz-autofill, :-webkit-autofill),
+[data-slot="textarea"]:is(:autofill, :-moz-autofill, :-webkit-autofill):hover,
+[data-slot="textarea"]:is(:autofill, :-moz-autofill, :-webkit-autofill):focus {
+    -webkit-text-fill-color: var(--foreground) !important;
+    color: var(--foreground) !important;
+    caret-color: var(--foreground);
+    background-color: transparent !important;
+    background-image: none !important;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    transition:
+        background-color calc(infinity * 1s) step-end,
+        background-image calc(infinity * 1s) step-end allow-discrete,
+        color calc(infinity * 1s) step-end;
+}
+
+:is(.dark *)
+    [data-slot="input"]:is(:autofill, :-moz-autofill, :-webkit-autofill),
+:is(.dark *)
+    [data-slot="input"]:is(:autofill, :-moz-autofill, :-webkit-autofill):hover,
+:is(.dark *)
+    [data-slot="input"]:is(:autofill, :-moz-autofill, :-webkit-autofill):focus,
+:is(.dark *)
+    [data-slot="textarea"]:is(:autofill, :-moz-autofill, :-webkit-autofill),
+:is(.dark *)
+    [data-slot="textarea"]:is(
+        :autofill,
+        :-moz-autofill,
+        :-webkit-autofill
+    ):hover,
+:is(.dark *)
+    [data-slot="textarea"]:is(
+        :autofill,
+        :-moz-autofill,
+        :-webkit-autofill
+    ):focus {
+    background-color: color-mix(
+        in oklch,
+        var(--input) 30%,
+        transparent
+    ) !important;
+    -webkit-box-shadow: 0 0 0 1000px
+        color-mix(in oklch, var(--input) 30%, transparent) inset !important;
+    box-shadow: 0 0 0 1000px color-mix(in oklch, var(--input) 30%, transparent)
+        inset !important;
 }
 
 /* View Transition Wave Effect */

@@ -2,7 +2,8 @@
   "comingSoon": {
     "badge": "जल्द आ रहा है",
     "defaultDescription": "यह पेज विकास में है और आगामी रिलीज़ में उपलब्ध होगा।",
-    "backHome": "होम पर वापस जाएँ"
+    "backHome": "होम पर वापस जाएँ",
+    "actionLabel": "ठीक है"
   },
   "auth": {
     "login": {

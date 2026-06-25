@@ -2,10 +2,8 @@ import { z } from "zod";
 
 /**
  * Schema limits.
- *
- * @returns The schema limits.
  */
-const SCHEMA_LIMITS = {
+export const SCHEMA_LIMITS = {
     PASSWORD_MIN_LENGTH: 8,
     PASSWORD_MAX_LENGTH: 128,
 
@@ -16,54 +14,76 @@ const SCHEMA_LIMITS = {
     NAME_MAX_LENGTH: 120,
 } as const;
 
-/**
- * Email schema.
- *
- * @returns The email schema.
- */
-export const emailSchema = z.email({ message: "Enter a valid email address" }).toLowerCase();
+export interface EmailSchemaMessages {
+    invalid: string;
+}
+
+export interface PasswordSchemaMessages {
+    required: string;
+    min: string;
+    max: string;
+}
+
+export interface PhoneNumberSchemaMessages {
+    required: string;
+    min: string;
+    max: string;
+}
+
+export interface FullNameSchemaMessages {
+    required: string;
+    min: string;
+    max: string;
+}
 
 /**
- * Password schema.
+ * Creates an email validation schema with localized error messages.
  *
- * @returns The password schema.
+ * @param messages - Localized validation messages.
+ * @returns Zod email schema.
  */
-export const passwordSchema = z
-    .string()
-    .min(1, { message: "Password is required" })
-    .min(SCHEMA_LIMITS.PASSWORD_MIN_LENGTH, {
-        message: `Password must be at least ${SCHEMA_LIMITS.PASSWORD_MIN_LENGTH} characters`,
-    })
-    .max(SCHEMA_LIMITS.PASSWORD_MAX_LENGTH, {
-        message: `Password must be at most ${SCHEMA_LIMITS.PASSWORD_MAX_LENGTH} characters`,
-    });
+export function createEmailSchema(messages: EmailSchemaMessages) {
+    return z.email({ error: messages.invalid }).toLowerCase();
+}
 
 /**
- * Phone number schema.
+ * Creates a password validation schema with localized error messages.
  *
- * @returns The phone number schema.
+ * @param messages - Localized validation messages.
+ * @returns Zod password schema.
  */
-export const phoneNumberSchema = z
-    .string()
-    .min(1, { message: "Phone number is required" })
-    .min(SCHEMA_LIMITS.PHONE_MIN_LENGTH, {
-        message: `Phone number must be at least ${SCHEMA_LIMITS.PHONE_MIN_LENGTH} characters`,
-    })
-    .max(SCHEMA_LIMITS.PHONE_MAX_LENGTH, {
-        message: `Phone number must be at most ${SCHEMA_LIMITS.PHONE_MAX_LENGTH} characters`,
-    });
+export function createPasswordSchema(messages: PasswordSchemaMessages) {
+    return z
+        .string()
+        .min(1, { error: messages.required })
+        .min(SCHEMA_LIMITS.PASSWORD_MIN_LENGTH, { error: messages.min })
+        .max(SCHEMA_LIMITS.PASSWORD_MAX_LENGTH, { error: messages.max });
+}
 
 /**
- * Full name schema.
+ * Creates a phone number validation schema with localized error messages.
  *
- * @returns The full name schema.
+ * @param messages - Localized validation messages.
+ * @returns Zod phone number schema.
  */
-export const fullNameSchema = z
-    .string()
-    .min(1, { message: "Full name is required" })
-    .min(SCHEMA_LIMITS.NAME_MIN_LENGTH, {
-        message: `Name must be at least ${SCHEMA_LIMITS.NAME_MIN_LENGTH} characters`,
-    })
-    .max(SCHEMA_LIMITS.NAME_MAX_LENGTH, {
-        message: `Name must be at most ${SCHEMA_LIMITS.NAME_MAX_LENGTH} characters`,
-    });
+export function createPhoneNumberSchema(messages: PhoneNumberSchemaMessages) {
+    return z
+        .string()
+        .min(1, { error: messages.required })
+        .min(SCHEMA_LIMITS.PHONE_MIN_LENGTH, { error: messages.min })
+        .max(SCHEMA_LIMITS.PHONE_MAX_LENGTH, { error: messages.max });
+}
+
+/**
+ * Creates a full name validation schema with localized error messages.
+ *
+ * @param messages - Localized validation messages.
+ * @returns Zod full name schema.
+ */
+export function createFullNameSchema(messages: FullNameSchemaMessages) {
+    return z
+        .string()
+        .min(1, { error: messages.required })
+        .min(SCHEMA_LIMITS.NAME_MIN_LENGTH, { error: messages.min })
+        .max(SCHEMA_LIMITS.NAME_MAX_LENGTH, { error: messages.max });
+}
