@@ -1,7 +1,4 @@
-export interface LoginRequest {
-    email: string;
-    password: string;
-}
+import type { ISuccessResponse } from "@/types/response.types";
 
 export interface AuthUser {
     id: string;
@@ -9,8 +6,12 @@ export interface AuthUser {
     name: string;
 }
 
-export interface LoginResponse {
+export interface AuthSessionData {
     accessToken: string;
     refreshToken: string;
     user: AuthUser;
 }
+
+// Response types
+export type LoginResponse = ISuccessResponse<AuthSessionData>;
+export type RegisterResponse = ISuccessResponse<AuthSessionData>;

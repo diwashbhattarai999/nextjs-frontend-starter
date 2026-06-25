@@ -14,6 +14,8 @@
     "phoneMax": "El número de teléfono debe tener como máximo 20 caracteres.",
     "nameRequired": "El nombre completo es obligatorio.",
     "nameMin": "El nombre debe tener al menos 2 caracteres.",
-    "nameMax": "El nombre debe tener como máximo 120 caracteres."
+    "nameMax": "El nombre debe tener como máximo 120 caracteres.",
+    "confirmPasswordRequired": "Confirma tu contraseña.",
+    "passwordMismatch": "Las contraseñas no coinciden."
   }
 }

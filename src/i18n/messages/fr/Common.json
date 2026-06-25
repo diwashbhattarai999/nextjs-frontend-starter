@@ -14,6 +14,8 @@
     "phoneMax": "Le numéro de téléphone doit contenir au plus 20 caractères.",
     "nameRequired": "Le nom complet est requis.",
     "nameMin": "Le nom doit contenir au moins 2 caractères.",
-    "nameMax": "Le nom doit contenir au plus 120 caractères."
+    "nameMax": "Le nom doit contenir au plus 120 caractères.",
+    "confirmPasswordRequired": "Veuillez confirmer votre mot de passe.",
+    "passwordMismatch": "Les mots de passe ne correspondent pas."
   }
 }

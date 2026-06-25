@@ -23,6 +23,8 @@ export function useCommonTranslations() {
             nameRequired: t("validation.nameRequired"),
             nameMin: t("validation.nameMin"),
             nameMax: t("validation.nameMax"),
+            confirmPasswordRequired: t("validation.confirmPasswordRequired"),
+            passwordMismatch: t("validation.passwordMismatch"),
         },
     };
 }

@@ -14,6 +14,8 @@
     "phoneMax": "Phone number must be at most 20 characters.",
     "nameRequired": "Full name is required.",
     "nameMin": "Name must be at least 2 characters.",
-    "nameMax": "Name must be at most 120 characters."
+    "nameMax": "Name must be at most 120 characters.",
+    "confirmPasswordRequired": "Please confirm your password.",
+    "passwordMismatch": "Passwords do not match."
   }
 }

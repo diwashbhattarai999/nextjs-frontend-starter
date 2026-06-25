@@ -6,29 +6,29 @@ import { MUTATION_KEYS } from "@/configs/mutation-keys";
 import { ROUTES } from "@/configs/routes";
 import { STORAGE_KEYS } from "@/configs/storage";
 import { useAuthTranslations } from "@/features/auth/hooks/use-auth-translations";
-import type { LoginFormValues } from "@/features/auth/schemas/login.schema";
+import type { RegisterFormValues, RegisterPayload } from "@/features/auth/schemas/register.schema";
 import { useRouter } from "@/i18n/navigation";
 import { setCookie } from "@/lib/cookies";
 import { handleApiError } from "@/lib/handle-error";
-import { login } from "@/services/auth/auth.api";
-import type { LoginResponse } from "@/types/api/auth.types";
+import { register } from "@/services/auth/auth.api";
+import type { RegisterResponse } from "@/types/api/auth.types";
 
-interface UseLoginMutationOptions {
-    form?: UseFormReturn<LoginFormValues>;
+interface UseRegisterMutationOptions {
+    form?: UseFormReturn<RegisterFormValues>;
 }
 
 /**
- * Mutation hook for authenticating a user via email and password.
+ * Mutation hook for creating a new user account.
  *
  * @param options - Optional form instance for field-level API errors.
  */
-export function useLoginMutation({ form }: UseLoginMutationOptions) {
+export function useRegisterMutation({ form }: UseRegisterMutationOptions) {
     const router = useRouter();
     const auth = useAuthTranslations();
 
-    return useMutation<LoginResponse, Error, LoginFormValues>({
-        mutationKey: MUTATION_KEYS.auth.login,
-        mutationFn: login,
+    return useMutation<RegisterResponse, Error, RegisterPayload>({
+        mutationKey: MUTATION_KEYS.auth.register,
+        mutationFn: register,
         onSuccess: (response) => {
             setCookie(
                 STORAGE_KEYS.SESSION,
@@ -39,14 +39,14 @@ export function useLoginMutation({ form }: UseLoginMutationOptions) {
                 })
             );
 
-            toast.success(auth.login.success);
+            toast.success(auth.register.success);
             router.push(ROUTES.DASHBOARD.HOME);
         },
         onError: (error) => {
             handleApiError({
                 error,
                 form,
-                fallbackMessage: auth.login.error,
+                fallbackMessage: auth.register.error,
             });
         },
     });

@@ -1,6 +1,8 @@
 import { AxiosError, type InternalAxiosRequestConfig } from "axios";
 
-import type { LoginRequest, LoginResponse } from "@/types/api/auth.types";
+import type { LoginFormValues } from "@/features/auth/schemas/login.schema";
+import type { RegisterPayload } from "@/features/auth/schemas/register.schema";
+import type { LoginResponse, RegisterResponse } from "@/types/api/auth.types";
 
 const MOCK_DELAY_MS = 1200;
 
@@ -35,7 +37,7 @@ function throwMockAuthError(message: string): never {
  * @param payload - Login credentials.
  * @returns Session tokens and user profile on success.
  */
-export async function login(payload: LoginRequest): Promise<LoginResponse> {
+export async function login(payload: LoginFormValues): Promise<LoginResponse> {
     await new Promise((resolve) => setTimeout(resolve, MOCK_DELAY_MS));
 
     const isValidCredentials =
@@ -46,15 +48,54 @@ export async function login(payload: LoginRequest): Promise<LoginResponse> {
     }
 
     return {
-        accessToken: "mock-access-token",
-        refreshToken: "mock-refresh-token",
-        user: {
-            id: "usr_mock_001",
-            email: payload.email,
-            name: "Demo User",
+        status: "success",
+        message: "Login successful.",
+        statusCode: 200,
+        data: {
+            accessToken: "mock-access-token",
+            refreshToken: "mock-refresh-token",
+            user: {
+                id: "usr_mock_001",
+                email: payload.email,
+                name: "Demo User",
+            },
         },
     };
 
     // const { data } = await api.post<LoginResponse>(ENDPOINTS.auth.login, payload);
+    // return data;
+}
+
+/**
+ * Creates a new user account.
+ *
+ * Mock implementation — replace with `api.post` when the backend is available.
+ *
+ * @param payload - Registration details.
+ * @returns Session tokens and user profile on success.
+ */
+export async function register(payload: RegisterPayload): Promise<RegisterResponse> {
+    await new Promise((resolve) => setTimeout(resolve, MOCK_DELAY_MS));
+
+    if (payload.email === MOCK_CREDENTIALS.email) {
+        throwMockAuthError("An account with this email already exists.");
+    }
+
+    return {
+        status: "success",
+        message: "Registration successful.",
+        statusCode: 201,
+        data: {
+            accessToken: "mock-access-token",
+            refreshToken: "mock-refresh-token",
+            user: {
+                id: "usr_mock_002",
+                email: payload.email,
+                name: payload.name,
+            },
+        },
+    };
+
+    // const { data } = await api.post<RegisterResponse>(ENDPOINTS.auth.register, payload);
     // return data;
 }
