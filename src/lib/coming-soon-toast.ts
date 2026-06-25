@@ -25,5 +25,9 @@ export function showComingSoonToast({ title, description, action }: ComingSoonTo
                 onClick: action.onClick,
             },
         }),
+        classNames: {
+            toast: "bg-amber-500/10! backdrop-blur-sm! text-amber-500! border-amber-500/20!",
+            actionButton: "bg-amber-500! text-white! hover:bg-amber-500/80!",
+        },
     });
 }

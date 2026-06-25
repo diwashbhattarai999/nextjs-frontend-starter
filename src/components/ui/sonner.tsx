@@ -19,7 +19,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
                 loading: <Icons.loader className="size-4 animate-spin" />,
             }}
             position="top-center"
-            // richColors
+            richColors
             style={
                 {
                     "--normal-bg": "var(--popover)",
