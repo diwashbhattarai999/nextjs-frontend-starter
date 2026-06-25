@@ -23,4 +23,9 @@ export const STORAGE_KEYS = {
      * Key for storing the session in cookies.
      */
     SESSION: `${STORAGE_KEY_BASE}session`,
+
+    /**
+     * Key for storing the verification cooldown in localStorage.
+     */
+    VERIFICATION_COOLDOWN: `${STORAGE_KEY_BASE}verification-cooldown`,
 };

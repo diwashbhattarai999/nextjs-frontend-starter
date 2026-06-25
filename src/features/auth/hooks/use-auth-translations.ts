@@ -74,6 +74,16 @@ export function useAuthTranslations() {
             error: t("resetPassword.error"),
             backToLogin: t("resetPassword.backToLogin"),
         },
+        verifyEmail: {
+            title: t("verifyEmail.title"),
+            description: t("verifyEmail.description"),
+            resendPrompt: t("verifyEmail.resendPrompt"),
+            resendButton: t("verifyEmail.resendButton"),
+            resending: t("verifyEmail.resending"),
+            success: t("verifyEmail.success"),
+            error: t("verifyEmail.error"),
+            backToLogin: t("verifyEmail.backToLogin"),
+        },
         showcase: {
             headline: t("showcase.headline"),
             description: t("showcase.description"),

@@ -8,7 +8,9 @@ import type {
     ForgotPasswordResponse,
     LoginResponse,
     RegisterResponse,
+    ResendVerificationResponse,
     ResetPasswordResponse,
+    VerifyEmailResponse,
 } from "@/types/api/auth.types";
 
 const MOCK_DELAY_MS = 1200;
@@ -160,6 +162,66 @@ export async function resetPassword(
 
     // const { data } = await api.post<ResetPasswordResponse>(
     //     ENDPOINTS.auth.resetPassword,
+    //     payload
+    // );
+    // return data;
+}
+
+/**
+ * Resends the email verification link.
+ *
+ * Mock implementation — replace with `api.post` when the backend is available.
+ *
+ * @param payload - The email address to resend the link to.
+ * @returns Confirmation message on success.
+ */
+export async function resendVerificationEmail(_payload: {
+    email: string;
+}): Promise<ResendVerificationResponse> {
+    await new Promise((resolve) => setTimeout(resolve, MOCK_DELAY_MS));
+
+    return {
+        status: "success",
+        message: "Verification email resent successfully.",
+        statusCode: 200,
+        data: {
+            message: "A verification email has been resent to your email address.",
+        },
+    };
+
+    // const { data } = await api.post<ResendVerificationResponse>(
+    //     ENDPOINTS.auth.resendVerification,
+    //     payload
+    // );
+    // return data;
+}
+
+/**
+ * Verifies the user's email using a verification token.
+ *
+ * Mock implementation — replace with `api.post` when the backend is available.
+ *
+ * @param payload - The verification token.
+ * @returns Confirmation message on success.
+ */
+export async function verifyEmail(payload: { token: string }): Promise<VerifyEmailResponse> {
+    await new Promise((resolve) => setTimeout(resolve, MOCK_DELAY_MS));
+
+    if (payload.token === "invalid") {
+        throwMockAuthError("The verification link is invalid or has expired.");
+    }
+
+    return {
+        status: "success",
+        message: "Email verified successfully.",
+        statusCode: 200,
+        data: {
+            message: "Your email has been verified successfully.",
+        },
+    };
+
+    // const { data } = await api.post<VerifyEmailResponse>(
+    //     ENDPOINTS.auth.verifyEmail,
     //     payload
     // );
     // return data;
