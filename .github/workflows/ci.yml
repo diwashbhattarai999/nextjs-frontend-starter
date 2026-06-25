@@ -64,11 +64,8 @@ jobs:
       - name: Install dependencies based on lockfile
         run: pnpm install --frozen-lockfile
 
-      - name: Setup Biome
-        uses: biomejs/setup-biome@v2
-
-      - name: Run Biome
-        run: biome ci
+      - name: Run lint check
+        run: pnpm lint:check
 
   commitlint:
     runs-on: ubuntu-latest
