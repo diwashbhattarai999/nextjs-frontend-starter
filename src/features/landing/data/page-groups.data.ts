@@ -19,9 +19,12 @@ export type PageLinkKey =
     | "termsOfService"
     | "cookiePolicy";
 
+export type PageLinkStatus = "ready" | "placeholder";
+
 interface PageLink {
     key: PageLinkKey;
     href: string;
+    status: PageLinkStatus;
 }
 
 interface PageGroup {
@@ -31,27 +34,31 @@ interface PageGroup {
 export const PAGE_GROUPS: Record<PageGroupKey, PageGroup> = {
     auth: {
         pages: [
-            { key: "login", href: ROUTES.AUTH.LOGIN },
-            { key: "register", href: ROUTES.AUTH.REGISTER },
-            { key: "forgotPassword", href: ROUTES.AUTH.FORGOT_PASSWORD },
-            { key: "resetPassword", href: ROUTES.AUTH.RESET_PASSWORD },
-            { key: "verifyEmail", href: ROUTES.AUTH.VERIFY_EMAIL },
-            { key: "emailVerificationSuccess", href: ROUTES.AUTH.EMAIL_VERIFICATION_SUCCESS },
+            { key: "login", href: ROUTES.AUTH.LOGIN, status: "ready" },
+            { key: "register", href: ROUTES.AUTH.REGISTER, status: "ready" },
+            { key: "forgotPassword", href: ROUTES.AUTH.FORGOT_PASSWORD, status: "ready" },
+            { key: "resetPassword", href: ROUTES.AUTH.RESET_PASSWORD, status: "placeholder" },
+            { key: "verifyEmail", href: ROUTES.AUTH.VERIFY_EMAIL, status: "placeholder" },
+            {
+                key: "emailVerificationSuccess",
+                href: ROUTES.AUTH.EMAIL_VERIFICATION_SUCCESS,
+                status: "placeholder",
+            },
         ],
     },
     dashboard: {
         pages: [
-            { key: "dashboardHome", href: ROUTES.DASHBOARD.HOME },
-            { key: "dashboardSettings", href: ROUTES.DASHBOARD.SETTINGS },
-            { key: "dashboardProfile", href: ROUTES.DASHBOARD.PROFILE },
-            { key: "dashboardBilling", href: ROUTES.DASHBOARD.BILLING },
+            { key: "dashboardHome", href: ROUTES.DASHBOARD.HOME, status: "placeholder" },
+            { key: "dashboardSettings", href: ROUTES.DASHBOARD.SETTINGS, status: "placeholder" },
+            { key: "dashboardProfile", href: ROUTES.DASHBOARD.PROFILE, status: "placeholder" },
+            { key: "dashboardBilling", href: ROUTES.DASHBOARD.BILLING, status: "placeholder" },
         ],
     },
     legal: {
         pages: [
-            { key: "privacyPolicy", href: ROUTES.LEGAL.PRIVACY_POLICY },
-            { key: "termsOfService", href: ROUTES.LEGAL.TERMS_OF_SERVICE },
-            { key: "cookiePolicy", href: ROUTES.LEGAL.COOKIE_POLICY },
+            { key: "privacyPolicy", href: ROUTES.LEGAL.PRIVACY_POLICY, status: "placeholder" },
+            { key: "termsOfService", href: ROUTES.LEGAL.TERMS_OF_SERVICE, status: "placeholder" },
+            { key: "cookiePolicy", href: ROUTES.LEGAL.COOKIE_POLICY, status: "placeholder" },
         ],
     },
 };

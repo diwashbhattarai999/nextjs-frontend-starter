@@ -2,7 +2,11 @@ import { useTranslations } from "next-intl";
 
 import type { RoadmapKey } from "@/features/landing/constants/landing.constants";
 import type { StackCategoryKey } from "@/features/landing/data/integrated-stack.data";
-import type { PageGroupKey, PageLinkKey } from "@/features/landing/data/page-groups.data";
+import type {
+    PageGroupKey,
+    PageLinkKey,
+    PageLinkStatus,
+} from "@/features/landing/data/page-groups.data";
 
 export function useLandingTranslations() {
     const t = useTranslations("HomePage");
@@ -24,6 +28,13 @@ export function useLandingTranslations() {
             title: t("pageGroups.title"),
             subtitle: t("pageGroups.subtitle"),
             placeholderLabel: t("pageGroups.placeholder"),
+            readyLabel: t("pageGroups.ready"),
+            getReadyCountLabel: (ready: number, total: number) =>
+                t("pageGroups.readyCount", { ready, total }),
+            getPageStatusLabel: (status: PageLinkStatus) =>
+                status === "ready"
+                    ? t("pageGroups.status.ready")
+                    : t("pageGroups.status.placeholder"),
             getGroupTitle: (group: PageGroupKey) => t(`pageGroups.groups.${group}.title`),
             getGroupDescription: (group: PageGroupKey) =>
                 t(`pageGroups.groups.${group}.description`),

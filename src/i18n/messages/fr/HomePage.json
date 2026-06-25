@@ -1,7 +1,7 @@
 {
-  "badge": "v0.1.0 · En cours de développement",
+  "badge": "v0.1.0 · Développement actif",
   "title": "Starter Frontend Next.js 16",
-  "description": "Une base prête pour la production avec TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, thèmes et une architecture structurée — pour livrer des fonctionnalités, pas du boilerplate.",
+  "description": "Une base prête pour la production avec TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, multi-thèmes, flux d'authentification et architecture structurée — pour livrer des fonctionnalités, pas du boilerplate.",
   "viewGithub": "Voir sur GitHub",
   "getStarted": "Commencer",
   "viewDashboard": "Voir le tableau de bord",
@@ -11,7 +11,7 @@
   },
   "integrated": {
     "title": "Stack intégrée",
-    "subtitle": "Tout est connecté et prêt à être utilisé.",
+    "subtitle": "Paquets et outils connectés avec icônes — prêts à l'emploi.",
     "categories": {
       "core": "Cœur",
       "ui": "UI et style",
@@ -23,20 +23,26 @@
   },
   "pageGroups": {
     "title": "Explorer le starter",
-    "subtitle": "Groupes de routes avec pages placeholder — cliquez pour prévisualiser chaque section.",
+    "subtitle": "Groupes de routes avec pages live et placeholder — cliquez pour prévisualiser chaque section.",
     "placeholder": "Placeholder",
+    "ready": "Prêt",
+    "readyCount": "{ready}/{total} prêts",
+    "status": {
+      "ready": "Prêt",
+      "placeholder": "Bientôt"
+    },
     "groups": {
       "auth": {
         "title": "Authentification",
-        "description": "Connexion, inscription, récupération de mot de passe et vérification d'e-mail."
+        "description": "Connexion, inscription et mot de passe oublié sont implémentés avec formulaires, validation et hooks API mock."
       },
       "dashboard": {
         "title": "Tableau de bord",
-        "description": "Shell d'application protégé avec aperçu, profil, paramètres et facturation."
+        "description": "Shell d'application protégé avec aperçu, profil, paramètres et facturation en placeholder."
       },
       "legal": {
         "title": "Légal",
-        "description": "Pages de confidentialité, conditions et politique de cookies."
+        "description": "Pages placeholder de confidentialité, conditions et politique de cookies."
       }
     },
     "pages": {
@@ -57,7 +63,7 @@
   },
   "roadmap": {
     "title": "Prochaines versions",
-    "subtitle": "Ajouts prévus pour les prochaines versions de ce starter.",
+    "subtitle": "Prochaines étapes maintenant que les formulaires d'auth, les thèmes et la couche service sont en place.",
     "soon": "Bientôt disponible"
   },
   "roadmapItems": {
@@ -65,17 +71,17 @@
       "title": "Suite de tests",
       "description": "Tests E2E Playwright et tests unitaires Vitest avec exemples."
     },
-    "forms": {
-      "title": "Modèles de formulaires",
-      "description": "Exemples React Hook Form + Zod pour les flux de saisie courants."
+    "authCompletion": {
+      "title": "Finalisation auth",
+      "description": "Pages reset password, vérification e-mail et succès de vérification avec formulaires complets."
     },
-    "api": {
-      "title": "Intégration API",
-      "description": "Exemples de couche service avec clients Axios typés et hooks TanStack Query."
+    "backendIntegration": {
+      "title": "Intégration backend réelle",
+      "description": "Remplacer les API mock par des clients Axios typés contre un backend live."
     },
     "deployment": {
       "title": "Workflows de déploiement",
-      "description": "Déploiement automatisé vers les environnements de staging et production."
+      "description": "Déploiement automatisé vers staging et production."
     }
   },
   "footer": {

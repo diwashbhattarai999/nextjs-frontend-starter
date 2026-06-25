@@ -1,7 +1,7 @@
 {
-  "badge": "v0.1.0 · कार्य प्रगति पर",
-  "title": "Next.js 16 फ्रंटएंड स्टार्टर",
-  "description": "TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, थीमिंग और स्पष्ट आर्किटेक्चर के साथ प्रोडक्शन-रेडी आधार — ताकि आप बॉयलरप्लेट नहीं, फीचर्स बना सकें।",
+  "badge": "v0.1.0 · सक्रिय विकास",
+  "title": "Next.js 16 Frontend Starter",
+  "description": "TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, मल्टी-थीम, auth फ्लो और स्पष्ट आर्किटेक्चर के साथ प्रोडक्शन-रेडी आधार — बॉयलरप्लेट नहीं, फीचर्स शिप करें।",
   "viewGithub": "GitHub पर देखें",
   "getStarted": "शुरू करें",
   "viewDashboard": "डैशबोर्ड देखें",
@@ -11,7 +11,7 @@
   },
   "integrated": {
     "title": "एकीकृत स्टैक",
-    "subtitle": "सब कुछ कनेक्टेड है और बिल्ड के लिए तैयार है।",
+    "subtitle": "आइकन के साथ जुड़े पैकेज और टूल — निर्माण के लिए तैयार।",
     "categories": {
       "core": "कोर",
       "ui": "UI और स्टाइलिंग",
@@ -23,20 +23,26 @@
   },
   "pageGroups": {
     "title": "स्टार्टर एक्सप्लोर करें",
-    "subtitle": "प्लेसहोल्डर पेजों के साथ तैयार रूट ग्रुप — हर सेक्शन का पूर्वावलोकन करने के लिए क्लिक करें।",
-    "placeholder": "प्लेसहोल्डर",
+    "subtitle": "लाइव और placeholder पेज वाले रूट ग्रुप — हर सेक्शन प्रीव्यू करने के लिए क्लिक करें।",
+    "placeholder": "Placeholder",
+    "ready": "तैयार",
+    "readyCount": "{ready}/{total} तैयार",
+    "status": {
+      "ready": "तैयार",
+      "placeholder": "जल्द"
+    },
     "groups": {
       "auth": {
         "title": "प्रमाणीकरण",
-        "description": "लॉगिन, रजिस्ट्रेशन, पासवर्ड रिकवरी और ईमेल सत्यापन फ्लो।"
+        "description": "लॉगिन, रजिस्टर और forgot password फॉर्म, validation और mock API hooks के साथ तैयार हैं।"
       },
       "dashboard": {
         "title": "डैशबोर्ड",
-        "description": "ओवरव्यू, प्रोफ़ाइल, सेटिंग्स और बिलिंग पेजों के साथ सुरक्षित ऐप शेल।"
+        "description": "ओवरव्यू, प्रोफ़ाइल, सेटिंग्स और बिलिंग placeholder पेज के साथ सुरक्षित ऐप शेल।"
       },
       "legal": {
         "title": "कानूनी",
-        "description": "अनुपालन के लिए गोपनीयता, नियम और कुकी नीति पेज।"
+        "description": "गोपनीयता, नियम और cookie policy placeholder पेज।"
       }
     },
     "pages": {
@@ -52,30 +58,30 @@
       "dashboardBilling": "बिलिंग",
       "privacyPolicy": "गोपनीयता नीति",
       "termsOfService": "सेवा की शर्तें",
-      "cookiePolicy": "कुकी नीति"
+      "cookiePolicy": "Cookie नीति"
     }
   },
   "roadmap": {
     "title": "आगामी रिलीज़",
-    "subtitle": "इस स्टार्टर के आगामी संस्करणों के लिए नियोजित जोड़।",
+    "subtitle": "auth फॉर्म, थीम और service layer तैयार होने के बाद अगले कदम।",
     "soon": "जल्द आ रहा है"
   },
   "roadmapItems": {
     "testing": {
       "title": "टेस्टिंग सुइट",
-      "description": "Playwright E2E और Vitest यूनिट टेस्ट उदाहरण कवरेज के साथ।"
+      "description": "Playwright E2E और Vitest unit tests उदाहरण कवरेज के साथ।"
     },
-    "forms": {
-      "title": "फॉर्म पैटर्न",
-      "description": "सामान्य इनपुट और वैलिडेशन फ्लो के लिए React Hook Form + Zod उदाहरण।"
+    "authCompletion": {
+      "title": "Auth फ्लो पूर्णता",
+      "description": "Reset password, verify email और verification success पेज पूर्ण form patterns के साथ।"
     },
-    "api": {
-      "title": "API एकीकरण",
-      "description": "टाइप्ड Axios क्लाइंट और TanStack Query हुक के साथ सर्विस लेयर उदाहरण।"
+    "backendIntegration": {
+      "title": "वास्तविक backend एकीकरण",
+      "description": "Mock auth APIs को live backend पर typed Axios clients से बदलें।"
     },
     "deployment": {
-      "title": "डिप्लॉयमेंट वर्कफ़्लो",
-      "description": "स्टेजिंग और प्रोडक्शन वातावरण में स्वचालित डिप्लॉयमेंट।"
+      "title": "डिप्लॉयमेंट workflows",
+      "description": "Staging और production में automated deploy।"
     }
   },
   "footer": {

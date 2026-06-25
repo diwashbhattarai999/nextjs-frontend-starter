@@ -10,11 +10,19 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { PAGE_GROUP_KEYS, PAGE_GROUPS } from "@/features/landing/data/page-groups.data";
+import {
+    PAGE_GROUP_KEYS,
+    PAGE_GROUPS,
+    type PageLinkStatus,
+} from "@/features/landing/data/page-groups.data";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 import { useLandingTranslations } from "../hooks/use-landing-translations";
+
+function getPageStatusBadgeVariant(status: PageLinkStatus) {
+    return status === "ready" ? "default" : "secondary";
+}
 
 export function PageGroupsSection() {
     const { pageGroups } = useLandingTranslations();
@@ -28,13 +36,19 @@ export function PageGroupsSection() {
             <SectionContent className="grid gap-6 lg:grid-cols-3">
                 {PAGE_GROUP_KEYS.map((groupKey) => {
                     const group = PAGE_GROUPS[groupKey];
+                    const readyCount = group.pages.filter((page) => page.status === "ready").length;
 
                     return (
                         <Card key={groupKey} size="sm">
                             <CardHeader>
                                 <div className="flex items-start justify-between gap-3">
                                     <CardTitle>{pageGroups.getGroupTitle(groupKey)}</CardTitle>
-                                    <Badge variant="secondary">{pageGroups.placeholderLabel}</Badge>
+                                    <Badge variant="outline">
+                                        {pageGroups.getReadyCountLabel(
+                                            readyCount,
+                                            group.pages.length
+                                        )}
+                                    </Badge>
                                 </div>
                                 <CardDescription>
                                     {pageGroups.getGroupDescription(groupKey)}
@@ -47,17 +61,30 @@ export function PageGroupsSection() {
                                             <Link
                                                 className={cn(
                                                     buttonVariants({
-                                                        className: "w-full justify-between",
+                                                        className:
+                                                            "h-auto w-full justify-between py-2",
                                                         size: "sm",
                                                         variant: "ghost",
                                                     })
                                                 )}
                                                 href={page.href}
                                             >
-                                                {pageGroups.getPageLabel(page.key)}
+                                                <span className="flex min-w-0 items-center gap-2">
+                                                    <span className="truncate">
+                                                        {pageGroups.getPageLabel(page.key)}
+                                                    </span>
+                                                    <Badge
+                                                        className="shrink-0"
+                                                        variant={getPageStatusBadgeVariant(
+                                                            page.status
+                                                        )}
+                                                    >
+                                                        {pageGroups.getPageStatusLabel(page.status)}
+                                                    </Badge>
+                                                </span>
                                                 <IconArrowRight
                                                     aria-hidden
-                                                    className="size-4 opacity-50"
+                                                    className="size-4 shrink-0 opacity-50"
                                                 />
                                             </Link>
                                         </li>

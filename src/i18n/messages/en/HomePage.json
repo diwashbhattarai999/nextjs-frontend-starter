@@ -1,7 +1,7 @@
 {
-  "badge": "v0.1.0 · Work in progress",
+  "badge": "v0.1.0 · Active development",
   "title": "Next.js 16 Frontend Starter",
-  "description": "A production-ready foundation with TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, theming, and opinionated architecture — so you can ship features, not boilerplate.",
+  "description": "A production-ready foundation with TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, multi-theme support, auth flows, and opinionated architecture — so you can ship features, not boilerplate.",
   "viewGithub": "View on GitHub",
   "getStarted": "Get started",
   "viewDashboard": "View dashboard",
@@ -11,7 +11,7 @@
   },
   "integrated": {
     "title": "Integrated stack",
-    "subtitle": "Everything wired up and ready to build on.",
+    "subtitle": "Packages and tools wired up with icons — ready to build on.",
     "categories": {
       "core": "Core",
       "ui": "UI & styling",
@@ -23,20 +23,26 @@
   },
   "pageGroups": {
     "title": "Explore the starter",
-    "subtitle": "Scaffolded route groups with placeholder pages — click through to preview each section.",
+    "subtitle": "Route groups with live and placeholder pages — click through to preview each section.",
     "placeholder": "Placeholder",
+    "ready": "Ready",
+    "readyCount": "{ready}/{total} ready",
+    "status": {
+      "ready": "Ready",
+      "placeholder": "Soon"
+    },
     "groups": {
       "auth": {
         "title": "Authentication",
-        "description": "Login, registration, password recovery, and email verification flows."
+        "description": "Login, register, and forgot-password flows are implemented with forms, validation, and mock API hooks."
       },
       "dashboard": {
         "title": "Dashboard",
-        "description": "Protected app shell with overview, profile, settings, and billing pages."
+        "description": "Protected app shell with overview, profile, settings, and billing placeholder pages."
       },
       "legal": {
         "title": "Legal",
-        "description": "Privacy, terms, and cookie policy pages for compliance."
+        "description": "Privacy, terms, and cookie policy placeholder pages for compliance."
       }
     },
     "pages": {
@@ -57,7 +63,7 @@
   },
   "roadmap": {
     "title": "Future releases",
-    "subtitle": "Planned additions for upcoming versions of this starter.",
+    "subtitle": "What is planned next now that auth forms, themes, and the service layer foundation are in place.",
     "soon": "Coming soon"
   },
   "roadmapItems": {
@@ -65,13 +71,13 @@
       "title": "Testing suite",
       "description": "Playwright end-to-end tests and Vitest unit tests with example coverage."
     },
-    "forms": {
-      "title": "Form patterns",
-      "description": "React Hook Form + Zod examples for common input and validation flows."
+    "authCompletion": {
+      "title": "Auth flow completion",
+      "description": "Reset password, verify email, and email verification success pages with full form patterns."
     },
-    "api": {
-      "title": "API integration",
-      "description": "Service layer examples with typed Axios clients and TanStack Query hooks."
+    "backendIntegration": {
+      "title": "Real backend integration",
+      "description": "Replace mock auth APIs with typed Axios clients against a live backend."
     },
     "deployment": {
       "title": "Deployment workflows",

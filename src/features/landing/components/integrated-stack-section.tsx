@@ -5,8 +5,8 @@ import {
     SectionHeader,
     SectionTitle,
 } from "@/components/shared/section";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { StackItemBadge } from "@/features/landing/components/stack-item-badge";
 import {
     INTEGRATED_STACK,
     STACK_CATEGORY_KEYS,
@@ -32,8 +32,8 @@ export function IntegratedStackSection() {
                         <CardContent>
                             <ul className="flex flex-wrap gap-2">
                                 {INTEGRATED_STACK[category].map((item) => (
-                                    <li key={item}>
-                                        <Badge variant="outline">{item}</Badge>
+                                    <li key={item.label}>
+                                        <StackItemBadge icon={item.icon} label={item.label} />
                                     </li>
                                 ))}
                             </ul>

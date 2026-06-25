@@ -1,7 +1,7 @@
 {
-  "badge": "v0.1.0 · कार्य प्रगतिमा",
-  "title": "नेक्स्ट.जेएस १६ फ्रन्टएन्ड स्टार्टर",
-  "description": "टाइपसक्रिप्ट, टेलविन्ड CSS ४, shadcn/ui, TanStack Query, i18n, थिमिङ र स्पष्ट आर्किटेक्चरसहित उत्पादनका लागि तयार आधार — ताकि तपाईं बोइलरप्लेट होइन, फिचर बनाउन सक्नुहोस्।",
+  "badge": "v0.1.0 · सक्रिय विकास",
+  "title": "Next.js 16 Frontend Starter",
+  "description": "TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, multi-theme, auth flows र स्पष्ट architecture सहित production-ready आधार — boilerplate होइन, features ship गर्नुहोस्।",
   "viewGithub": "GitHub मा हेर्नुहोस्",
   "getStarted": "सुरु गर्नुहोस्",
   "viewDashboard": "ड्यासबोर्ड हेर्नुहोस्",
@@ -10,33 +10,39 @@
     "register": "दर्ता"
   },
   "integrated": {
-    "title": "एकीकृत स्ट्याक",
-    "subtitle": "सबै कुरा जोडिएको छ र निर्माणका लागि तयार छ।",
+    "title": "एकीकृत stack",
+    "subtitle": "आइकनसहित जडान गरिएका packages र tools — निर्माणका लागि तयार।",
     "categories": {
-      "core": "कोर",
-      "ui": "UI र स्टाइलिङ",
-      "data": "डाटा र फर्म",
-      "platform": "प्लेटफर्म",
-      "architecture": "एप संरचना",
-      "dx": "विकासकर्ता अनुभव"
+      "core": "Core",
+      "ui": "UI र styling",
+      "data": "Data र forms",
+      "platform": "Platform",
+      "architecture": "App structure",
+      "dx": "Developer experience"
     }
   },
   "pageGroups": {
-    "title": "स्टार्टर अन्वेषण गर्नुहोस्",
-    "subtitle": "प्लेसहोल्डर पृष्ठहरूसहित तयार मार्ग समूहहरू — प्रत्येक खण्ड पूर्वावलोकन गर्न क्लिक गर्नुहोस्।",
-    "placeholder": "प्लेसहोल्डर",
+    "title": "Starter अन्वेषण गर्नुहोस्",
+    "subtitle": "Live र placeholder pages भएका route groups — प्रत्येक section preview गर्न क्लिक गर्नुहोस्।",
+    "placeholder": "Placeholder",
+    "ready": "तयार",
+    "readyCount": "{ready}/{total} तयार",
+    "status": {
+      "ready": "तयार",
+      "placeholder": "छिट्टै"
+    },
     "groups": {
       "auth": {
-        "title": "प्रमाणीकरण",
-        "description": "लगइन, दर्ता, पासवर्ड पुनर्प्राप्ति र इमेल प्रमाणीकरण प्रवाह।"
+        "title": "Authentication",
+        "description": "Login, register र forgot password forms, validation र mock API hooks सहित implement गरिएको छ।"
       },
       "dashboard": {
-        "title": "ड्यासबोर्ड",
-        "description": "अवलोकन, प्रोफाइल, सेटिङ र बिलिङ पृष्ठहरूसहित सुरक्षित एप शेल।"
+        "title": "Dashboard",
+        "description": "Overview, profile, settings र billing placeholder pages सहित protected app shell।"
       },
       "legal": {
-        "title": "कानूनी",
-        "description": "अनुपालनका लागि गोपनीयता, सर्त र कुकी नीति पृष्ठहरू।"
+        "title": "Legal",
+        "description": "Privacy, terms र cookie policy placeholder pages।"
       }
     },
     "pages": {
@@ -46,45 +52,45 @@
       "resetPassword": "पासवर्ड रिसेट",
       "verifyEmail": "इमेल प्रमाणित",
       "emailVerificationSuccess": "इमेल प्रमाणित भयो",
-      "dashboardHome": "अवलोकन",
-      "dashboardSettings": "सेटिङहरू",
-      "dashboardProfile": "प्रोफाइल",
-      "dashboardBilling": "बिलिङ",
-      "privacyPolicy": "गोपनीयता नीति",
-      "termsOfService": "सेवाका सर्तहरू",
-      "cookiePolicy": "कुकी नीति"
+      "dashboardHome": "Overview",
+      "dashboardSettings": "Settings",
+      "dashboardProfile": "Profile",
+      "dashboardBilling": "Billing",
+      "privacyPolicy": "Privacy policy",
+      "termsOfService": "Terms of service",
+      "cookiePolicy": "Cookie policy"
     }
   },
   "roadmap": {
-    "title": "आगामी संस्करणहरू",
-    "subtitle": "यो स्टार्टरका आगामी संस्करणहरूका लागि योजना गरिएका थप सुविधाहरू।",
+    "title": "आगामी releases",
+    "subtitle": "auth forms, themes र service layer तयार भएपछि अर्को चरण।",
     "soon": "छिट्टै आउँदै"
   },
   "roadmapItems": {
     "testing": {
-      "title": "परीक्षण सुइट",
-      "description": "Playwright E2E र Vitest युनिट परीक्षण उदाहरण कभरेजसहित।"
+      "title": "Testing suite",
+      "description": "Playwright E2E र Vitest unit tests उदाहरण coverage सहित।"
     },
-    "forms": {
-      "title": "फर्म ढाँचाहरू",
-      "description": "सामान्य इनपुट र प्रमाणीकरण प्रवाहका लागि React Hook Form + Zod उदाहरणहरू।"
+    "authCompletion": {
+      "title": "Auth flow completion",
+      "description": "Reset password, verify email र verification success pages पूर्ण form patterns सहित।"
     },
-    "api": {
-      "title": "API एकीकरण",
-      "description": "टाइप गरिएको Axios क्लाइन्ट र TanStack Query हुकसहित सेवा तह उदाहरणहरू।"
+    "backendIntegration": {
+      "title": "Real backend integration",
+      "description": "Mock auth APIs लाई live backend मा typed Axios clients ले प्रतिस्थापन गर्नुहोस्।"
     },
     "deployment": {
-      "title": "डिप्लोयमेन्ट वर्कफ्लो",
-      "description": "स्टेजिङ र उत्पादन वातावरणमा स्वचालित डिप्लोयमेन्ट।"
+      "title": "Deployment workflows",
+      "description": "Staging र production मा automated deploy।"
     }
   },
   "footer": {
-    "product": "उत्पादन",
-    "legal": "कानूनी",
-    "resources": "स्रोतहरू",
-    "overview": "अवलोकन",
-    "settings": "सेटिङहरू",
-    "profile": "प्रोफाइल",
+    "product": "Product",
+    "legal": "Legal",
+    "resources": "Resources",
+    "overview": "Overview",
+    "settings": "Settings",
+    "profile": "Profile",
     "github": "GitHub",
     "copyright": "© {year} Next.js Frontend Starter. सर्वाधिकार सुरक्षित।"
   }
