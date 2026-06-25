@@ -1,5 +1,13 @@
 import { IconArrowRight, IconBrandGithub } from "@tabler/icons-react";
 
+import { PageActions } from "@/components/shared/page";
+import {
+    Section,
+    SectionContent,
+    SectionDescription,
+    SectionHeader,
+    SectionTitle,
+} from "@/components/shared/section";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { ROUTES } from "@/configs/routes";
@@ -14,15 +22,17 @@ export function LandingHero() {
         useLandingTranslations();
 
     return (
-        <section className="flex flex-col items-center gap-6 text-center">
-            <Badge variant="secondary">{badge}</Badge>
-            <div className="flex max-w-2xl flex-col gap-4">
-                <h1 className="font-semibold text-4xl tracking-tight md:text-5xl">{title}</h1>
-                <p className="text-balance text-lg text-muted-foreground leading-relaxed">
-                    {description}
-                </p>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-3">
+        <Section spacing="sm">
+            <SectionHeader align="center">
+                <Badge variant="secondary">{badge}</Badge>
+                <SectionContent className="max-w-2xl items-center gap-4">
+                    <SectionTitle className="text-4xl md:text-5xl">{title}</SectionTitle>
+                    <SectionDescription className="text-balance text-lg">
+                        {description}
+                    </SectionDescription>
+                </SectionContent>
+            </SectionHeader>
+            <PageActions className="justify-center">
                 <Link className={cn(buttonVariants({ size: "lg" }))} href={ROUTES.AUTH.LOGIN}>
                     {getStartedLabel}
                     <IconArrowRight aria-hidden />
@@ -42,7 +52,7 @@ export function LandingHero() {
                     <IconBrandGithub aria-hidden />
                     {viewGithubLabel}
                 </a>
-            </div>
-        </section>
+            </PageActions>
+        </Section>
     );
 }

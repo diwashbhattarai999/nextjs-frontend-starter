@@ -1,16 +1,11 @@
 import { IconClock } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 
+import { PageActions, PageDescription, PageTitle } from "@/components/shared/page";
+import { Section, SectionHeader } from "@/components/shared/section";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import {
-    Empty,
-    EmptyContent,
-    EmptyDescription,
-    EmptyHeader,
-    EmptyMedia,
-    EmptyTitle,
-} from "@/components/ui/empty";
+import { Empty, EmptyContent, EmptyHeader, EmptyMedia } from "@/components/ui/empty";
 import { ROUTES } from "@/configs/routes";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
@@ -32,28 +27,34 @@ export async function ComingSoonPage({ title, description }: ComingSoonPageProps
     const t = await getTranslations("Pages");
 
     return (
-        <Empty className="border border-primary bg-primary/5">
-            <EmptyHeader className="max-w-4xl gap-4">
-                <EmptyMedia variant="icon">
-                    <IconClock aria-hidden />
-                </EmptyMedia>
-                <Badge rounded="full" size="sm" variant="secondary">
-                    {t("comingSoon.badge")}
-                </Badge>
-                <EmptyTitle className="font-bold text-4xl">{title}</EmptyTitle>
-                <EmptyDescription className="w-full text-lg">
-                    {description ?? t("comingSoon.defaultDescription")}
-                </EmptyDescription>
-            </EmptyHeader>
-            <EmptyContent className="max-w-4xl">
-                <Link
-                    className={cn(buttonVariants({ variant: "outline", size: "xl" }))}
-                    href={ROUTES.HOME}
-                >
-                    <Icons.arrowLeft />
-                    {t("comingSoon.backHome")}
-                </Link>
-            </EmptyContent>
-        </Empty>
+        <Section spacing="sm">
+            <Empty className="border border-primary bg-primary/5">
+                <EmptyHeader className="max-w-4xl gap-4">
+                    <EmptyMedia variant="icon">
+                        <IconClock aria-hidden />
+                    </EmptyMedia>
+                    <Badge rounded="full" size="sm" variant="secondary">
+                        {t("comingSoon.badge")}
+                    </Badge>
+                    <SectionHeader align="center" className="gap-4">
+                        <PageTitle className="font-bold text-4xl">{title}</PageTitle>
+                        <PageDescription className="w-full text-lg">
+                            {description ?? t("comingSoon.defaultDescription")}
+                        </PageDescription>
+                    </SectionHeader>
+                </EmptyHeader>
+                <EmptyContent className="max-w-4xl">
+                    <PageActions className="justify-center">
+                        <Link
+                            className={cn(buttonVariants({ size: "xl", variant: "outline" }))}
+                            href={ROUTES.HOME}
+                        >
+                            <Icons.arrowLeft />
+                            {t("comingSoon.backHome")}
+                        </Link>
+                    </PageActions>
+                </EmptyContent>
+            </Empty>
+        </Section>
     );
 }

@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
+import { Page, PageContainer, PageContent, PageHeader } from "@/components/shared/page";
 import { ROUTES } from "@/configs/routes";
 import { Link } from "@/i18n/navigation";
 
@@ -7,20 +8,23 @@ export default async function DashboardLayout({ children }: { children: React.Re
     const t = await getTranslations("Pages");
 
     return (
-        <div className="flex min-h-svh flex-col">
-            <header className="border-b">
-                <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-6">
+        <Page>
+            <PageHeader className="border-b">
+                <PageContainer
+                    className="h-14 flex-row items-center justify-between py-0"
+                    width="full"
+                >
                     <Link
-                        className="font-medium text-sm hover:text-primary"
+                        className="font-medium text-sm transition-colors hover:text-primary"
                         href={ROUTES.DASHBOARD.HOME}
                     >
                         {t("dashboard.home.title")}
                     </Link>
-                </div>
-            </header>
-            <main className="flex flex-1 flex-col items-center justify-center px-6 py-12">
+                </PageContainer>
+            </PageHeader>
+            <PageContent align="center" className="px-6 py-12">
                 {children}
-            </main>
-        </div>
+            </PageContent>
+        </Page>
     );
 }

@@ -1,5 +1,12 @@
 import { IconArrowRight } from "@tabler/icons-react";
 
+import {
+    Section,
+    SectionContent,
+    SectionDescription,
+    SectionHeader,
+    SectionTitle,
+} from "@/components/shared/section";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,12 +20,12 @@ export function PageGroupsSection() {
     const { pageGroups } = useLandingTranslations();
 
     return (
-        <section className="flex flex-col gap-8">
-            <div className="flex flex-col gap-2 text-center md:text-left">
-                <h2 className="font-semibold text-2xl tracking-tight">{pageGroups.title}</h2>
-                <p className="text-muted-foreground">{pageGroups.subtitle}</p>
-            </div>
-            <div className="grid gap-6 lg:grid-cols-3">
+        <Section>
+            <SectionHeader>
+                <SectionTitle>{pageGroups.title}</SectionTitle>
+                <SectionDescription>{pageGroups.subtitle}</SectionDescription>
+            </SectionHeader>
+            <SectionContent className="grid gap-6 lg:grid-cols-3">
                 {PAGE_GROUP_KEYS.map((groupKey) => {
                     const group = PAGE_GROUPS[groupKey];
 
@@ -60,7 +67,7 @@ export function PageGroupsSection() {
                         </Card>
                     );
                 })}
-            </div>
-        </section>
+            </SectionContent>
+        </Section>
     );
 }

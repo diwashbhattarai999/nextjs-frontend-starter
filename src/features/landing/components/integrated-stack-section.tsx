@@ -1,3 +1,10 @@
+import {
+    Section,
+    SectionContent,
+    SectionDescription,
+    SectionHeader,
+    SectionTitle,
+} from "@/components/shared/section";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -11,12 +18,12 @@ export function IntegratedStackSection() {
     const { integrated } = useLandingTranslations();
 
     return (
-        <section className="flex flex-col gap-8">
-            <div className="flex flex-col gap-2 text-center md:text-left">
-                <h2 className="font-semibold text-2xl tracking-tight">{integrated.title}</h2>
-                <p className="text-muted-foreground">{integrated.subtitle}</p>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Section>
+            <SectionHeader>
+                <SectionTitle>{integrated.title}</SectionTitle>
+                <SectionDescription>{integrated.subtitle}</SectionDescription>
+            </SectionHeader>
+            <SectionContent className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {STACK_CATEGORY_KEYS.map((category) => (
                     <Card key={category} size="sm">
                         <CardHeader>
@@ -33,7 +40,7 @@ export function IntegratedStackSection() {
                         </CardContent>
                     </Card>
                 ))}
-            </div>
-        </section>
+            </SectionContent>
+        </Section>
     );
 }

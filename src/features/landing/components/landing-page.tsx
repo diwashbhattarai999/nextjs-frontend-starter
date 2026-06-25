@@ -1,5 +1,6 @@
 "use client";
 
+import { Page, PageContainer } from "@/components/shared/page";
 import { Separator } from "@/components/ui/separator";
 import { IntegratedStackSection } from "@/features/landing/components/integrated-stack-section";
 import { LandingFooter } from "@/features/landing/components/landing-footer";
@@ -10,8 +11,8 @@ import { RoadmapSection } from "@/features/landing/components/roadmap-section";
 
 export function LandingPage() {
     return (
-        <main className="min-h-screen overflow-y-auto">
-            <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-16 px-6 py-8 md:py-12">
+        <Page>
+            <PageContainer className="relative gap-16" width="wide">
                 <div
                     aria-hidden
                     className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-72 bg-[radial-gradient(ellipse_at_top,var(--color-muted)_0%,transparent_70%)]"
@@ -19,14 +20,12 @@ export function LandingPage() {
 
                 <LandingHeader />
                 <LandingHero />
-
                 <Separator />
-
                 <PageGroupsSection />
                 <IntegratedStackSection />
                 <RoadmapSection />
                 <LandingFooter />
-            </div>
-        </main>
+            </PageContainer>
+        </Page>
     );
 }
