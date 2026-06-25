@@ -3,31 +3,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
     INTEGRATED_STACK,
     STACK_CATEGORY_KEYS,
-    type StackCategoryKey,
 } from "@/features/landing/data/integrated-stack.data";
 
-interface IntegratedStackSectionProps {
-    title: string;
-    subtitle: string;
-    getCategoryLabel: (category: StackCategoryKey) => string;
-}
+import { useLandingTranslations } from "../hooks/use-landing-translations";
 
-export function IntegratedStackSection({
-    title,
-    subtitle,
-    getCategoryLabel,
-}: IntegratedStackSectionProps) {
+export function IntegratedStackSection() {
+    const { integrated } = useLandingTranslations();
+
     return (
         <section className="flex flex-col gap-8">
             <div className="flex flex-col gap-2 text-center md:text-left">
-                <h2 className="font-semibold text-2xl tracking-tight">{title}</h2>
-                <p className="text-muted-foreground">{subtitle}</p>
+                <h2 className="font-semibold text-2xl tracking-tight">{integrated.title}</h2>
+                <p className="text-muted-foreground">{integrated.subtitle}</p>
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {STACK_CATEGORY_KEYS.map((category) => (
                     <Card key={category} size="sm">
                         <CardHeader>
-                            <CardTitle>{getCategoryLabel(category)}</CardTitle>
+                            <CardTitle>{integrated.getCategoryLabel(category)}</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <ul className="flex flex-wrap gap-2">

@@ -7,23 +7,12 @@ import { siteConfig } from "@/configs/site";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
-interface LandingHeroProps {
-    badge: string;
-    title: string;
-    description: string;
-    getStartedLabel: string;
-    viewDashboardLabel: string;
-    viewGithubLabel: string;
-}
+import { useLandingTranslations } from "../hooks/use-landing-translations";
 
-export function LandingHero({
-    badge,
-    title,
-    description,
-    getStartedLabel,
-    viewDashboardLabel,
-    viewGithubLabel,
-}: LandingHeroProps) {
+export function LandingHero() {
+    const { badge, title, description, viewGithubLabel, getStartedLabel, viewDashboardLabel } =
+        useLandingTranslations();
+
     return (
         <section className="flex flex-col items-center gap-6 text-center">
             <Badge variant="secondary">{badge}</Badge>
