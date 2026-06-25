@@ -7,10 +7,10 @@ import { Controller, useForm } from "react-hook-form";
 
 import { PageDescription, PageFooter, PageHeader, PageTitle } from "@/components/shared/page";
 import { PasswordInput } from "@/components/shared/password-input";
+import { SubmitButton } from "@/components/shared/submit-button";
 import { Button } from "@/components/ui/button";
 import { Field, FieldError, FieldGroup, FieldLabel, FieldSeparator } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { Spinner } from "@/components/ui/spinner";
 import { ROUTES } from "@/configs/routes";
 import { useAuthTranslations } from "@/features/auth/hooks/use-auth-translations";
 import { useLoginMutation } from "@/features/auth/hooks/use-login-mutation";
@@ -62,8 +62,6 @@ export function LoginForm() {
     const onSubmit = form.handleSubmit((values) => {
         loginMutation.mutate(values);
     });
-
-    const isSubmitDisabled = loginMutation.isPending;
 
     return (
         <form className="flex w-full flex-col gap-8" noValidate onSubmit={onSubmit}>
@@ -143,16 +141,13 @@ export function LoginForm() {
                     )}
                 />
 
-                <Button className="w-full" disabled={isSubmitDisabled} size="xl" type="submit">
-                    {loginMutation.isPending ? (
-                        <>
-                            <Spinner />
-                            {auth.login.submitting}
-                        </>
-                    ) : (
-                        auth.login.submit
-                    )}
-                </Button>
+                <SubmitButton
+                    className="w-full"
+                    isPending={loginMutation.isPending}
+                    label={auth.login.submit}
+                    pendingLabel={auth.login.submitting}
+                    size="xl"
+                />
             </FieldGroup>
 
             <PageFooter className="mt-0 border-0 pt-0 text-center">
