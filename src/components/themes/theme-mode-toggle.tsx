@@ -34,7 +34,7 @@ export function ThemeModeToggle() {
 
     return (
         <Button
-            className="group/toggle size-8"
+            className="group/toggle"
             onClick={handleThemeToggle}
             size="icon"
             variant="secondary"
