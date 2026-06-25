@@ -49,6 +49,18 @@ export function useAuthTranslations() {
             error: t("register.error"),
             socialComingSoon: t("register.socialComingSoon"),
         },
+        forgotPassword: {
+            title: t("forgotPassword.title"),
+            description: t("forgotPassword.description"),
+            email: t("forgotPassword.email"),
+            emailPlaceholder: t("forgotPassword.emailPlaceholder"),
+            submit: t("forgotPassword.submit"),
+            submitting: t("forgotPassword.submitting"),
+            rememberPassword: t("forgotPassword.rememberPassword"),
+            signIn: t("forgotPassword.signIn"),
+            success: t("forgotPassword.success"),
+            error: t("forgotPassword.error"),
+        },
         showcase: {
             headline: t("showcase.headline"),
             description: t("showcase.description"),

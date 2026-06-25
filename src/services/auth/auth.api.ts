@@ -1,8 +1,13 @@
 import { AxiosError, type InternalAxiosRequestConfig } from "axios";
 
+import type { ForgotPasswordFormValues } from "@/features/auth/schemas/forgot-password.schema";
 import type { LoginFormValues } from "@/features/auth/schemas/login.schema";
 import type { RegisterPayload } from "@/features/auth/schemas/register.schema";
-import type { LoginResponse, RegisterResponse } from "@/types/api/auth.types";
+import type {
+    ForgotPasswordResponse,
+    LoginResponse,
+    RegisterResponse,
+} from "@/types/api/auth.types";
 
 const MOCK_DELAY_MS = 1200;
 
@@ -97,5 +102,34 @@ export async function register(payload: RegisterPayload): Promise<RegisterRespon
     };
 
     // const { data } = await api.post<RegisterResponse>(ENDPOINTS.auth.register, payload);
+    // return data;
+}
+
+/**
+ * Sends a password reset link to the given email address.
+ *
+ * Mock implementation — replace with `api.post` when the backend is available.
+ *
+ * @param payload - Email address for the reset link.
+ * @returns Confirmation message on success.
+ */
+export async function forgotPassword(
+    _payload: ForgotPasswordFormValues
+): Promise<ForgotPasswordResponse> {
+    await new Promise((resolve) => setTimeout(resolve, MOCK_DELAY_MS));
+
+    return {
+        status: "success",
+        message: "Password reset link sent.",
+        statusCode: 200,
+        data: {
+            message: "A password reset link has been sent to your email address.",
+        },
+    };
+
+    // const { data } = await api.post<ForgotPasswordResponse>(
+    //     ENDPOINTS.auth.forgotPassword,
+    //     payload
+    // );
     // return data;
 }

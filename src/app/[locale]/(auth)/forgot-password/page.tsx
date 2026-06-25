@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { ComingSoonPage } from "@/components/shared/coming-soon-page";
-import { AuthPlaceholderLayout } from "@/features/auth/components/auth-placeholder-layout";
+import { AppLogo } from "@/components/shared/app-logo";
+import { LocaleSwitcher } from "@/components/shared/locale-switcher";
+import { PageActions, PageContent } from "@/components/shared/page";
+import { ROUTES } from "@/configs/routes";
+import { ForgotPasswordForm } from "@/features/auth/components/forgot-password-form";
+import { LoginShowcase } from "@/features/auth/components/login-showcase";
 
 export async function generateMetadata(): Promise<Metadata> {
     const t = await getTranslations("Pages");
@@ -10,15 +14,23 @@ export async function generateMetadata(): Promise<Metadata> {
     return { title: t("auth.forgotPassword.title") };
 }
 
-export default async function ForgotPasswordPage() {
-    const t = await getTranslations("Pages");
-
+export default function ForgotPasswordRoutePage() {
     return (
-        <AuthPlaceholderLayout>
-            <ComingSoonPage
-                description={t("auth.forgotPassword.description")}
-                title={t("auth.forgotPassword.title")}
-            />
-        </AuthPlaceholderLayout>
+        <PageContent className="min-h-svh lg:grid lg:grid-cols-2">
+            <div className="flex min-h-svh flex-col px-6 py-8 lg:px-12">
+                <PageActions className="justify-between">
+                    <AppLogo displayWidth={40} href={ROUTES.HOME} />
+                    <LocaleSwitcher />
+                </PageActions>
+
+                <div className="flex flex-1 items-center justify-center py-8">
+                    <div className="w-full max-w-md">
+                        <ForgotPasswordForm />
+                    </div>
+                </div>
+            </div>
+
+            <LoginShowcase />
+        </PageContent>
     );
 }

@@ -12,6 +12,11 @@ export interface AuthSessionData {
     user: AuthUser;
 }
 
+export interface ForgotPasswordData {
+    message: string;
+}
+
 // Response types
 export type LoginResponse = ISuccessResponse<AuthSessionData>;
 export type RegisterResponse = ISuccessResponse<AuthSessionData>;
+export type ForgotPasswordResponse = ISuccessResponse<ForgotPasswordData>;
