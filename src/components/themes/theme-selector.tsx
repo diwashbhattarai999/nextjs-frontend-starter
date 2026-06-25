@@ -29,7 +29,7 @@ export function ThemeSelector() {
             <Label className="sr-only" htmlFor="theme-selector">
                 Theme
             </Label>
-            <Select onValueChange={handleThemeChange} value={activeTheme}>
+            <Select items={THEMES} onValueChange={handleThemeChange} value={activeTheme}>
                 <SelectTrigger
                     className="justify-start *:data-[slot=select-value]:w-24"
                     id="theme-selector"
@@ -45,8 +45,8 @@ export function ThemeSelector() {
                         <SelectGroup>
                             <SelectLabel>THEMES</SelectLabel>
                             {THEMES.map((theme) => (
-                                <SelectItem key={theme.name} value={theme.value}>
-                                    {theme.name}
+                                <SelectItem key={theme.label} value={theme.value}>
+                                    {theme.label}
                                 </SelectItem>
                             ))}
                         </SelectGroup>

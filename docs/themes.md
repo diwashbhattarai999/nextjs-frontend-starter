@@ -265,7 +265,7 @@ Add your theme to the `THEMES` array in `src/components/themes/theme.config.ts`:
 export const THEMES = [
   // ... existing themes
   {
-    name: 'Your Theme Name', // Display name in the UI
+    label: 'Your Theme Name', // Display name in the UI
     value: 'your-theme-name' // Must match [data-theme] value exactly
   }
 ];

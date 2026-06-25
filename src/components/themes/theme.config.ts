@@ -6,31 +6,31 @@ export const DEFAULT_THEME = "paila";
 
 export const THEMES = [
     {
-        name: "Claude",
+        label: "Claude",
         value: "claude",
     },
     {
-        name: "Supabase",
+        label: "Supabase",
         value: "supabase",
     },
     {
-        name: "Vercel",
+        label: "Vercel",
         value: "vercel",
     },
     {
-        name: "Mono",
+        label: "Mono",
         value: "mono",
     },
     {
-        name: "Notebook",
+        label: "Notebook",
         value: "notebook",
     },
     {
-        name: "Paila",
+        label: "Paila",
         value: "paila",
     },
     {
-        name: "BridgeBench",
+        label: "BridgeBench",
         value: "bridgebench",
     },
 ];
