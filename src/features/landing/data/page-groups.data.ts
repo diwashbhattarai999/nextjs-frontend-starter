@@ -46,7 +46,7 @@ export const PAGE_GROUPS: Record<PageGroupKey, PageGroup> = {
             {
                 key: "emailVerificationSuccess",
                 href: ROUTES.AUTH.EMAIL_VERIFICATION_SUCCESS,
-                status: "placeholder",
+                status: "ready",
             },
         ],
     },

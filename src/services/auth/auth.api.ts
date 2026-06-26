@@ -3,10 +3,14 @@ import { AxiosError, type InternalAxiosRequestConfig } from "axios";
 import type { ForgotPasswordFormValues } from "@/features/auth/schemas/forgot-password.schema";
 import type { LoginFormValues } from "@/features/auth/schemas/login.schema";
 import type { RegisterPayload } from "@/features/auth/schemas/register.schema";
+import type { ResetPasswordPayload } from "@/features/auth/schemas/reset-password.schema";
 import type {
     ForgotPasswordResponse,
     LoginResponse,
     RegisterResponse,
+    ResendVerificationResponse,
+    ResetPasswordResponse,
+    VerifyEmailResponse,
 } from "@/types/api/auth.types";
 
 const MOCK_DELAY_MS = 1200;
@@ -129,6 +133,95 @@ export async function forgotPassword(
 
     // const { data } = await api.post<ForgotPasswordResponse>(
     //     ENDPOINTS.auth.forgotPassword,
+    //     payload
+    // );
+    // return data;
+}
+
+/**
+ * Resets the user's password using a reset token.
+ *
+ * Mock implementation — replace with `api.post` when the backend is available.
+ *
+ * @param payload - The new password and the verification token.
+ * @returns Confirmation message on success.
+ */
+export async function resetPassword(
+    _payload: ResetPasswordPayload
+): Promise<ResetPasswordResponse> {
+    await new Promise((resolve) => setTimeout(resolve, MOCK_DELAY_MS));
+
+    return {
+        status: "success",
+        message: "Password reset successful.",
+        statusCode: 200,
+        data: {
+            message: "Your password has been reset successfully.",
+        },
+    };
+
+    // const { data } = await api.post<ResetPasswordResponse>(
+    //     ENDPOINTS.auth.resetPassword,
+    //     payload
+    // );
+    // return data;
+}
+
+/**
+ * Resends the email verification link.
+ *
+ * Mock implementation — replace with `api.post` when the backend is available.
+ *
+ * @param payload - The email address to resend the link to.
+ * @returns Confirmation message on success.
+ */
+export async function resendVerificationEmail(_payload: {
+    email: string;
+}): Promise<ResendVerificationResponse> {
+    await new Promise((resolve) => setTimeout(resolve, MOCK_DELAY_MS));
+
+    return {
+        status: "success",
+        message: "Verification email resent successfully.",
+        statusCode: 200,
+        data: {
+            message: "A verification email has been resent to your email address.",
+        },
+    };
+
+    // const { data } = await api.post<ResendVerificationResponse>(
+    //     ENDPOINTS.auth.resendVerification,
+    //     payload
+    // );
+    // return data;
+}
+
+/**
+ * Verifies the user's email using a verification token.
+ *
+ * Mock implementation — replace with `api.post` when the backend is available.
+ *
+ * @param payload - The verification token.
+ * @returns Confirmation message on success.
+ */
+export async function verifyEmail(payload: { token: string }): Promise<VerifyEmailResponse> {
+    await new Promise((resolve) => setTimeout(resolve, MOCK_DELAY_MS));
+
+    if (payload.token === "invalid") {
+        throwMockAuthError("The verification link is invalid or has expired.");
+    }
+
+    return {
+        status: "success",
+        message: "Email verified successfully.",
+        statusCode: 200,
+        data: {
+            message: "Your email has been verified successfully.",
+        },
+    };
+
+    // const { data } = await api.post<VerifyEmailResponse>(
+    //     ENDPOINTS.auth.verifyEmail,
     //     payload
     // );
     // return data;
