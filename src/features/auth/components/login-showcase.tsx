@@ -1,6 +1,6 @@
-import { IconArrowRight, IconCube3dSphere } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 
+import { Icons } from "@/components/shared/icons";
 import { buttonVariants } from "@/components/ui/button";
 import { ROUTES } from "@/configs/routes";
 import { Link } from "@/i18n/navigation";
@@ -26,7 +26,11 @@ export async function LoginShowcase() {
                         aria-hidden
                         className="absolute inset-4 rounded-full border border-primary/40 border-dashed"
                     />
-                    <IconCube3dSphere aria-hidden className="size-16 text-primary" stroke={1.25} />
+                    <Icons.cube3dSphere
+                        aria-hidden
+                        className="size-16 text-primary"
+                        stroke={1.25}
+                    />
                 </div>
 
                 <div className="flex max-w-md flex-col gap-4">
@@ -43,7 +47,7 @@ export async function LoginShowcase() {
                     href={ROUTES.HOME}
                 >
                     {t("showcase.cta")}
-                    <IconArrowRight aria-hidden />
+                    <Icons.arrowRight aria-hidden />
                 </Link>
             </div>
         </aside>

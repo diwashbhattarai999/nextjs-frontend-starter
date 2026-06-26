@@ -1,7 +1,8 @@
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
-import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 
 import { cn } from "@/lib/utils";
+
+import { Icons } from "../shared/icons";
 
 function Accordion({ className, ...props }: AccordionPrimitive.Root.Props) {
     return (
@@ -35,11 +36,11 @@ function AccordionTrigger({ className, children, ...props }: AccordionPrimitive.
                 {...props}
             >
                 {children}
-                <IconChevronDown
+                <Icons.chevronDown
                     className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden"
                     data-slot="accordion-trigger-icon"
                 />
-                <IconChevronUp
+                <Icons.chevronUp
                     className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline"
                     data-slot="accordion-trigger-icon"
                 />

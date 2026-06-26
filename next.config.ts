@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     // Experimental features for Next.js 16.1
     experimental: {
         // Better tree-shaking for large icon/utility libraries
-        optimizePackageImports: ["lucide-react", "date-fns", "recharts"],
+        optimizePackageImports: ["@tabler/icons-react", "lucide-react", "date-fns", "recharts"],
     },
 
     // Image optimization for external images (GitHub avatars)

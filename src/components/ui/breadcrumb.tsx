@@ -1,9 +1,10 @@
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
-import { IconChevronRight, IconDots } from "@tabler/icons-react";
 import type * as React from "react";
 
 import { cn } from "@/lib/utils";
+
+import { Icons } from "../shared/icons";
 
 function Breadcrumb({ className, ...props }: React.ComponentProps<"nav">) {
     return (
@@ -72,7 +73,7 @@ function BreadcrumbSeparator({ children, className, ...props }: React.ComponentP
             role="presentation"
             {...props}
         >
-            {children ?? <IconChevronRight />}
+            {children ?? <Icons.chevronRight />}
         </li>
     );
 }
@@ -86,7 +87,7 @@ function BreadcrumbEllipsis({ className, ...props }: React.ComponentProps<"span"
             role="presentation"
             {...props}
         >
-            <IconDots />
+            <Icons.dots />
             <span className="sr-only">More</span>
         </span>
     );

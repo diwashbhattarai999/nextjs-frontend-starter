@@ -1,4 +1,3 @@
-import { IconClock } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
 
 import { PageActions, PageDescription, PageTitle } from "@/components/shared/page";
@@ -31,7 +30,7 @@ export async function ComingSoonPage({ title, description }: ComingSoonPageProps
             <Empty className="border border-primary bg-primary/5">
                 <EmptyHeader className="max-w-4xl gap-4">
                     <EmptyMedia variant="icon">
-                        <IconClock aria-hidden />
+                        <Icons.clock aria-hidden />
                     </EmptyMedia>
                     <Badge rounded="full" size="sm" variant="secondary">
                         {t("comingSoon.badge")}

@@ -1,11 +1,12 @@
 "use client";
 
 import { Dialog as SheetPrimitive } from "@base-ui/react/dialog";
-import { IconX } from "@tabler/icons-react";
 import type * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+import { Icons } from "../shared/icons";
 
 function Sheet({ ...props }: SheetPrimitive.Root.Props) {
     return <SheetPrimitive.Root data-slot="sheet" {...props} />;
@@ -70,7 +71,7 @@ function SheetContent({
                             />
                         }
                     >
-                        <IconX />
+                        <Icons.x />
                         <span className="sr-only">Close</span>
                     </SheetPrimitive.Close>
                 )}

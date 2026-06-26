@@ -17,58 +17,69 @@ import { cn } from "@/lib/utils";
 const fontSans = Geist({
     subsets: ["latin"],
     variable: "--font-sans",
+    preload: true,
 });
 
 const fontMono = Geist_Mono({
     subsets: ["latin"],
     variable: "--font-mono",
+    preload: true,
 });
 
 const fontInstrument = Instrument_Sans({
     subsets: ["latin"],
     variable: "--font-instrument",
+    preload: false,
 });
 
 const fontNotoMono = Noto_Sans_Mono({
     subsets: ["latin"],
     variable: "--font-noto-mono",
+    preload: false,
 });
 
 const fontMullish = Mulish({
     subsets: ["latin"],
     variable: "--font-mullish",
+    preload: false,
 });
 
 const fontInter = Inter({
     subsets: ["latin"],
     variable: "--font-inter",
+    preload: false,
 });
 
 const fontArchitectsDaughter = Architects_Daughter({
     subsets: ["latin"],
     weight: "400",
     variable: "--font-architects-daughter",
+    preload: false,
 });
 
 const fontDMSans = DM_Sans({
     subsets: ["latin"],
     variable: "--font-dm-sans",
+    preload: false,
 });
 
 const fontFiraCode = Fira_Code({
     subsets: ["latin"],
     variable: "--font-fira-code",
+    preload: false,
 });
 
 const fontOutfit = Outfit({
     subsets: ["latin"],
     variable: "--font-outfit",
+    preload: false,
 });
 
 const fontSpaceMono = Space_Mono({
     subsets: ["latin"],
     weight: ["400", "700"],
     variable: "--font-space-mono",
+    preload: false,
 });
 
 export const fontVariables = cn(

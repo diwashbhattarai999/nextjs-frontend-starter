@@ -1,6 +1,5 @@
 "use client";
 
-import { IconEye, IconEyeOff } from "@tabler/icons-react";
 import type * as React from "react";
 import { useState } from "react";
 
@@ -12,6 +11,8 @@ import {
 } from "@/components/ui/input-group";
 import { useCommonTranslations } from "@/hooks/use-common-translations";
 import { cn } from "@/lib/utils";
+
+import { Icons } from "./icons";
 
 interface PasswordInputProps extends Omit<React.ComponentProps<typeof InputGroupInput>, "type"> {
     inputGroupClassName?: string;
@@ -46,7 +47,7 @@ export function PasswordInput({
                     onClick={() => setShowPassword((current) => !current)}
                     type="button"
                 >
-                    {showPassword ? <IconEyeOff aria-hidden /> : <IconEye aria-hidden />}
+                    {showPassword ? <Icons.eyeOff aria-hidden /> : <Icons.eye aria-hidden />}
                 </InputGroupButton>
             </InputGroupAddon>
         </InputGroup>

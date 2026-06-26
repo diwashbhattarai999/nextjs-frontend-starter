@@ -1,11 +1,12 @@
 "use client";
 
-import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react";
 import * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+import { Icons } from "../shared/icons";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -188,7 +189,7 @@ function CarouselPrevious({
             variant={variant}
             {...props}
         >
-            <IconChevronLeft />
+            <Icons.chevronLeft />
             <span className="sr-only">Previous slide</span>
         </Button>
     );
@@ -218,7 +219,7 @@ function CarouselNext({
             variant={variant}
             {...props}
         >
-            <IconChevronRight />
+            <Icons.chevronRight />
             <span className="sr-only">Next slide</span>
         </Button>
     );

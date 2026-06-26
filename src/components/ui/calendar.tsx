@@ -1,11 +1,12 @@
 "use client";
 
-import { IconChevronDown, IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import * as React from "react";
 import { type DayButton, DayPicker, getDefaultClassNames, type Locale } from "react-day-picker";
 
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+import { Icons } from "../shared/icons";
 
 function Calendar({
     className,
@@ -125,14 +126,16 @@ function Calendar({
                 },
                 Chevron: ({ className, orientation, ...props }) => {
                     if (orientation === "left") {
-                        return <IconChevronLeft className={cn("size-4", className)} {...props} />;
+                        return <Icons.chevronLeft className={cn("size-4", className)} {...props} />;
                     }
 
                     if (orientation === "right") {
-                        return <IconChevronRight className={cn("size-4", className)} {...props} />;
+                        return (
+                            <Icons.chevronRight className={cn("size-4", className)} {...props} />
+                        );
                     }
 
-                    return <IconChevronDown className={cn("size-4", className)} {...props} />;
+                    return <Icons.chevronDown className={cn("size-4", className)} {...props} />;
                 },
                 DayButton: ({ ...props }) => <CalendarDayButton locale={locale} {...props} />,
                 WeekNumber: ({ children, ...props }) => {

@@ -25,6 +25,8 @@ export function Providers({ activeThemeValue, locale, messages, children }: Prov
 
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Asia/Kathmandu";
 
+    const isDevelopment = process.env.NODE_ENV === "development";
+
     return (
         <>
             <NextTopLoader color="var(--primary)" showSpinner={false} />
@@ -38,7 +40,7 @@ export function Providers({ activeThemeValue, locale, messages, children }: Prov
                             <TooltipProvider>{children}</TooltipProvider>
                         </ActiveThemeProvider>
 
-                        <ReactQueryDevtools initialIsOpen={false} />
+                        {isDevelopment && <ReactQueryDevtools initialIsOpen={false} />}
                     </QueryClientProvider>
                 </NextIntlClientProvider>
             </NuqsAdapter>

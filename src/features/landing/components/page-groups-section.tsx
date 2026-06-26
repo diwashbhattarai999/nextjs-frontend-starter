@@ -1,5 +1,4 @@
-import { IconArrowRight } from "@tabler/icons-react";
-
+import { Icons } from "@/components/shared/icons";
 import {
     Section,
     SectionContent,
@@ -91,7 +90,7 @@ export function PageGroupsSection() {
                                                         {pageGroups.getPageStatusLabel(page.status)}
                                                     </Badge>
                                                 </span>
-                                                <IconArrowRight
+                                                <Icons.arrowRight
                                                     aria-hidden
                                                     className="size-4 shrink-0 opacity-50"
                                                 />

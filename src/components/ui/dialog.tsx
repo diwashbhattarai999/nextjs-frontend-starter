@@ -1,11 +1,12 @@
 "use client";
 
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
-import { IconX } from "@tabler/icons-react";
 import type * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+import { Icons } from "../shared/icons";
 
 function Dialog({ ...props }: DialogPrimitive.Root.Props) {
     return <DialogPrimitive.Root data-slot="dialog" {...props} />;
@@ -67,7 +68,7 @@ function DialogContent({
                             />
                         }
                     >
-                        <IconX />
+                        <Icons.x />
                         <span className="sr-only">Close</span>
                     </DialogPrimitive.Close>
                 )}

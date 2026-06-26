@@ -1,10 +1,11 @@
 "use client";
 
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { IconCheck, IconChevronDown, IconChevronUp, IconSelector } from "@tabler/icons-react";
 import type * as React from "react";
 
 import { cn } from "@/lib/utils";
+
+import { Icons } from "../shared/icons";
 
 const Select = SelectPrimitive.Root;
 
@@ -49,7 +50,7 @@ function SelectTrigger({
             {children}
             <SelectPrimitive.Icon
                 render={
-                    <IconSelector className="pointer-events-none size-4 text-muted-foreground" />
+                    <Icons.selector className="pointer-events-none size-4 text-muted-foreground" />
                 }
             />
         </SelectPrimitive.Trigger>
@@ -126,7 +127,7 @@ function SelectItem({ className, children, ...props }: SelectPrimitive.Item.Prop
                     <span className="pointer-events-none absolute right-2 flex size-4 items-center justify-center" />
                 }
             >
-                <IconCheck className="pointer-events-none" />
+                <Icons.check className="pointer-events-none" />
             </SelectPrimitive.ItemIndicator>
         </SelectPrimitive.Item>
     );
@@ -155,7 +156,7 @@ function SelectScrollUpButton({
             data-slot="select-scroll-up-button"
             {...props}
         >
-            <IconChevronUp />
+            <Icons.chevronUp />
         </SelectPrimitive.ScrollUpArrow>
     );
 }
@@ -173,7 +174,7 @@ function SelectScrollDownButton({
             data-slot="select-scroll-down-button"
             {...props}
         >
-            <IconChevronDown />
+            <Icons.chevronDown />
         </SelectPrimitive.ScrollDownArrow>
     );
 }

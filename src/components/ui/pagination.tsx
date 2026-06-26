@@ -1,8 +1,9 @@
-import { IconChevronLeft, IconChevronRight, IconDots } from "@tabler/icons-react";
 import type * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+import { Icons } from "../shared/icons";
 
 function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
     return (
@@ -65,7 +66,7 @@ function PaginationPrevious({
             size="default"
             {...props}
         >
-            <IconChevronLeft data-icon="inline-start" />
+            <Icons.chevronLeft data-icon="inline-start" />
             <span className="hidden sm:block">{text}</span>
         </PaginationLink>
     );
@@ -84,7 +85,7 @@ function PaginationNext({
             {...props}
         >
             <span className="hidden sm:block">{text}</span>
-            <IconChevronRight data-icon="inline-end" />
+            <Icons.chevronRight data-icon="inline-end" />
         </PaginationLink>
     );
 }
@@ -100,7 +101,7 @@ function PaginationEllipsis({ className, ...props }: React.ComponentProps<"span"
             data-slot="pagination-ellipsis"
             {...props}
         >
-            <IconDots />
+            <Icons.dots />
             <span className="sr-only">More pages</span>
         </span>
     );

@@ -1,5 +1,5 @@
-import { IconArrowRight, IconBrandGithub } from "@tabler/icons-react";
-
+import { GithubIcon } from "@/components/icons/github";
+import { Icons } from "@/components/shared/icons";
 import { PageActions } from "@/components/shared/page";
 import {
     Section,
@@ -52,7 +52,7 @@ export function LandingHero() {
 
     return (
         <Section spacing="sm">
-            <SectionHeader align="center">
+            <SectionHeader align="center" className="gap-4">
                 <Badge variant="secondary">{badge}</Badge>
                 <SectionContent className="max-w-2xl items-center gap-4">
                     <SectionTitle className="text-4xl md:text-5xl">{title}</SectionTitle>
@@ -82,7 +82,7 @@ export function LandingHero() {
             <PageActions className="justify-center">
                 <Link className={cn(buttonVariants({ size: "lg" }))} href={ROUTES.AUTH.LOGIN}>
                     {getStartedLabel}
-                    <IconArrowRight aria-hidden />
+                    <Icons.arrowRight aria-hidden />
                 </Link>
                 <Link
                     className={cn(buttonVariants({ size: "lg", variant: "outline" }))}
@@ -96,7 +96,7 @@ export function LandingHero() {
                     rel="noopener noreferrer"
                     target="_blank"
                 >
-                    <IconBrandGithub aria-hidden />
+                    <GithubIcon aria-hidden />
                     {viewGithubLabel}
                 </a>
             </PageActions>

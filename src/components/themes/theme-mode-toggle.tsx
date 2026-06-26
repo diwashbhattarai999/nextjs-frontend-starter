@@ -1,10 +1,11 @@
 "use client";
 
-import { IconBrightness } from "@tabler/icons-react";
 import { useTheme } from "@wrksz/themes/client";
 import { useCallback } from "react";
 
 import { Button } from "@/components/ui/button";
+
+import { Icons } from "../shared/icons";
 
 export function ThemeModeToggle() {
     const { setTheme, resolvedTheme } = useTheme();
@@ -39,7 +40,7 @@ export function ThemeModeToggle() {
             size="icon"
             variant="secondary"
         >
-            <IconBrightness />
+            <Icons.brightness />
             <span className="sr-only">Toggle theme</span>
         </Button>
     );
