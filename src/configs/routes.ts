@@ -19,4 +19,11 @@ export const ROUTES = {
         TERMS_OF_SERVICE: "/terms-of-service",
         COOKIE_POLICY: "/cookie-policy",
     },
+    ERRORS: {
+        NOT_FOUND: "/not-found",
+        UNAUTHORIZED: "/unauthorized",
+        FORBIDDEN: "/forbidden",
+        SERVER_ERROR: "/server-error",
+        MAINTENANCE: "/maintenance",
+    },
 } as const;

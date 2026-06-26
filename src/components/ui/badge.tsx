@@ -18,6 +18,9 @@ const badgeVariants = cva(
                 ghost: "hover:bg-muted hover:text-muted-foreground dark:hover:bg-muted/50",
                 link: "text-primary underline-offset-4 hover:underline",
                 warning: "bg-yellow-500/10 text-yellow-500",
+                info: "bg-blue-500/10 text-blue-500",
+                success: "bg-emerald-500/10 text-emerald-500",
+                danger: "bg-red-500/10 text-red-500",
             },
             size: {
                 xs: "h-5 text-xs",
@@ -43,6 +46,8 @@ const badgeVariants = cva(
     }
 );
 
+export type BadgeProps = useRender.ComponentProps<"span"> & VariantProps<typeof badgeVariants>;
+
 function Badge({
     className,
     variant = "default",
@@ -50,7 +55,7 @@ function Badge({
     rounded = "xl",
     render,
     ...props
-}: useRender.ComponentProps<"span"> & VariantProps<typeof badgeVariants>) {
+}: BadgeProps) {
     return useRender({
         defaultTagName: "span",
         props: mergeProps<"span">(

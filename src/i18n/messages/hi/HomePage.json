@@ -43,6 +43,10 @@
       "legal": {
         "title": "कानूनी",
         "description": "गोपनीयता, नियम और cookie policy placeholder पेज।"
+      },
+      "errors": {
+        "title": "त्रुटियां",
+        "description": "Not found, unauthorized, forbidden, server error, and maintenance placeholder pages."
       }
     },
     "pages": {
@@ -58,7 +62,12 @@
       "dashboardBilling": "बिलिंग",
       "privacyPolicy": "गोपनीयता नीति",
       "termsOfService": "सेवा की शर्तें",
-      "cookiePolicy": "Cookie नीति"
+      "cookiePolicy": "Cookie नीति",
+      "notFound": "नहीं मिला",
+      "unauthorized": "अनुमति नहीं",
+      "forbidden": "अनुमति नहीं",
+      "serverError": "सर्वर त्रुटि",
+      "maintenance": "मेंटेनेंस"
     }
   },
   "roadmap": {
@@ -71,17 +80,13 @@
       "title": "टेस्टिंग सुइट",
       "description": "Playwright E2E और Vitest unit tests उदाहरण कवरेज के साथ।"
     },
-    "authCompletion": {
-      "title": "Auth फ्लो पूर्णता",
-      "description": "Reset password, verify email और verification success पेज पूर्ण form patterns के साथ।"
-    },
-    "backendIntegration": {
-      "title": "वास्तविक backend एकीकरण",
-      "description": "Mock auth APIs को live backend पर typed Axios clients से बदलें।"
-    },
     "deployment": {
       "title": "डिप्लॉयमेंट workflows",
       "description": "Staging और production में automated deploy।"
+    },
+    "errorHandling": {
+      "title": "त्रुटि संभालन",
+      "description": "Axios और React Query के साथ केंद्रीकृत त्रुटि संभालन।"
     }
   },
   "footer": {

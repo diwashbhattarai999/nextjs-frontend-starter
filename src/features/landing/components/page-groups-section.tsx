@@ -7,7 +7,7 @@ import {
     SectionHeader,
     SectionTitle,
 } from "@/components/shared/section";
-import { Badge } from "@/components/ui/badge";
+import { Badge, type BadgeProps } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -20,8 +20,12 @@ import { cn } from "@/lib/utils";
 
 import { useLandingTranslations } from "../hooks/use-landing-translations";
 
-function getPageStatusBadgeVariant(status: PageLinkStatus) {
-    return status === "ready" ? "default" : "secondary";
+function getPageStatusBadgeVariant(status: PageLinkStatus): BadgeProps["variant"] {
+    return status === "ready" ? "success" : "warning";
+}
+
+function getReadyCountBadgeVariant(readyCount: number, totalCount: number): BadgeProps["variant"] {
+    return readyCount === totalCount ? "success" : "warning";
 }
 
 export function PageGroupsSection() {
@@ -43,7 +47,12 @@ export function PageGroupsSection() {
                             <CardHeader>
                                 <div className="flex items-start justify-between gap-3">
                                     <CardTitle>{pageGroups.getGroupTitle(groupKey)}</CardTitle>
-                                    <Badge variant="outline">
+                                    <Badge
+                                        variant={getReadyCountBadgeVariant(
+                                            readyCount,
+                                            group.pages.length
+                                        )}
+                                    >
                                         {pageGroups.getReadyCountLabel(
                                             readyCount,
                                             group.pages.length

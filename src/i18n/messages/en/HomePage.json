@@ -43,6 +43,10 @@
       "legal": {
         "title": "Legal",
         "description": "Privacy, terms, and cookie policy placeholder pages for compliance."
+      },
+      "errors": {
+        "title": "Errors",
+        "description": "Not found, unauthorized, forbidden, server error, and maintenance placeholder pages."
       }
     },
     "pages": {
@@ -58,7 +62,12 @@
       "dashboardBilling": "Billing",
       "privacyPolicy": "Privacy policy",
       "termsOfService": "Terms of service",
-      "cookiePolicy": "Cookie policy"
+      "cookiePolicy": "Cookie policy",
+      "notFound": "Not found",
+      "unauthorized": "Unauthorized",
+      "forbidden": "Forbidden",
+      "serverError": "Server error",
+      "maintenance": "Maintenance"
     }
   },
   "roadmap": {
@@ -71,17 +80,13 @@
       "title": "Testing suite",
       "description": "Playwright end-to-end tests and Vitest unit tests with example coverage."
     },
-    "authCompletion": {
-      "title": "Auth flow completion",
-      "description": "Reset password, verify email, and email verification success pages with full form patterns."
-    },
-    "backendIntegration": {
-      "title": "Real backend integration",
-      "description": "Replace mock auth APIs with typed Axios clients against a live backend."
-    },
     "deployment": {
       "title": "Deployment workflows",
       "description": "Automated deploy to staging and production environments."
+    },
+    "errorHandling": {
+      "title": "Error handling",
+      "description": "Centralized error handling with Axios and React Query."
     }
   },
   "footer": {

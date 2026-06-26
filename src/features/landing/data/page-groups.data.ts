@@ -1,6 +1,6 @@
 import { ROUTES } from "@/configs/routes";
 
-export const PAGE_GROUP_KEYS = ["auth", "dashboard", "legal"] as const;
+export const PAGE_GROUP_KEYS = ["auth", "dashboard", "legal", "errors"] as const;
 
 export type PageGroupKey = (typeof PAGE_GROUP_KEYS)[number];
 
@@ -14,10 +14,14 @@ export type PageLinkKey =
     | "dashboardHome"
     | "dashboardSettings"
     | "dashboardProfile"
-    | "dashboardBilling"
     | "privacyPolicy"
     | "termsOfService"
-    | "cookiePolicy";
+    | "cookiePolicy"
+    | "notFound"
+    | "unauthorized"
+    | "forbidden"
+    | "serverError"
+    | "maintenance";
 
 export type PageLinkStatus = "ready" | "placeholder";
 
@@ -55,7 +59,6 @@ export const PAGE_GROUPS: Record<PageGroupKey, PageGroup> = {
             { key: "dashboardHome", href: ROUTES.DASHBOARD.HOME, status: "placeholder" },
             { key: "dashboardSettings", href: ROUTES.DASHBOARD.SETTINGS, status: "placeholder" },
             { key: "dashboardProfile", href: ROUTES.DASHBOARD.PROFILE, status: "placeholder" },
-            { key: "dashboardBilling", href: ROUTES.DASHBOARD.BILLING, status: "placeholder" },
         ],
     },
     legal: {
@@ -63,6 +66,15 @@ export const PAGE_GROUPS: Record<PageGroupKey, PageGroup> = {
             { key: "privacyPolicy", href: ROUTES.LEGAL.PRIVACY_POLICY, status: "placeholder" },
             { key: "termsOfService", href: ROUTES.LEGAL.TERMS_OF_SERVICE, status: "placeholder" },
             { key: "cookiePolicy", href: ROUTES.LEGAL.COOKIE_POLICY, status: "placeholder" },
+        ],
+    },
+    errors: {
+        pages: [
+            { key: "notFound", href: ROUTES.ERRORS.NOT_FOUND, status: "placeholder" },
+            { key: "unauthorized", href: ROUTES.ERRORS.UNAUTHORIZED, status: "placeholder" },
+            { key: "forbidden", href: ROUTES.ERRORS.FORBIDDEN, status: "placeholder" },
+            { key: "serverError", href: ROUTES.ERRORS.SERVER_ERROR, status: "placeholder" },
+            { key: "maintenance", href: ROUTES.ERRORS.MAINTENANCE, status: "placeholder" },
         ],
     },
 };

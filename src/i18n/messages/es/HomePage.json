@@ -43,6 +43,10 @@
       "legal": {
         "title": "Legal",
         "description": "Páginas placeholder de privacidad, términos y política de cookies."
+      },
+      "errors": {
+        "title": "Errores",
+        "description": "Páginas placeholder de errores 404, 401, 403, 500 y mantenimiento."
       }
     },
     "pages": {
@@ -58,7 +62,12 @@
       "dashboardBilling": "Facturación",
       "privacyPolicy": "Política de privacidad",
       "termsOfService": "Términos de servicio",
-      "cookiePolicy": "Política de cookies"
+      "cookiePolicy": "Política de cookies",
+      "notFound": "No encontrado",
+      "unauthorized": "No autorizado",
+      "forbidden": "Prohibido",
+      "serverError": "Error del servidor",
+      "maintenance": "Mantenimiento"
     }
   },
   "roadmap": {
@@ -71,17 +80,13 @@
       "title": "Suite de pruebas",
       "description": "Pruebas E2E con Playwright y unitarias con Vitest con ejemplos."
     },
-    "authCompletion": {
-      "title": "Completar flujos auth",
-      "description": "Páginas de restablecer contraseña, verificar correo y éxito de verificación con formularios completos."
-    },
-    "backendIntegration": {
-      "title": "Integración backend real",
-      "description": "Reemplazar APIs mock por clientes Axios tipados contra un backend en vivo."
-    },
     "deployment": {
       "title": "Flujos de despliegue",
       "description": "Despliegue automatizado a entornos de staging y producción."
+    },
+    "errorHandling": {
+      "title": "Manejo de errores",
+      "description": "Manejo de errores centralizado con Axios y React Query."
     }
   },
   "footer": {
