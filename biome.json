@@ -84,7 +84,8 @@
           },
           "style": {
             "useConsistentTypeDefinitions": "off",
-            "noNestedTernary": "off"
+            "noNestedTernary": "off",
+            "noExportedImports": "off"
           },
           "correctness": {
             "useExhaustiveDependencies": "off"
