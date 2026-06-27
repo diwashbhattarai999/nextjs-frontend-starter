@@ -15,13 +15,13 @@ const pageVariants = cva("flex min-h-svh flex-col", {
     },
 });
 
-const pageContainerVariants = cva("mx-auto flex w-full flex-1 flex-col px-6 py-8 md:py-12", {
+const pageContainerVariants = cva("mx-auto flex w-full flex-1 flex-col", {
     variants: {
         width: {
-            narrow: "max-w-xl",
-            default: "max-w-3xl",
-            wide: "max-w-5xl",
-            full: "max-w-6xl",
+            narrow: "max-w-xl px-6 py-8 md:py-12",
+            default: "max-w-3xl px-6 py-8 md:py-12",
+            wide: "max-w-5xl px-6 py-8 md:py-12",
+            full: "max-container py-4",
         },
     },
     defaultVariants: {
@@ -35,9 +35,32 @@ const pageContentVariants = cva("flex flex-1 flex-col", {
             start: "",
             center: "items-center justify-center",
         },
+        spacing: {
+            none: "",
+            sm: "gap-2",
+            md: "gap-4",
+            lg: "gap-6",
+            xl: "gap-8",
+        },
     },
     defaultVariants: {
         align: "start",
+        spacing: "none",
+    },
+});
+
+const pageTitleVariants = cva("font-semibold tracking-tight", {
+    variants: {
+        size: {
+            xs: "text-lg",
+            sm: "text-xl",
+            md: "text-2xl",
+            default: "text-3xl",
+            lg: "text-4xl",
+        },
+    },
+    defaultVariants: {
+        size: "default",
     },
 });
 
@@ -73,10 +96,14 @@ function PageHeader({ className, ...props }: React.ComponentProps<"header">) {
     );
 }
 
-function PageTitle({ className, ...props }: React.ComponentProps<"h1">) {
+function PageTitle({
+    className,
+    size = "default",
+    ...props
+}: React.ComponentProps<"h1"> & VariantProps<typeof pageTitleVariants>) {
     return (
         <h1
-            className={cn("font-semibold text-3xl tracking-tight", className)}
+            className={cn(pageTitleVariants({ size }), className)}
             data-slot="page-title"
             {...props}
         />
@@ -106,11 +133,12 @@ function PageActions({ className, ...props }: React.ComponentProps<"div">) {
 function PageContent({
     className,
     align,
+    spacing,
     ...props
 }: React.ComponentProps<"div"> & VariantProps<typeof pageContentVariants>) {
     return (
         <div
-            className={cn(pageContentVariants({ align }), className)}
+            className={cn(pageContentVariants({ align, spacing }), className)}
             data-slot="page-content"
             {...props}
         />

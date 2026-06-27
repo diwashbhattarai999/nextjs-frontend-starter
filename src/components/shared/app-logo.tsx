@@ -35,7 +35,7 @@ export function AppLogo({
         render: render ?? (href ? <Link href={href} /> : undefined),
         props: mergeProps<"div">(
             {
-                className: cn("inline-flex items-center", className),
+                className: cn("inline-flex shrink-0 items-center", className),
                 children: (
                     <>
                         <Image

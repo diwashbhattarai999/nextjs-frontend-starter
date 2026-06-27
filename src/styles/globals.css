@@ -150,3 +150,7 @@ input[type="reset"],
 [data-slot="select-trigger"] {
     cursor: pointer;
 }
+
+@utility max-container {
+    @apply max-w-400 mx-auto px-4 sm:px-6 lg:px-8;
+}

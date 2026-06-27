@@ -33,7 +33,7 @@ const PWA_MANIFEST_ICONS: MetadataRoute.Manifest["icons"] = [
  */
 export const siteConfig: SiteConfig = {
     title: "Next.js 16 Frontend Template with Shadcn UI",
-    shortTitle: "Next.js 16 Frontend Template with Shadcn UI",
+    shortTitle: "NextStarter",
     description:
         "A modern frontend template built with Next.js 16 and Shadcn UI, designed for developers looking to kickstart their projects with a solid foundation.",
     url: env.NEXT_PUBLIC_APP_URL,

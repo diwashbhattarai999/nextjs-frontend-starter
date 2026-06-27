@@ -64,7 +64,7 @@ function CommandInput({
 }: React.ComponentProps<typeof CommandPrimitive.Input>) {
     return (
         <div className="p-1 pb-0" data-slot="command-input-wrapper">
-            <InputGroup className="h-8! rounded-lg! border-input/30 bg-input/30 shadow-none! *:data-[slot=input-group-addon]:pl-2!">
+            <InputGroup className="h-11! rounded-lg! border-input/30 bg-input/30 shadow-none! *:data-[slot=input-group-addon]:pl-2!">
                 <CommandPrimitive.Input
                     className={cn(
                         "w-full text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50",
@@ -139,19 +139,28 @@ function CommandSeparator({
 function CommandItem({
     className,
     children,
+    isActive = false,
     ...props
-}: React.ComponentProps<typeof CommandPrimitive.Item>) {
+}: React.ComponentProps<typeof CommandPrimitive.Item> & {
+    isActive?: boolean;
+}) {
     return (
         <CommandPrimitive.Item
             className={cn(
-                "group/command-item relative flex cursor-default select-none items-center gap-2 in-data-[slot=dialog-content]:rounded-lg! rounded-sm px-2 py-1.5 text-sm outline-hidden data-[disabled=true]:pointer-events-none data-selected:bg-muted data-selected:text-foreground data-[disabled=true]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 data-selected:**:[svg]:text-foreground",
+                "group/command-item relative flex cursor-pointer select-none items-center gap-2 in-data-[slot=dialog-content]:rounded-sm! rounded-sm px-2 py-2.5 text-sm outline-hidden data-[disabled=true]:pointer-events-none data-selected:bg-muted data-selected:text-foreground data-[disabled=true]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 data-selected:**:[svg]:text-foreground",
+                { "bg-muted/50 hover:bg-muted/50": isActive },
                 className
             )}
             data-slot="command-item"
             {...props}
         >
             {children}
-            <Icons.check className="ml-auto opacity-0 group-has-data-[slot=command-shortcut]/command-item:hidden group-data-[checked=true]/command-item:opacity-100" />
+            <Icons.check
+                className={cn(
+                    "ml-auto opacity-0 group-has-data-[slot=command-shortcut]/command-item:hidden group-data-[checked=true]/command-item:opacity-100",
+                    { "opacity-100": isActive }
+                )}
+            />
         </CommandPrimitive.Item>
     );
 }
