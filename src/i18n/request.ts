@@ -9,6 +9,7 @@ import { routing } from "@/i18n/routing";
 const NAMESPACE_FILES = {
     Auth: "Auth",
     Common: "Common",
+    Errors: "Errors",
     HomePage: "HomePage",
     Legal: "Legal",
     Pages: "Pages",

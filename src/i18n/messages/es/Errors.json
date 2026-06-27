@@ -1,0 +1,10 @@
+{
+  "notFound": {
+    "code": "404",
+    "title": "Parece que te saliste del mapa.",
+    "description": "La página que buscas no existe, se mudó o simplemente es muy buena escondiéndose.",
+    "footnote": "Al menos perderse aquí no requiere pedir direcciones.",
+    "goBack": "Volver",
+    "backHome": "Ir al inicio"
+  }
+}

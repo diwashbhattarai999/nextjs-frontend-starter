@@ -1,0 +1,10 @@
+{
+  "notFound": {
+    "code": "404",
+    "title": "On dirait que vous êtes hors carte.",
+    "description": "La page que vous cherchez n'existe pas, a été déplacée ou se cache très bien.",
+    "footnote": "Au moins, se perdre ici ne nécessite pas de demander son chemin.",
+    "goBack": "Retour",
+    "backHome": "Accueil"
+  }
+}
