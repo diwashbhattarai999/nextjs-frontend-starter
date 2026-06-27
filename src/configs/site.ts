@@ -37,6 +37,8 @@ export const siteConfig: SiteConfig = {
     description:
         "A modern frontend template built with Next.js 16 and Shadcn UI, designed for developers looking to kickstart their projects with a solid foundation.",
     url: env.NEXT_PUBLIC_APP_URL,
+    contactEmail: "legal@example.com",
+    contactPhone: "+1 (555) 010-0000",
     seo: {
         keywords: [
             "nextjs",

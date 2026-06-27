@@ -19,6 +19,8 @@ export interface SiteConfig {
     shortTitle: string;
     description: string;
     url: string;
+    contactEmail: string;
+    contactPhone: string;
     seo: SiteSeoConfig;
     pwa: {
         display: MetadataRoute.Manifest["display"];

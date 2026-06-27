@@ -1,0 +1,326 @@
+{
+  "common": {
+    "templateDisclaimer": "This is a starter template for legal pages. Replace this content with policies reviewed by qualified legal counsel before publishing your application.",
+    "lastUpdated": "Last updated: {date}",
+    "relatedPages": "Related pages",
+    "backToHome": "Back to home"
+  },
+  "privacyPolicy": {
+    "title": "Privacy policy",
+    "description": "How we collect, use, and protect your personal data when you use {appName}.",
+    "lastUpdatedDate": "June 27, 2025",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "Introduction",
+        "paragraphs": [
+          "This Privacy Policy explains how {companyName} (\"we\", \"us\", or \"our\") collects, uses, and protects personal information when you visit {appUrl} or use {appName} (the \"Service\").",
+          "By using the Service, you agree to the collection and use of information in accordance with this policy. If you do not agree, please do not use the Service."
+        ]
+      },
+      {
+        "id": "information-we-collect",
+        "title": "Information we collect",
+        "paragraphs": [
+          "We may collect information that you provide directly, information collected automatically, and information from third-party services you connect to the Service."
+        ],
+        "list": [
+          "Account information such as name, email address, and profile details",
+          "Authentication data such as login credentials or verification tokens",
+          "Usage data such as pages viewed, features used, and interaction timestamps",
+          "Device and browser data such as IP address, user agent, and approximate location",
+          "Payment and billing details when you purchase a paid plan",
+          "Communications you send to us, including support requests and feedback"
+        ]
+      },
+      {
+        "id": "how-we-use-information",
+        "title": "How we use your information",
+        "paragraphs": [
+          "We use personal information for the following purposes:"
+        ],
+        "list": [
+          "Provide, operate, and maintain the Service",
+          "Create and manage user accounts",
+          "Process transactions and send related notifications",
+          "Improve performance, security, and user experience",
+          "Respond to inquiries and provide customer support",
+          "Send service-related communications and, where permitted, marketing messages",
+          "Detect, prevent, and address fraud, abuse, or security incidents",
+          "Comply with legal obligations and enforce our terms"
+        ]
+      },
+      {
+        "id": "legal-bases",
+        "title": "Legal bases for processing",
+        "paragraphs": [
+          "Where applicable data protection laws require a legal basis, we process personal information based on one or more of the following: performance of a contract, legitimate interests, consent, and compliance with legal obligations."
+        ]
+      },
+      {
+        "id": "sharing",
+        "title": "How we share information",
+        "paragraphs": [
+          "We do not sell your personal information. We may share information with trusted service providers who assist us in operating the Service, such as hosting, analytics, email delivery, and payment processing providers. These parties are authorized to use your information only as necessary to provide services to us.",
+          "We may also disclose information if required by law, to protect our rights, or in connection with a merger, acquisition, or sale of assets."
+        ]
+      },
+      {
+        "id": "retention",
+        "title": "Data retention",
+        "paragraphs": [
+          "We retain personal information only for as long as necessary to fulfill the purposes described in this policy, unless a longer retention period is required or permitted by law. When data is no longer needed, we take reasonable steps to delete or anonymize it."
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Security",
+        "paragraphs": [
+          "We implement appropriate technical and organizational measures designed to protect personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is completely secure."
+        ]
+      },
+      {
+        "id": "your-rights",
+        "title": "Your rights and choices",
+        "paragraphs": [
+          "Depending on your location, you may have rights regarding your personal information, including:"
+        ],
+        "list": [
+          "Accessing or receiving a copy of your personal data",
+          "Correcting inaccurate or incomplete information",
+          "Requesting deletion of your personal data",
+          "Restricting or objecting to certain processing activities",
+          "Withdrawing consent where processing is based on consent",
+          "Opting out of marketing communications at any time"
+        ]
+      },
+      {
+        "id": "children",
+        "title": "Children's privacy",
+        "paragraphs": [
+          "The Service is not intended for children under the age of 13 (or the minimum age required in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us so we can take appropriate action."
+        ]
+      },
+      {
+        "id": "international-transfers",
+        "title": "International transfers",
+        "paragraphs": [
+          "Your information may be processed in countries other than your own. Where required, we implement appropriate safeguards for cross-border data transfers."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Changes to this policy",
+        "paragraphs": [
+          "We may update this Privacy Policy from time to time. When we do, we will revise the \"Last updated\" date at the top of this page. Continued use of the Service after changes become effective constitutes acceptance of the updated policy."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Contact us",
+        "paragraphs": [
+          "If you have questions about this Privacy Policy or wish to exercise your privacy rights, email us at {contactEmail} or call {contactPhone}."
+        ]
+      }
+    ]
+  },
+  "termsOfService": {
+    "title": "Terms of service",
+    "description": "Rules and guidelines for using {appName}.",
+    "lastUpdatedDate": "June 27, 2025",
+    "sections": [
+      {
+        "id": "agreement",
+        "title": "Agreement to terms",
+        "paragraphs": [
+          "These Terms of Service (\"Terms\") govern your access to and use of {appName}, operated by {companyName} at {appUrl}. By accessing or using the Service, you agree to be bound by these Terms.",
+          "If you are using the Service on behalf of an organization, you represent that you have authority to bind that organization to these Terms."
+        ]
+      },
+      {
+        "id": "eligibility",
+        "title": "Eligibility",
+        "paragraphs": [
+          "You must be at least 13 years old (or the minimum age required in your jurisdiction) and capable of forming a binding contract to use the Service. You may not use the Service if you are prohibited from doing so under applicable law."
+        ]
+      },
+      {
+        "id": "accounts",
+        "title": "Accounts and security",
+        "paragraphs": [
+          "You may need to create an account to access certain features. You are responsible for maintaining the confidentiality of your credentials and for all activity that occurs under your account.",
+          "You agree to provide accurate information and to notify us promptly of any unauthorized use of your account."
+        ]
+      },
+      {
+        "id": "acceptable-use",
+        "title": "Acceptable use",
+        "paragraphs": [
+          "You agree not to misuse the Service. Prohibited activities include, but are not limited to:"
+        ],
+        "list": [
+          "Violating applicable laws or regulations",
+          "Infringing intellectual property or privacy rights of others",
+          "Uploading malware, spam, or harmful code",
+          "Attempting to gain unauthorized access to systems or data",
+          "Interfering with or disrupting the Service or its infrastructure",
+          "Using the Service to harass, abuse, or harm others",
+          "Scraping or collecting data from the Service without permission"
+        ]
+      },
+      {
+        "id": "content",
+        "title": "Your content",
+        "paragraphs": [
+          "You retain ownership of content you submit through the Service. By submitting content, you grant us a limited, non-exclusive license to host, store, and display that content solely to operate and improve the Service.",
+          "You are solely responsible for the content you submit and must ensure you have the rights necessary to do so."
+        ]
+      },
+      {
+        "id": "intellectual-property",
+        "title": "Our intellectual property",
+        "paragraphs": [
+          "The Service, including its software, design, branding, and documentation, is owned by {companyName} or its licensors and is protected by intellectual property laws. Except as expressly permitted, you may not copy, modify, distribute, or create derivative works from the Service."
+        ]
+      },
+      {
+        "id": "paid-services",
+        "title": "Paid services and billing",
+        "paragraphs": [
+          "If you purchase a paid plan, you agree to pay all applicable fees and taxes. Billing terms, renewal periods, and refund policies will be disclosed at the point of purchase or in separate billing documentation.",
+          "We may change pricing or features with reasonable notice where required by law."
+        ]
+      },
+      {
+        "id": "termination",
+        "title": "Suspension and termination",
+        "paragraphs": [
+          "We may suspend or terminate your access to the Service if you violate these Terms or if we reasonably believe your use poses a risk to the Service or other users.",
+          "You may stop using the Service at any time. Provisions that by their nature should survive termination will remain in effect."
+        ]
+      },
+      {
+        "id": "disclaimers",
+        "title": "Disclaimers",
+        "paragraphs": [
+          "The Service is provided on an \"as is\" and \"as available\" basis without warranties of any kind, whether express or implied, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.",
+          "We do not guarantee that the Service will be uninterrupted, secure, or error-free."
+        ]
+      },
+      {
+        "id": "liability",
+        "title": "Limitation of liability",
+        "paragraphs": [
+          "To the maximum extent permitted by law, {companyName} and its affiliates will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of profits, data, or goodwill arising from your use of the Service.",
+          "Our total liability for any claim relating to the Service will not exceed the amount you paid us in the twelve months preceding the event giving rise to the claim, or one hundred dollars (USD) if no fees were paid."
+        ]
+      },
+      {
+        "id": "governing-law",
+        "title": "Governing law",
+        "paragraphs": [
+          "These Terms are governed by the laws of the jurisdiction where {companyName} is established, without regard to conflict of law principles. Update this section to reflect your company's legal jurisdiction before launch."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Changes to these terms",
+        "paragraphs": [
+          "We may modify these Terms from time to time. Material changes will be communicated through the Service or by other reasonable means. Your continued use after changes take effect constitutes acceptance of the revised Terms."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Contact us",
+        "paragraphs": [
+          "Questions about these Terms may be sent to {contactEmail} or by phone at {contactPhone}."
+        ]
+      }
+    ]
+  },
+  "cookiePolicy": {
+    "title": "Cookie policy",
+    "description": "How {appName} uses cookies and similar technologies.",
+    "lastUpdatedDate": "June 27, 2025",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "Introduction",
+        "paragraphs": [
+          "This Cookie Policy explains how {companyName} uses cookies and similar technologies when you visit {appUrl} or use {appName}. It should be read together with our Privacy Policy."
+        ]
+      },
+      {
+        "id": "what-are-cookies",
+        "title": "What are cookies?",
+        "paragraphs": [
+          "Cookies are small text files stored on your device when you visit a website. They help websites remember preferences, keep you signed in, and understand how the site is used.",
+          "Similar technologies include local storage, session storage, and pixels."
+        ]
+      },
+      {
+        "id": "how-we-use-cookies",
+        "title": "How we use cookies",
+        "paragraphs": [
+          "We use cookies and similar technologies for the following purposes:"
+        ],
+        "list": [
+          "Essential operation of the Service, including authentication and security",
+          "Remembering preferences such as language, theme, and locale",
+          "Measuring traffic and understanding how features are used",
+          "Improving performance and diagnosing technical issues"
+        ]
+      },
+      {
+        "id": "types-of-cookies",
+        "title": "Types of cookies we use",
+        "paragraphs": [
+          "Depending on your configuration, we may use the following categories of cookies:"
+        ],
+        "list": [
+          "Strictly necessary cookies required for core functionality and security",
+          "Preference cookies that remember settings you choose",
+          "Analytics cookies that help us understand usage patterns in aggregate",
+          "Marketing cookies used to deliver relevant messages, if enabled"
+        ]
+      },
+      {
+        "id": "third-party-cookies",
+        "title": "Third-party cookies",
+        "paragraphs": [
+          "Some cookies may be set by third-party services integrated into the Service, such as analytics providers or payment processors. These third parties have their own privacy and cookie policies.",
+          "Review and configure third-party integrations used in your deployment before production launch."
+        ]
+      },
+      {
+        "id": "managing-cookies",
+        "title": "Managing cookies",
+        "paragraphs": [
+          "You can control cookies through your browser settings, including blocking or deleting cookies. Note that disabling certain cookies may affect the functionality of the Service.",
+          "Where required by law, we will provide a consent mechanism before placing non-essential cookies."
+        ]
+      },
+      {
+        "id": "retention",
+        "title": "Cookie retention",
+        "paragraphs": [
+          "Session cookies expire when you close your browser. Persistent cookies remain on your device for a defined period or until you delete them."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Changes to this policy",
+        "paragraphs": [
+          "We may update this Cookie Policy from time to time. The \"Last updated\" date at the top of this page indicates when the policy was last revised."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Contact us",
+        "paragraphs": [
+          "If you have questions about our use of cookies, email {contactEmail} or call {contactPhone}."
+        ]
+      }
+    ]
+  }
+}

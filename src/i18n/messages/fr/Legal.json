@@ -1,0 +1,326 @@
+{
+  "common": {
+    "templateDisclaimer": "Il s'agit d'un modèle de départ pour les pages légales. Remplacez ce contenu par des politiques examinées par un conseil juridique qualifié avant de publier votre application.",
+    "lastUpdated": "Dernière mise à jour : {date}",
+    "relatedPages": "Pages associées",
+    "backToHome": "Retour à l'accueil"
+  },
+  "privacyPolicy": {
+    "title": "Politique de confidentialité",
+    "description": "Comment nous collectons, utilisons et protégeons vos données personnelles lorsque vous utilisez {appName}.",
+    "lastUpdatedDate": "27 juin 2025",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "Introduction",
+        "paragraphs": [
+          "La présente Politique de confidentialité explique comment {companyName} (« nous », « notre » ou « nos ») collecte, utilise et protège les informations personnelles lorsque vous visitez {appUrl} ou utilisez {appName} (le « Service »).",
+          "En utilisant le Service, vous acceptez la collecte et l'utilisation des informations conformément à la présente politique. Si vous n'êtes pas d'accord, veuillez ne pas utiliser le Service."
+        ]
+      },
+      {
+        "id": "information-we-collect",
+        "title": "Informations que nous collectons",
+        "paragraphs": [
+          "Nous pouvons collecter les informations que vous fournissez directement, les informations collectées automatiquement et les informations provenant de services tiers que vous connectez au Service."
+        ],
+        "list": [
+          "Informations de compte telles que le nom, l'adresse e-mail et les détails du profil",
+          "Données d'authentification telles que les identifiants de connexion ou les jetons de vérification",
+          "Données d'utilisation telles que les pages consultées, les fonctionnalités utilisées et les horodatages des interactions",
+          "Données d'appareil et de navigateur telles que l'adresse IP, l'agent utilisateur et la localisation approximative",
+          "Détails de paiement et de facturation lorsque vous achetez un forfait payant",
+          "Communications que vous nous envoyez, y compris les demandes d'assistance et les commentaires"
+        ]
+      },
+      {
+        "id": "how-we-use-information",
+        "title": "Comment nous utilisons vos informations",
+        "paragraphs": [
+          "Nous utilisons les informations personnelles aux fins suivantes :"
+        ],
+        "list": [
+          "Fournir, exploiter et maintenir le Service",
+          "Créer et gérer les comptes utilisateurs",
+          "Traiter les transactions et envoyer les notifications associées",
+          "Améliorer les performances, la sécurité et l'expérience utilisateur",
+          "Répondre aux demandes et fournir une assistance client",
+          "Envoyer des communications liées au Service et, lorsque cela est autorisé, des messages marketing",
+          "Détecter, prévenir et traiter la fraude, les abus ou les incidents de sécurité",
+          "Respecter les obligations légales et faire appliquer nos conditions"
+        ]
+      },
+      {
+        "id": "legal-bases",
+        "title": "Bases juridiques du traitement",
+        "paragraphs": [
+          "Lorsque les lois applicables en matière de protection des données exigent une base juridique, nous traitons les informations personnelles sur la base d'une ou plusieurs des bases suivantes : exécution d'un contrat, intérêts légitimes, consentement et respect des obligations légales."
+        ]
+      },
+      {
+        "id": "sharing",
+        "title": "Comment nous partageons les informations",
+        "paragraphs": [
+          "Nous ne vendons pas vos informations personnelles. Nous pouvons partager des informations avec des prestataires de services de confiance qui nous aident à exploiter le Service, tels que les fournisseurs d'hébergement, d'analyse, de distribution d'e-mails et de traitement des paiements. Ces parties sont autorisées à utiliser vos informations uniquement dans la mesure nécessaire pour nous fournir leurs services.",
+          "Nous pouvons également divulguer des informations si la loi l'exige, pour protéger nos droits ou dans le cadre d'une fusion, d'une acquisition ou d'une cession d'actifs."
+        ]
+      },
+      {
+        "id": "retention",
+        "title": "Conservation des données",
+        "paragraphs": [
+          "Nous conservons les informations personnelles uniquement pendant la durée nécessaire pour atteindre les objectifs décrits dans la présente politique, sauf si une période de conservation plus longue est exigée ou autorisée par la loi. Lorsque les données ne sont plus nécessaires, nous prenons des mesures raisonnables pour les supprimer ou les anonymiser."
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Sécurité",
+        "paragraphs": [
+          "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées conçues pour protéger les informations personnelles contre l'accès non autorisé, la modification, la divulgation ou la destruction. Cependant, aucune méthode de transmission sur Internet ou de stockage électronique n'est totalement sécurisée."
+        ]
+      },
+      {
+        "id": "your-rights",
+        "title": "Vos droits et choix",
+        "paragraphs": [
+          "Selon votre localisation, vous pouvez disposer de droits concernant vos informations personnelles, notamment :"
+        ],
+        "list": [
+          "Accéder à vos données personnelles ou en recevoir une copie",
+          "Corriger des informations inexactes ou incomplètes",
+          "Demander la suppression de vos données personnelles",
+          "Restreindre ou vous opposer à certaines activités de traitement",
+          "Retirer votre consentement lorsque le traitement est fondé sur le consentement",
+          "Vous désabonner des communications marketing à tout moment"
+        ]
+      },
+      {
+        "id": "children",
+        "title": "Confidentialité des enfants",
+        "paragraphs": [
+          "Le Service n'est pas destiné aux enfants de moins de 13 ans (ou l'âge minimum requis dans votre juridiction). Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants. Si vous pensez qu'un enfant nous a fourni des informations personnelles, veuillez nous contacter afin que nous puissions prendre les mesures appropriées."
+        ]
+      },
+      {
+        "id": "international-transfers",
+        "title": "Transferts internationaux",
+        "paragraphs": [
+          "Vos informations peuvent être traitées dans des pays autres que le vôtre. Lorsque cela est requis, nous mettons en place des garanties appropriées pour les transferts transfrontaliers de données."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Modifications de la présente politique",
+        "paragraphs": [
+          "Nous pouvons mettre à jour la présente Politique de confidentialité de temps à autre. Lorsque nous le faisons, nous révisons la date de « Dernière mise à jour » en haut de cette page. L'utilisation continue du Service après l'entrée en vigueur des modifications constitue une acceptation de la politique mise à jour."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Nous contacter",
+        "paragraphs": [
+          "Si vous avez des questions concernant la présente Politique de confidentialité ou souhaitez exercer vos droits en matière de confidentialité, envoyez-nous un e-mail à {contactEmail} ou appelez le {contactPhone}."
+        ]
+      }
+    ]
+  },
+  "termsOfService": {
+    "title": "Conditions d'utilisation",
+    "description": "Règles et directives pour l'utilisation de {appName}.",
+    "lastUpdatedDate": "27 juin 2025",
+    "sections": [
+      {
+        "id": "agreement",
+        "title": "Acceptation des conditions",
+        "paragraphs": [
+          "Les présentes Conditions d'utilisation (les « Conditions ») régissent votre accès à {appName} et son utilisation, exploité par {companyName} à l'adresse {appUrl}. En accédant au Service ou en l'utilisant, vous acceptez d'être lié par les présentes Conditions.",
+          "Si vous utilisez le Service au nom d'une organisation, vous déclarez avoir l'autorité de lier cette organisation aux présentes Conditions."
+        ]
+      },
+      {
+        "id": "eligibility",
+        "title": "Éligibilité",
+        "paragraphs": [
+          "Vous devez avoir au moins 13 ans (ou l'âge minimum requis dans votre juridiction) et être capable de conclure un contrat contraignant pour utiliser le Service. Vous ne pouvez pas utiliser le Service si la loi applicable vous en interdit l'usage."
+        ]
+      },
+      {
+        "id": "accounts",
+        "title": "Comptes et sécurité",
+        "paragraphs": [
+          "Vous devrez peut-être créer un compte pour accéder à certaines fonctionnalités. Vous êtes responsable du maintien de la confidentialité de vos identifiants et de toute activité effectuée sous votre compte.",
+          "Vous acceptez de fournir des informations exactes et de nous informer rapidement de toute utilisation non autorisée de votre compte."
+        ]
+      },
+      {
+        "id": "acceptable-use",
+        "title": "Utilisation acceptable",
+        "paragraphs": [
+          "Vous acceptez de ne pas faire un usage abusif du Service. Les activités interdites comprennent, sans s'y limiter :"
+        ],
+        "list": [
+          "La violation des lois ou réglementations applicables",
+          "La violation des droits de propriété intellectuelle ou de confidentialité d'autrui",
+          "Le téléchargement de logiciels malveillants, de spam ou de code nuisible",
+          "Les tentatives d'accès non autorisé aux systèmes ou aux données",
+          "L'interférence avec ou la perturbation du Service ou de son infrastructure",
+          "L'utilisation du Service pour harceler, abuser ou nuire à autrui",
+          "L'extraction ou la collecte de données du Service sans autorisation"
+        ]
+      },
+      {
+        "id": "content",
+        "title": "Votre contenu",
+        "paragraphs": [
+          "Vous conservez la propriété du contenu que vous soumettez via le Service. En soumettant du contenu, vous nous accordez une licence limitée et non exclusive pour héberger, stocker et afficher ce contenu uniquement afin d'exploiter et d'améliorer le Service.",
+          "Vous êtes seul responsable du contenu que vous soumettez et devez vous assurer de disposer des droits nécessaires pour le faire."
+        ]
+      },
+      {
+        "id": "intellectual-property",
+        "title": "Notre propriété intellectuelle",
+        "paragraphs": [
+          "Le Service, y compris son logiciel, sa conception, son image de marque et sa documentation, est la propriété de {companyName} ou de ses concédants de licence et est protégé par les lois sur la propriété intellectuelle. Sauf autorisation expresse, vous ne pouvez pas copier, modifier, distribuer ou créer des œuvres dérivées du Service."
+        ]
+      },
+      {
+        "id": "paid-services",
+        "title": "Services payants et facturation",
+        "paragraphs": [
+          "Si vous achetez un forfait payant, vous acceptez de payer tous les frais et taxes applicables. Les conditions de facturation, les périodes de renouvellement et les politiques de remboursement seront communiquées au moment de l'achat ou dans une documentation de facturation distincte.",
+          "Nous pouvons modifier les tarifs ou les fonctionnalités avec un préavis raisonnable lorsque la loi l'exige."
+        ]
+      },
+      {
+        "id": "termination",
+        "title": "Suspension et résiliation",
+        "paragraphs": [
+          "Nous pouvons suspendre ou résilier votre accès au Service si vous violez les présentes Conditions ou si nous estimons raisonnablement que votre utilisation présente un risque pour le Service ou pour d'autres utilisateurs.",
+          "Vous pouvez cesser d'utiliser le Service à tout moment. Les dispositions qui, par leur nature, doivent survivre à la résiliation resteront en vigueur."
+        ]
+      },
+      {
+        "id": "disclaimers",
+        "title": "Avertissements",
+        "paragraphs": [
+          "Le Service est fourni « en l'état » et « selon disponibilité », sans garantie d'aucune sorte, expresse ou implicite, y compris les garanties implicites de qualité marchande, d'adéquation à un usage particulier et de non-contrefaçon.",
+          "Nous ne garantissons pas que le Service sera ininterrompu, sécurisé ou exempt d'erreurs."
+        ]
+      },
+      {
+        "id": "liability",
+        "title": "Limitation de responsabilité",
+        "paragraphs": [
+          "Dans la mesure maximale autorisée par la loi, {companyName} et ses sociétés affiliées ne seront pas responsables des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs, ni de toute perte de profits, de données ou de clientèle découlant de votre utilisation du Service.",
+          "Notre responsabilité totale pour toute réclamation liée au Service ne dépassera pas le montant que vous nous avez payé au cours des douze mois précédant l'événement à l'origine de la réclamation, ou cent dollars américains (USD) si aucun frais n'a été payé."
+        ]
+      },
+      {
+        "id": "governing-law",
+        "title": "Droit applicable",
+        "paragraphs": [
+          "Les présentes Conditions sont régies par les lois de la juridiction dans laquelle {companyName} est établie, sans égard aux principes de conflit de lois. Mettez à jour cette section pour refléter la juridiction légale de votre entreprise avant le lancement."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Modifications des présentes conditions",
+        "paragraphs": [
+          "Nous pouvons modifier les présentes Conditions de temps à autre. Les modifications importantes seront communiquées via le Service ou par d'autres moyens raisonnables. Votre utilisation continue après l'entrée en vigueur des modifications constitue une acceptation des Conditions révisées."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Nous contacter",
+        "paragraphs": [
+          "Les questions concernant les présentes Conditions peuvent être envoyées à {contactEmail} ou par téléphone au {contactPhone}."
+        ]
+      }
+    ]
+  },
+  "cookiePolicy": {
+    "title": "Politique de cookies",
+    "description": "Comment {appName} utilise les cookies et technologies similaires.",
+    "lastUpdatedDate": "27 juin 2025",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "Introduction",
+        "paragraphs": [
+          "La présente Politique de cookies explique comment {companyName} utilise les cookies et technologies similaires lorsque vous visitez {appUrl} ou utilisez {appName}. Elle doit être lue conjointement avec notre Politique de confidentialité."
+        ]
+      },
+      {
+        "id": "what-are-cookies",
+        "title": "Que sont les cookies ?",
+        "paragraphs": [
+          "Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez un site web. Ils aident les sites web à mémoriser les préférences, à vous maintenir connecté et à comprendre comment le site est utilisé.",
+          "Les technologies similaires comprennent le stockage local, le stockage de session et les pixels."
+        ]
+      },
+      {
+        "id": "how-we-use-cookies",
+        "title": "Comment nous utilisons les cookies",
+        "paragraphs": [
+          "Nous utilisons les cookies et technologies similaires aux fins suivantes :"
+        ],
+        "list": [
+          "Fonctionnement essentiel du Service, y compris l'authentification et la sécurité",
+          "Mémorisation des préférences telles que la langue, le thème et la locale",
+          "Mesure du trafic et compréhension de l'utilisation des fonctionnalités",
+          "Amélioration des performances et diagnostic des problèmes techniques"
+        ]
+      },
+      {
+        "id": "types-of-cookies",
+        "title": "Types de cookies que nous utilisons",
+        "paragraphs": [
+          "Selon votre configuration, nous pouvons utiliser les catégories de cookies suivantes :"
+        ],
+        "list": [
+          "Cookies strictement nécessaires requis pour les fonctionnalités essentielles et la sécurité",
+          "Cookies de préférences qui mémorisent les paramètres que vous choisissez",
+          "Cookies d'analyse qui nous aident à comprendre les schémas d'utilisation de manière agrégée",
+          "Cookies marketing utilisés pour diffuser des messages pertinents, s'ils sont activés"
+        ]
+      },
+      {
+        "id": "third-party-cookies",
+        "title": "Cookies tiers",
+        "paragraphs": [
+          "Certains cookies peuvent être déposés par des services tiers intégrés au Service, tels que des fournisseurs d'analyse ou des processeurs de paiement. Ces tiers ont leurs propres politiques de confidentialité et de cookies.",
+          "Examinez et configurez les intégrations tierces utilisées dans votre déploiement avant la mise en production."
+        ]
+      },
+      {
+        "id": "managing-cookies",
+        "title": "Gestion des cookies",
+        "paragraphs": [
+          "Vous pouvez contrôler les cookies via les paramètres de votre navigateur, y compris en les bloquant ou en les supprimant. Notez que la désactivation de certains cookies peut affecter le fonctionnement du Service.",
+          "Lorsque la loi l'exige, nous fournirons un mécanisme de consentement avant de déposer des cookies non essentiels."
+        ]
+      },
+      {
+        "id": "retention",
+        "title": "Conservation des cookies",
+        "paragraphs": [
+          "Les cookies de session expirent lorsque vous fermez votre navigateur. Les cookies persistants restent sur votre appareil pendant une période définie ou jusqu'à ce que vous les supprimiez."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Modifications de la présente politique",
+        "paragraphs": [
+          "Nous pouvons mettre à jour la présente Politique de cookies de temps à autre. La date de « Dernière mise à jour » en haut de cette page indique quand la politique a été révisée pour la dernière fois."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Nous contacter",
+        "paragraphs": [
+          "Si vous avez des questions concernant notre utilisation des cookies, envoyez un e-mail à {contactEmail} ou appelez le {contactPhone}."
+        ]
+      }
+    ]
+  }
+}

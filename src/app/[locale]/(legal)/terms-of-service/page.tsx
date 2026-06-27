@@ -1,21 +1,20 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { ComingSoonPage } from "@/components/shared/coming-soon-page";
+import { LegalDocument } from "@/features/legal/components/legal-document";
+import { getLegalPlaceholders } from "@/features/legal/lib/get-legal-placeholders";
+import { getLegalTranslationValues } from "@/features/legal/lib/get-legal-translation-values";
 
 export async function generateMetadata(): Promise<Metadata> {
-    const t = await getTranslations("Pages");
+    const t = await getTranslations("Legal");
+    const placeholders = getLegalPlaceholders();
 
-    return { title: t("legal.termsOfService.title") };
+    return {
+        title: t("termsOfService.title"),
+        description: t("termsOfService.description", getLegalTranslationValues(placeholders)),
+    };
 }
 
-export default async function TermsOfServicePage() {
-    const t = await getTranslations("Pages");
-
-    return (
-        <ComingSoonPage
-            description={t("legal.termsOfService.description")}
-            title={t("legal.termsOfService.title")}
-        />
-    );
+export default function TermsOfServicePage() {
+    return <LegalDocument documentKey="termsOfService" />;
 }

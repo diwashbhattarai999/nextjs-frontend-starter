@@ -63,9 +63,9 @@ export const PAGE_GROUPS: Record<PageGroupKey, PageGroup> = {
     },
     legal: {
         pages: [
-            { key: "privacyPolicy", href: ROUTES.LEGAL.PRIVACY_POLICY, status: "placeholder" },
-            { key: "termsOfService", href: ROUTES.LEGAL.TERMS_OF_SERVICE, status: "placeholder" },
-            { key: "cookiePolicy", href: ROUTES.LEGAL.COOKIE_POLICY, status: "placeholder" },
+            { key: "privacyPolicy", href: ROUTES.LEGAL.PRIVACY_POLICY, status: "ready" },
+            { key: "termsOfService", href: ROUTES.LEGAL.TERMS_OF_SERVICE, status: "ready" },
+            { key: "cookiePolicy", href: ROUTES.LEGAL.COOKIE_POLICY, status: "ready" },
         ],
     },
     errors: {

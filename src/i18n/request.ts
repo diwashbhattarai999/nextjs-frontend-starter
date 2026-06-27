@@ -10,6 +10,7 @@ const NAMESPACE_FILES = {
     Auth: "Auth",
     Common: "Common",
     HomePage: "HomePage",
+    Legal: "Legal",
     Pages: "Pages",
 } as const satisfies Record<string, string>;
 

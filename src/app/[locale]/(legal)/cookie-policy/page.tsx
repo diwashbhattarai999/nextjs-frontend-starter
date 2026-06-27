@@ -1,21 +1,20 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { ComingSoonPage } from "@/components/shared/coming-soon-page";
+import { LegalDocument } from "@/features/legal/components/legal-document";
+import { getLegalPlaceholders } from "@/features/legal/lib/get-legal-placeholders";
+import { getLegalTranslationValues } from "@/features/legal/lib/get-legal-translation-values";
 
 export async function generateMetadata(): Promise<Metadata> {
-    const t = await getTranslations("Pages");
+    const t = await getTranslations("Legal");
+    const placeholders = getLegalPlaceholders();
 
-    return { title: t("legal.cookiePolicy.title") };
+    return {
+        title: t("cookiePolicy.title"),
+        description: t("cookiePolicy.description", getLegalTranslationValues(placeholders)),
+    };
 }
 
-export default async function CookiePolicyPage() {
-    const t = await getTranslations("Pages");
-
-    return (
-        <ComingSoonPage
-            description={t("legal.cookiePolicy.description")}
-            title={t("legal.cookiePolicy.title")}
-        />
-    );
+export default function CookiePolicyPage() {
+    return <LegalDocument documentKey="cookiePolicy" />;
 }
