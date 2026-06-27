@@ -1,5 +1,5 @@
-import { NotFoundPage } from "@/features/errors/components/not-found-page";
+import { ErrorPage } from "@/features/errors/components/error-page";
 
 export default function NotFound() {
-    return <NotFoundPage />;
+    return <ErrorPage errorKey="notFound" />;
 }

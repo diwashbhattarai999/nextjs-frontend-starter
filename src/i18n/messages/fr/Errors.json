@@ -6,5 +6,37 @@
     "footnote": "Au moins, se perdre ici ne nécessite pas de demander son chemin.",
     "goBack": "Retour",
     "backHome": "Accueil"
+  },
+  "unauthorized": {
+    "code": "401",
+    "title": "Il vous faut un badge pour ça.",
+    "description": "Cette zone est réservée aux membres. Connectez-vous si vous avez accès, ou revenez en terrain connu.",
+    "footnote": "Pas de badge, pas d'entrée. Les règles sont les règles.",
+    "goBack": "Retour",
+    "backHome": "Accueil"
+  },
+  "forbidden": {
+    "code": "403",
+    "title": "Belle tentative, mais non.",
+    "description": "Vous êtes connecté, mais vous n'avez pas la permission d'ouvrir cette page.",
+    "footnote": "Même le serveur a haussé un sourcil.",
+    "goBack": "Retour",
+    "backHome": "Accueil"
+  },
+  "serverError": {
+    "code": "500",
+    "title": "Quelque chose a déraillé.",
+    "description": "Nos serveurs ont eu un moment de faiblesse. On s'en occupe — réessayez dans un instant.",
+    "footnote": "Ce n'est pas vous. C'est clairement nous.",
+    "goBack": "Retour",
+    "backHome": "Accueil"
+  },
+  "maintenance": {
+    "code": "503",
+    "title": "On revient tout de suite.",
+    "description": "Nous faisons une petite maintenance. Prenez un café — ce ne sera pas long.",
+    "footnote": "Même les sites web ont besoin d'une pause.",
+    "goBack": "Retour",
+    "backHome": "Accueil"
   }
 }

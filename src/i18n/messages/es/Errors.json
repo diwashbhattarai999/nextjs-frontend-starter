@@ -6,5 +6,37 @@
     "footnote": "Al menos perderse aquí no requiere pedir direcciones.",
     "goBack": "Volver",
     "backHome": "Ir al inicio"
+  },
+  "unauthorized": {
+    "code": "401",
+    "title": "Necesitarás una credencial para esto.",
+    "description": "Esta zona es solo para miembros. Inicia sesión si tienes acceso o vuelve a terreno seguro.",
+    "footnote": "Sin credencial, no hay entrada. Son las reglas.",
+    "goBack": "Volver",
+    "backHome": "Ir al inicio"
+  },
+  "forbidden": {
+    "code": "403",
+    "title": "Buen intento, pero no.",
+    "description": "Has iniciado sesión, pero no tienes permiso para abrir esta página.",
+    "footnote": "Hasta el servidor se quedó con la ceja levantada.",
+    "goBack": "Volver",
+    "backHome": "Ir al inicio"
+  },
+  "serverError": {
+    "code": "500",
+    "title": "Algo salió de lado.",
+    "description": "Nuestros servidores tuvieron un momento. Lo estamos arreglando — inténtalo de nuevo en un rato.",
+    "footnote": "No eres tú. Somos nosotros, sin duda.",
+    "goBack": "Volver",
+    "backHome": "Ir al inicio"
+  },
+  "maintenance": {
+    "code": "503",
+    "title": "Volvemos enseguida.",
+    "description": "Estamos haciendo un mantenimiento rápido. Tómate un café — no tardaremos.",
+    "footnote": "Hasta los sitios web necesitan un descanso.",
+    "goBack": "Volver",
+    "backHome": "Ir al inicio"
   }
 }

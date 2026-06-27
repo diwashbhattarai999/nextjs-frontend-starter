@@ -6,5 +6,37 @@
     "footnote": "At least getting lost here doesn't require asking for directions.",
     "goBack": "Go back",
     "backHome": "Back to home"
+  },
+  "unauthorized": {
+    "code": "401",
+    "title": "You'll need a badge for this one.",
+    "description": "This area is for members only. Sign in if you have access, or head back to safer ground.",
+    "footnote": "No badge, no entry. Rules are rules.",
+    "goBack": "Go back",
+    "backHome": "Back to home"
+  },
+  "forbidden": {
+    "code": "403",
+    "title": "Nice try, but no.",
+    "description": "You're signed in, but you don't have permission to open this page.",
+    "footnote": "Even the server raised an eyebrow.",
+    "goBack": "Go back",
+    "backHome": "Back to home"
+  },
+  "serverError": {
+    "code": "500",
+    "title": "Something went sideways.",
+    "description": "Our servers had a moment. We're on it — try again in a bit.",
+    "footnote": "It's not you. It's definitely us.",
+    "goBack": "Go back",
+    "backHome": "Back to home"
+  },
+  "maintenance": {
+    "code": "503",
+    "title": "We'll be right back.",
+    "description": "We're doing some quick maintenance. Grab a coffee — we won't be long.",
+    "footnote": "Even websites need a stretch break.",
+    "goBack": "Go back",
+    "backHome": "Back to home"
   }
 }

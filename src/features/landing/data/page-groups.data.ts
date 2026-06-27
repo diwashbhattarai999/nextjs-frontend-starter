@@ -70,11 +70,11 @@ export const PAGE_GROUPS: Record<PageGroupKey, PageGroup> = {
     },
     errors: {
         pages: [
-            { key: "notFound", href: ROUTES.ERRORS.NOT_FOUND, status: "placeholder" },
-            { key: "unauthorized", href: ROUTES.ERRORS.UNAUTHORIZED, status: "placeholder" },
-            { key: "forbidden", href: ROUTES.ERRORS.FORBIDDEN, status: "placeholder" },
-            { key: "serverError", href: ROUTES.ERRORS.SERVER_ERROR, status: "placeholder" },
-            { key: "maintenance", href: ROUTES.ERRORS.MAINTENANCE, status: "placeholder" },
+            { key: "notFound", href: ROUTES.ERRORS.NOT_FOUND, status: "ready" },
+            { key: "unauthorized", href: ROUTES.ERRORS.UNAUTHORIZED, status: "ready" },
+            { key: "forbidden", href: ROUTES.ERRORS.FORBIDDEN, status: "ready" },
+            { key: "serverError", href: ROUTES.ERRORS.SERVER_ERROR, status: "ready" },
+            { key: "maintenance", href: ROUTES.ERRORS.MAINTENANCE, status: "ready" },
         ],
     },
 };

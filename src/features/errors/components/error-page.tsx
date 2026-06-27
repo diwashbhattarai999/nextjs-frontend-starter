@@ -13,15 +13,28 @@ import {
 import { Section, SectionHeader } from "@/components/shared/section";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ROUTES } from "@/configs/routes";
+import type {
+    ErrorPageFieldKey,
+    ErrorPageKey,
+    ErrorTranslationKey,
+} from "@/features/errors/types/error-page.types";
 import { Link, useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
+interface ErrorPageProps {
+    errorKey: ErrorPageKey;
+}
+
 /**
- * Full-page 404 experience with illustration, humor, and navigation actions.
+ * Shared full-page error experience with humor, status code, and navigation actions.
+ *
+ * @param errorKey - Errors message namespace key for the page content.
  */
-export const NotFoundPage = () => {
+export function ErrorPage({ errorKey }: ErrorPageProps) {
     const t = useTranslations("Errors");
     const router = useRouter();
+
+    const getField = (field: ErrorPageFieldKey) => t(`${errorKey}.${field}` as ErrorTranslationKey);
 
     return (
         <Page className="relative overflow-hidden">
@@ -42,15 +55,15 @@ export const NotFoundPage = () => {
                                 aria-hidden
                                 className="bg-linear-to-b from-foreground/80 to-foreground/20 bg-clip-text font-extrabold text-7xl text-transparent tracking-tighter md:text-8xl xl:text-[18rem]"
                             >
-                                {t("notFound.code")}
+                                {getField("code")}
                             </div>
 
                             <PageTitle className="text-balance font-bold text-3xl md:text-4xl">
-                                {t("notFound.title")}
+                                {getField("title")}
                             </PageTitle>
 
                             <PageDescription className="max-w-md text-base md:text-lg">
-                                {t("notFound.description")}
+                                {getField("description")}
                             </PageDescription>
                         </div>
                     </SectionHeader>
@@ -59,21 +72,21 @@ export const NotFoundPage = () => {
                         <PageActions className="justify-center">
                             <Button onClick={() => router.back()} size="lg">
                                 <Icons.arrowLeft aria-hidden />
-                                {t("notFound.goBack")}
+                                {getField("goBack")}
                             </Button>
                             <Link
                                 className={cn(buttonVariants({ size: "lg", variant: "outline" }))}
                                 href={ROUTES.HOME}
                             >
-                                {t("notFound.backHome")}
+                                {getField("backHome")}
                             </Link>
                         </PageActions>
                         <p className="text-muted-foreground/70 text-xs tracking-wide">
-                            {t("notFound.footnote")}
+                            {getField("footnote")}
                         </p>
                     </div>
                 </Section>
             </PageContent>
         </Page>
     );
-};
+}

@@ -46,7 +46,7 @@
       },
       "errors": {
         "title": "Errors",
-        "description": "Not found, unauthorized, forbidden, server error, and maintenance placeholder pages."
+        "description": "हास्य, स्ट्याटस कोड र नेभिगेसन सहित 404, 401, 403, 500 र मर्मतसम्भार पृष्ठहरू।"
       }
     },
     "pages": {

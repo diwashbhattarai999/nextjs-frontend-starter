@@ -46,7 +46,7 @@
       },
       "errors": {
         "title": "त्रुटियां",
-        "description": "Not found, unauthorized, forbidden, server error, and maintenance placeholder pages."
+        "description": "हास्य, स्टेटस कोड और नेविगेशन के साथ 404, 401, 403, 500 और रखरखाव पेज।"
       }
     },
     "pages": {

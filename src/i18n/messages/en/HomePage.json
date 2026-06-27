@@ -46,7 +46,7 @@
       },
       "errors": {
         "title": "Errors",
-        "description": "Not found, unauthorized, forbidden, server error, and maintenance placeholder pages."
+        "description": "404, 401, 403, 500, and maintenance pages with humor, status codes, and navigation."
       }
     },
     "pages": {
