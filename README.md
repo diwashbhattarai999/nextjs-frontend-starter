@@ -12,6 +12,11 @@
 
 A production-oriented Next.js starter with TypeScript, Tailwind CSS 4, shadcn/ui, TanStack Query, i18n, multi-theme support, and an opinionated feature-based architecture — so you can ship features, not boilerplate.
 
+<br />
+<img width="1864" height="2596" alt="Pasted image" src="https://github.com/user-attachments/assets/96a586ab-4c2d-4751-a96b-9f5cf7dac3f1" />
+<br />
+<br />
+
 > **Note**  
 > This project is under active development. See [Roadmap](#roadmap) for planned additions.
 
